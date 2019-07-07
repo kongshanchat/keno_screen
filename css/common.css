@@ -1,0 +1,431 @@
+#container>header #headerTime {
+    position: absolute;
+    right: 20px;
+    top: 14px;
+    font-size:14px;
+    font-family:Adobe Heiti Std R;
+    font-weight:normal;
+    color:rgba(207,231,254,1);
+    /* letter-spacing: 10px; */
+    
+}
+
+#container>header #headerTime>span {
+    /* display: block; */
+}
+
+#container>header #headerTime .week{
+    margin-left:10px;
+}
+
+#container>header #headerTime .digital-num {
+    font-family: "number", serif;
+    font-size: 14px;
+    margin: 0 6px;
+}
+
+#container>header #headerTime .digital-num:last-child {
+    margin-left: 10px;
+    margin-right: 0;
+}
+
+#container>header #headerTime .digital-num .colon {
+    display: inline-block;
+    font-family: sans-serif;
+    width: 10px;
+}
+
+.dateIcon{
+    /* vertical-align: middle; */
+    width: 15px;
+    height: 15px;
+    margin-top:8px;
+    margin-right:10px;
+}
+
+
+
+
+
+
+#container>main {
+    flex: 1;
+    display: flex;
+    padding: 20px;
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+
+.main_item {
+
+    min-height: 300px;
+}
+
+.l {
+    /* background: pink; */
+    width: 490px;
+}
+
+.c {
+    /* background: red; */
+    width: 900px;
+}
+
+.r {
+    /* background: purple; */
+    width: 490px;
+
+}
+
+.box_item {
+    width: 470px;
+    /* height: 226px; */
+    margin-bottom: 20px;
+}
+
+.box-tle {
+    height: 21px;
+    font-size: 14px;
+    line-height: 14px;
+    position: relative;
+    text-indent: 12px;
+    background: url(../images/maintitle.png) no-repeat;
+    background-size:90px 21px;
+
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+.chartBox {
+    width: 470px;
+    height: 250px;
+    background: rgba(17, 24, 60, 0.7);
+    opacity: 0.8;
+    box-sizing: border-box;
+    padding: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.rectLeft,.rectRight,.rectLeftBottom,.rectRightBottom{
+    position: absolute;
+    width:42px;
+    height:42px;
+}
+
+.rectLeft{
+    top:0;
+    left:0;
+}
+
+.rectRight{
+    top:0;
+    right:0;
+    transform:rotate(90deg)
+}
+
+.rectLeftBottom{
+    bottom:0;
+    left:0;
+    transform:rotate(270deg)
+}
+.rectRightBottom{
+    bottom:0;
+    right:0;
+    transform:rotate(180deg)
+}
+.chart_tle {
+    text-align: center;
+    width: 100%;
+    height:10px;
+font-size:8px;
+line-height: 10px;
+font-family:Adobe Heiti Std R;
+font-weight:normal;
+color:rgba(227,251,255,1);
+}
+
+.jiya_l{
+    width:300px;
+}
+
+#jiya_charts{
+    height:150px
+}
+
+.circlecont{
+    margin: 10px 0;
+}
+
+.jiya .chartCont{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+.jiya .chartBox_r{
+    width:150px
+}
+.chart_tle{
+    margin-bottom: 10px;
+    text-align:center
+}
+
+.circleChart{
+    background:rgba(4,10,19,1);
+}
+
+
+.circleChart_text{
+    color:#fff;
+    font-size:10px;
+font-family:FZZDHJW--GB1-0;
+font-weight:400;
+}
+
+.tr{
+    height:28px;
+    line-height:28px;
+
+overflow: hidden;
+}
+
+.tr:nth-of-type(odd){
+    background:rgba(0,84,166,0.12);
+}
+.tr .td{
+    float: left;
+    height:28px;
+    line-height:28px;
+    color:#00CCFF
+}
+.tr .td:nth-of-type(1){
+width:15%;
+}
+.tr .td:nth-of-type(2){
+    width:55%;
+}
+.tr .td:nth-of-type(3){
+    width:30%;
+}
+
+
+.yanghua_l{
+    width:230px;
+}
+
+.yanghua_r{
+    width:230px
+}
+
+#workOrderChart, #RateWorkOrderChart{
+    height:220px
+}
+
+#produceOrderChartRate, #produceOrderChartDoneRate{
+    height:125px;
+}
+.produce{
+    width:100%
+}
+#weeksendDoneChart, #weekPlanDoneChart{
+    height:220px
+}
+.live_status{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.status_item{
+    width:94px;
+    height:42px;
+    background:rgba(15,25,68,1);
+border:1px solid rgba(92,183,254,1);
+border-radius:5px;
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+align-items: center;
+
+}
+.status_l {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height:100%
+}
+
+.status_l span{
+    width:35px;
+
+font-size:8px;
+font-family:Adobe Heiti Std R;
+font-weight:normal;
+color:rgba(2,255,175,1);
+
+}
+
+
+.status_l p{
+   
+
+font-size:12px;
+font-family:number;
+font-weight:400;
+color:rgba(223,120,46,1);
+}
+
+.status_r img{
+    width:32px;
+    height:32px;
+    vertical-align: middle;
+    border: none
+}
+.charttable{
+    margin-top:20px;
+    display:flex;
+    flex-direction: column;
+    width: 450px;
+    background:rgba(17,24,60,0.5);
+}
+
+.table_thead , .table_tr{
+    display:flex;
+    flex-direction: row;
+}
+
+.table_thead {
+    height:32px;
+    line-height:32px;
+    color: #00CCFF;
+    font-size:10px;
+    background:rgba(0,84,166,.12);
+    
+}
+
+.table_th , .table_td{
+    text-align: center;
+    border-right: 1px solid #070815;
+    box-sizing:border-box;
+    color:#00FEFE
+}
+.table_tr{
+    height:24px;
+    line-height:24px;
+}
+
+.table_tr:nth-of-type(odd){
+    background:rgba(0,84,166,.12);
+}
+
+.table_thead .table_th:nth-of-type(1), .table_td:nth-of-type(1) {
+    width:30px;
+}
+.table_thead .table_th:nth-of-type(2), .table_td:nth-of-type(2){
+    width:80px;
+}
+.table_thead .table_th:nth-of-type(3), .table_td:nth-of-type(3){
+    width:30px;
+}
+.table_thead .table_th:nth-of-type(4), .table_td:nth-of-type(4){
+    width:116px;
+}
+.table_thead .table_th:nth-of-type(5), .table_td:nth-of-type(5){
+    width:116px;
+}
+.table_thead .table_th:nth-of-type(6), .table_td:nth-of-type(6){
+    width:78px;
+    border-right: none;
+}
+
+.material{
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top:20px;
+}
+.desc{
+    margin-top:20px
+}
+
+.material_item{
+    width:43%;
+    position: relative;
+    height: 50px;
+    margin-bottom:20px;
+    background:rgba(15,25,68,1);
+    border:1px solid rgba(92,183,254,1);
+    border-radius:3px;
+}
+.material_item:nth-of-type(odd){
+    margin-right: 4%
+}
+.material_item > p{
+    position: absolute;
+    height: 44px;
+    width:44px;
+    text-align: center;
+    line-height:44px;
+    top:-22px;
+    left:50%;
+    margin-left:-22px;
+    font-weight:normal;
+    color:rgba(255,255,255,1);
+}
+
+.desc p{
+    color:rgba(255,255,255,1);
+}
+.desc p span{
+    color: #FFD200;
+}
+
+#statisticChart{
+    height:150px;
+}
+
+.c .box_item{
+    width:100%
+}
+.c .chartBox{
+    width:100%
+}
+
+.swiperItem{
+    width:800px;
+    margin:0 auto;
+}
+
+.nubberBox{
+    position: relative;
+}
+
+.number_item{
+    position: relative;
+}
+
+
+.inrow{font-size:0;[;font-size:12px;];*font-size:0;font-family:arial;[;letter-spacing:-3px;];*letter-spacing:normal;*word-spacing:-1px;}
+.inrow>li,.inrow span{display:inline-block;*display:inline;*zoom:1;font-size:14px;letter-spacing:normal;word-spacing:normal; }
+.dataNums{position: absolute; top:0%; display: block; width:100%; height:75px; margin-top: -37px; text-align:center;}
+.dataNums .dataOne{ width:61px; height:75px; margin: 0px 3px; text-align: center; background: url(../images/num-bg.png) no-repeat;}
+.dataNums .dataBoc {position: relative; height: 100%; overflow: hidden;}
+.dataNums .dataBoc .tt {position: absolute; top: 0;  left: 0; width: 100%;  height: 100%;}
+.dataNums .tt span{width:100%;height:100%; font:bold 54px/75px "Arial";color:#ddf0ff;}
+
+#dataNums .dataNums{ left:10%; }
+
+#dataNums2 .dataNums{ left:30%; }
+
+
+#dataNums3 .dataNums{ left:50%; }

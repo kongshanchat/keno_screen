@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>科诺大屏</title>
+    <link rel="stylesheet" type="text/css" href="./css/base.css">
+    <link rel="stylesheet" type="text/css" href="./css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/certify.css">
+    <link href="./lib/bg/css/index_style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="./css/common.css">
+    <link rel="stylesheet" type="text/css" href="./css/wavecircle.css">
+
+    <script src="./js/jquery-1.12.2.min.js"></script>
+
+    <script src="./js/common.js"></script>
+    <script src="./js/swiper.min.js"></script>
+    <script src="./js/num.js"></script>
+</head>
+
+<body>
+    <!-----HEADER STAR----->
+    <div class="header">
+        <div id="container">
+            <header>
+                <time id="headerTime"></time>
+            </header>
+
+
+            <main>
+                <!--主左侧模块BG-->
+                <div class="l main_item">
+                    <div class="box_item jiya">
+                        <div class="box-tle">
+                            挤压车间
+                        </div>
+                        <!-- box-tle -->
+
+                        <div class="chartBox">
+                            <img src="./images/rect.png" class="rectLeft">
+                            <img src="./images/rect.png" class="rectRight">
+                            <img src="./images/rect.png" class="rectLeftBottom">
+                            <img src="./images/rect.png" class="rectRightBottom">
+                            <div class="chartBox_l jiya_l">
+                                <div class=" chartBox_item">
+                                    <div class="chartBox_t">
+                                        <div class="chart_tle">
+                                            挤压车间的总达成率
+                                        </div>
+                                        <div class="chartCont circlecont">
+                                            <div class="circleChart" id="0"></div>
+                                            <div class="circleChart" id="1"></div>
+                                            <div class="circleChart" id="2"></div>
+                                            <div class="circleChart" id="3"></div>
+                                            <div class="circleChart" id="4"></div>
+                                            <div class="circleChart" id="5"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- chartBox_item -->
+                                <div class=" chartBox_item">
+                                    <div class="chartBox_t">
+                                        <div class="chart_tle">
+                                            挤压车间工单
+                                        </div>
+                                    </div>
+                                    <div class="chartBox_b">
+                                        <div id="jiya_charts"></div>
+                                    </div>
+
+                                </div>
+                                <!-- chartBox_item -->
+                            </div>
+                            <!-- chartBox_l -->
+
+
+                            <div class="chartBox_r">
+                                <div class=" chartBox_item">
+                                    <div class="chartBox_t">
+                                        <div class="chart_tle">
+                                            挤压车间设备实时状态
+                                        </div>
+                                        <div class="chartCont">
+                                            <div class="statusBox">
+                                                <div class="tr">
+                                                    <div class="td">编号</div>
+                                                    <div class="td">设备名称</div>
+                                                    <div class="td">当前状态</div>
+                                                </div>
+                                                <div class="tr">
+                                                    <div class="td">1</div>
+                                                    <div class="td">哈哈哈</div>
+                                                    <div class="td">3是</div>
+                                                </div>
+                                                <div class="tr">
+                                                    <div class="td">1</div>
+                                                    <div class="td">哈哈哈</div>
+                                                    <div class="td">3是</div>
+                                                </div>
+                                                <div class="tr">
+                                                    <div class="td">1</div>
+                                                    <div class="td">哈哈哈</div>
+                                                    <div class="td">3是</div>
+                                                </div>
+                                                <div class="tr">
+                                                    <div class="td">1</div>
+                                                    <div class="td">哈哈哈</div>
+                                                    <div class="td">3是</div>
+                                                </div>
+                                                <div class="tr">
+                                                    <div class="td">1</div>
+                                                    <div class="td">哈哈哈</div>
+                                                    <div class="td">3是</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chartBox_b">
+
+                                    </div>
+                                </div>
+                                <!-- chartBox_item -->
+                            </div>
+                            <!-- chartBox_r -->
+                        </div>
+                        <!-- chartBox -->
+                    </div>
+                    <!-- box_item -->
+
+                    <!-- 氧化车间 BG -->
+                    <div class="box_item">
+                        <div class="box-tle">
+                            氧化车间
+                        </div>
+                        <!-- box-tle -->
+
+                        <div class="chartBox">
+                            <img src="./images/rect.png" class="rectLeft">
+                            <img src="./images/rect.png" class="rectRight">
+                            <img src="./images/rect.png" class="rectLeftBottom">
+                            <img src="./images/rect.png" class="rectRightBottom">
+                            <div class="chartBox_l yanghua_l">
+                                <div class=" chartBox_item">
+                                    <div class="chartBox_t">
+                                        <div class="chart_tle">
+                                            氧化车间生产工单
+                                        </div>
+                                        <div class="chartCont">
+                                            <div id="workOrderChart"></div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+                            <!-- chartBox_l -->
+
+
+                            <div class="chartBox_r yanghua_r">
+                                <div class=" chartBox_item">
+                                    <div class="chartBox_t">
+                                        <div class="chart_tle">
+                                            工单达成率合格率
+                                        </div>
+                                        <div class="chartCont">
+                                            <div id="RateWorkOrderChart"></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- chartBox_item -->
+                            </div>
+                            <!-- chartBox_r -->
+                        </div>
+                        <!-- chartBox -->
+                    </div>
+                    <!-- box_item -->
+                    <!-- 氧化车间 ED -->
+
+                    <!-- 深加工车间 BG -->
+                    <div class="box_item">
+                        <div class="box-tle">
+                            深加工车间
+                        </div>
+                        <!-- box-tle -->
+
+                        <div class="chartBox">
+                            <img src="./images/rect.png" class="rectLeft">
+                            <img src="./images/rect.png" class="rectRight">
+                            <img src="./images/rect.png" class="rectLeftBottom">
+                            <img src="./images/rect.png" class="rectRightBottom">
+                            <div class="chartBox_l produce">
+                                <div class=" chartBox_item">
+                                    <div class="chartBox_t">
+                                        <div class="chart_tle">
+                                            生产工单达成率
+                                        </div>
+                                        <div class="chartCont">
+                                            <div id="produceOrderChartRate"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="chartBox_b">
+                                        <div class="chart_tle">
+                                            生产工单完工数
+                                        </div>
+                                        <div class="chartCont">
+                                            <div id="produceOrderChartDoneRate"></div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+                            <!-- chartBox_l -->
+
+                        </div>
+                        <!-- chartBox -->
+                    </div>
+                    <!-- box_item -->
+                    <!-- 深加工车间 ED -->
+
+                </div>
+                <!--  主左侧模块ED -->
+
+
+                <!-- 主中间侧模块BG -->
+                <div class=" c main_item">
+
+                    <div class="nubberBox">
+                        <div class="number_item">
+                            <p>计划数量:</p>
+                            <div id="dataNums"> </div>
+                        </div>
+                        <div class="number_item">
+                            <p>完工数量:</p>
+                            <div id="dataNums2"> </div>
+                        </div>
+                        <div class="number_item">
+                            <p>合格数量:</p>
+                            <div id="dataNums3"> </div>
+                        </div>
+                    </div>
+                    <div class="swiperItem">
+                        <div id="certify">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="images/certify01.png" /></div>
+                                    <div class="swiper-slide"><img src="images/certify02.png" /></div>
+                                    <div class="swiper-slide"><img src="images/certify03.png" /></div>
+
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+
+                    </div>
+                    <!-- 生产统计 BG -->
+                    <div class="box_item">
+                        <div class="box-tle">
+                            生产统计
+                        </div>
+                        <!-- box-tle -->
+
+                        <div class="chartBox">
+                            <img src="./images/rect.png" class="rectLeft">
+                            <img src="./images/rect.png" class="rectRight">
+                            <img src="./images/rect.png" class="rectLeftBottom">
+                            <img src="./images/rect.png" class="rectRightBottom">
+                            <div class="chartBox_l produce">
+                                <div class=" chartBox_item">
+                                    <div class="chartBox_t">
+                                        <div class="chartCont">
+                                            <div class="live_status">
+                                                <div class="green">
+                                                    <div class="progress">
+                                                        <div class="inner">
+                                                            <div class="percent"><span>67</span>%</div>
+                                                            <div class="water"></div>
+                                                            <div class="glare"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="red">
+                                                    <div class="progress">
+                                                        <div class="inner">
+                                                            <div class="percent"><span>17</span>%</div>
+                                                            <div class="water"></div>
+                                                            <div class="glare"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="orange">
+                                                    <div class="progress">
+                                                        <div class="inner">
+                                                            <div class="percent"><span>90</span>%</div>
+                                                            <div class="water"></div>
+                                                            <div class="glare"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="green">
+                                                    <div class="progress">
+                                                        <div class="inner">
+                                                            <div class="percent"><span>100</span>%</div>
+                                                            <div class="water"></div>
+                                                            <div class="glare"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="red">
+                                                    <div class="progress">
+                                                        <div class="inner">
+                                                            <div class="percent"><span>90</span>%</div>
+                                                            <div class="water"></div>
+                                                            <div class="glare"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="orange">
+                                                    <div class="progress">
+                                                        <div class="inner">
+                                                            <div class="percent"><span>50</span>%</div>
+                                                            <div class="water"></div>
+                                                            <div class="glare"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="green">
+                                                    <div class="progress">
+                                                        <div class="inner">
+                                                            <div class="percent"><span>25</span>%</div>
+                                                            <div class="water"></div>
+                                                            <div class="glare"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="red">
+                                                    <div class="progress">
+                                                        <div class="inner">
+                                                            <div class="percent"><span>60</span>%</div>
+                                                            <div class="water"></div>
+                                                            <div class="glare"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chartBox_b">
+                                        <div class="chartCont">
+                                            <div id="statisticChart"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- chartBox_l -->
+
+                        </div>
+                        <!-- chartBox -->
+                    </div>
+                    <!-- box_item -->
+                    <!-- 生产统计 ED -->
+
+                </div>
+                <!-- <!-- 主中间模块ED --> -->
+
+                <!-- 主右侧模块BG -->
+                <div class="r main_item">
+
+                    <!-- 仓库实时库存 BG -->
+                    <div class="box_item">
+                        <div class="box-tle">
+                            仓库实时库存
+                        </div>
+                        <!-- box-tle -->
+
+                        <div class="chartBox">
+                            <img src="./images/rect.png" class="rectLeft">
+                            <img src="./images/rect.png" class="rectRight">
+                            <img src="./images/rect.png" class="rectLeftBottom">
+                            <img src="./images/rect.png" class="rectRightBottom">
+                            <div class="chartBox_l yanghua_l">
+                                <div class=" chartBox_item">
+                                    <div class="chartBox_t">
+                                        <div class="chart_tle">
+                                            原料仓库
+                                        </div>
+                                        <div class="chartCont">
+                                            <div class="material">
+                                                <div class="material_item">
+                                                    <p>璐定</p>
+                                                    <div class="desc">
+                                                        <p>当前库存：<span>1200</span></p>
+                                                        <p>今日入库：<span>1200</span></p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="material_item">
+                                                    <p>璐定</p>
+                                                    <div class="desc">
+                                                        <p>当前库存：<span>1200</span></p>
+                                                        <p>今日入库：<span>1200</span></p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="material_item">
+                                                    <p>璐定</p>
+                                                    <div class="desc">
+                                                        <p>当前库存：<span>1200</span></p>
+                                                        <p>今日入库：<span>1200</span></p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="material_item">
+                                                    <p>璐定</p>
+                                                    <div class="desc">
+                                                        <p>当前库存：<span>1200</span></p>
+                                                        <p>今日入库：<span>1200</span></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+                            <!-- chartBox_l -->
+
+
+                            <div class="chartBox_r yanghua_r">
+                                <div class=" chartBox_item">
+                                    <div class="chartBox_t">
+                                        <div class="chart_tle">
+                                            成品仓库
+                                        </div>
+                                        <div class="chartCont">
+                                            <div class="material">
+                                                <div class="material_item">
+                                                    <p>璐定</p>
+                                                    <div class="desc">
+                                                        <p>当前库存：<span>1200</span></p>
+                                                        <p>今日入库：<span>1200</span></p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="material_item">
+                                                    <p>璐定</p>
+                                                    <div class="desc">
+                                                        <p>当前库存：<span>1200</span></p>
+                                                        <p>今日入库：<span>1200</span></p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="material_item">
+                                                    <p>璐定</p>
+                                                    <div class="desc">
+                                                        <p>当前库存：<span>1200</span></p>
+                                                        <p>今日入库：<span>1200</span></p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="material_item">
+                                                    <p>璐定</p>
+                                                    <div class="desc">
+                                                        <p>当前库存：<span>1200</span></p>
+                                                        <p>今日入库：<span>1200</span></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- chartBox_item -->
+                            </div>
+                            <!-- chartBox_r -->
+                        </div>
+                        <!-- chartBox -->
+                    </div>
+                    <!-- box_item -->
+                    <!-- 仓库实时库存 ED -->
+
+
+                    <!-- 仓库周发货计划 BG -->
+                    <div class="box_item">
+                        <div class="box-tle">
+                            仓库周发货计划
+                        </div>
+                        <!-- box-tle -->
+
+                        <div class="chartBox">
+                            <img src="./images/rect.png" class="rectLeft">
+                            <img src="./images/rect.png" class="rectRight">
+                            <img src="./images/rect.png" class="rectLeftBottom">
+                            <img src="./images/rect.png" class="rectRightBottom">
+                            <div class="chartBox_l yanghua_l">
+                                <div class=" chartBox_item">
+                                    <div class="chartBox_t">
+                                        <div class="chart_tle">
+                                            周发货计划完工数
+                                        </div>
+                                        <div class="chartCont">
+                                            <div id="weekPlanDoneChart"></div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+                            <!-- chartBox_l -->
+
+
+                            <div class="chartBox_r yanghua_r">
+                                <div class=" chartBox_item">
+                                    <div class="chartBox_t">
+                                        <div class="chart_tle">
+                                            周发货达成率
+                                        </div>
+                                        <div class="chartCont">
+                                            <div id="weeksendDoneChart"></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- chartBox_item -->
+                            </div>
+                            <!-- chartBox_r -->
+                        </div>
+                        <!-- chartBox -->
+                    </div>
+                    <!-- box_item -->
+                    <!-- 仓库周发货计划 ED -->
+
+
+                    <!-- 氮化炉实时监控 BG -->
+                    <div class="box_item">
+                        <div class="box-tle">
+                            氮化炉实时监控
+                        </div>
+                        <!-- box-tle -->
+
+                        <div class="chartBox">
+                            <img src="./images/rect.png" class="rectLeft">
+                            <img src="./images/rect.png" class="rectRight">
+                            <img src="./images/rect.png" class="rectLeftBottom">
+                            <img src="./images/rect.png" class="rectRightBottom">
+                            <div class="chartBox_l produce">
+                                <div class=" chartBox_item">
+                                    <div class="chartBox_t">
+                                        <div class="chartCont">
+                                            <div class="live_status">
+                                                <div class="status_item">
+                                                    <div class="status_l">
+                                                        <span>氨气分解率</span>
+                                                        <p>33%</p>
+                                                    </div>
+                                                    <div class="status_r">
+                                                        <img src="./images/act.png">
+                                                    </div>
+                                                </div>
+                                                <div class="status_item">
+                                                    <div class="status_l">
+                                                        <span>氨气流量</span>
+                                                        <p>33/h</p>
+                                                    </div>
+                                                    <div class="status_r">
+                                                        <img src="./images/act.png">
+                                                    </div>
+                                                </div>
+                                                <div class="status_item">
+                                                    <div class="status_l">
+                                                        <span>温 度</span>
+                                                        <p>33 C</p>
+                                                    </div>
+                                                    <div class="status_r">
+                                                        <img src="./images/act.png">
+                                                    </div>
+                                                </div>
+                                                <div class="status_item">
+                                                    <div class="status_l">
+                                                        <span>水循环状态</span>
+                                                        <p>正常</p>
+                                                    </div>
+                                                    <div class="status_r">
+                                                        <img src="./images/act.png">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chartBox_b">
+                                        <div class="chartCont">
+                                            <div class="charttable">
+                                                <div class="table_thead">
+                                                    <div class="table_th">编号</div>
+                                                    <div class="table_th">模具编号</div>
+                                                    <div class="table_th">模号</div>
+                                                    <div class="table_th">煲模开始时间</div>
+                                                    <div class="table_th">煲模截止时间</div>
+                                                    <div class="table_th">煲模时长</div>
+                                                </div>
+                                                <div class="table_tr">
+                                                    <div class="table_td">1</div>
+                                                    <div class="table_td">132sfsf</div>
+                                                    <div class="table_td">1</div>
+                                                    <div class="table_td">2019-07-01 12:00</div>
+                                                    <div class="table_td">2019-07-01 12:00</div>
+                                                    <div class="table_td">10小时00分钟</div>
+                                                </div>
+                                                <div class="table_tr">
+                                                    <div class="table_td">1</div>
+                                                    <div class="table_td">132sfsf</div>
+                                                    <div class="table_td">1</div>
+                                                    <div class="table_td">2019-07-01 12:00</div>
+                                                    <div class="table_td">2019-07-01 12:00</div>
+                                                    <div class="table_td">10小时00分钟</div>
+                                                </div>
+                                                <div class="table_tr">
+                                                    <div class="table_td">1</div>
+                                                    <div class="table_td">132sfsf</div>
+                                                    <div class="table_td">1</div>
+                                                    <div class="table_td">2019-07-01 12:00</div>
+                                                    <div class="table_td">2019-07-01 12:00</div>
+                                                    <div class="table_td">10小时00分钟</div>
+                                                </div>
+                                                <div class="table_tr">
+                                                    <div class="table_td">1</div>
+                                                    <div class="table_td">132sfsf</div>
+                                                    <div class="table_td">1</div>
+                                                    <div class="table_td">2019-07-01 12:00</div>
+                                                    <div class="table_td">2019-07-01 12:00</div>
+                                                    <div class="table_td">10小时00分钟</div>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- chartBox_l -->
+
+                        </div>
+                        <!-- chartBox -->
+                    </div>
+                    <!-- box_item -->
+                    <!-- 氮化炉实时监控 ED -->
+
+                </div>
+                <!-- 主右侧模块ED -->
+            </main>
+        </div>
+        <!-- container -->
+        <!-- <div class="canvaszz"> </div>
+        <canvas id="canvas"></canvas> -->
+    </div>
+    <!-----HEADER END----->
+    <div class="videozz"></div>
+
+
+
+
+
+
+    <script src="./js/echarts.js"></script>
+    <!-- <script src="./lib/bg/js/bg.js"></script> -->
+    <script src="./lib/circleChart.min.js"></script>
+    <script src="./js/ec.js"></script>
+    <script src="./js/index.js"></script>
+    <script>
+        var ch = $(window).height();
+        $('main').height(ch);
+
+        $(".circleChart#1").circleChart({
+            size: 30,
+            value: 5,
+            text: 0,
+            onDraw: function (el, circle) {
+                circle.text(Math.round(circle.value) + "%");
+            }
+        });
+        $(".circleChart#0").circleChart({
+            size: 30,
+            value: 5,
+            text: 'asasasa',
+            onDraw: function (el, circle) {
+                circle.text(Math.round(circle.value) + "%");
+            }
+        });
+        $(".circleChart#2").circleChart({
+            size: 30,
+            value: 8,
+            color: "#67ee3e",
+            backgroundColor: "#e6e6e6",
+            text: 0,
+            onDraw: function (el, circle) {
+                circle.text(Math.round(circle.value) + "%");
+            }
+        });
+        $(".circleChart#3").circleChart({
+            size: 30,
+            value: 8,
+            color: "#67ee3e",
+            backgroundColor: "#e6e6e6",
+            text: 0,
+            onDraw: function (el, circle) {
+                circle.text(Math.round(circle.value) + "%");
+            }
+        });
+        $(".circleChart#4").circleChart({
+            size: 30,
+            value: 8,
+            color: "#67ee3e",
+            backgroundColor: "#e6e6e6",
+            text: 0,
+            onDraw: function (el, circle) {
+                circle.text(Math.round(circle.value) + "%");
+            }
+        });
+        $(".circleChart#5").circleChart({
+            size: 30,
+            value: 8,
+            color: "#67ee3e",
+            backgroundColor: "#e6e6e6",
+            text: 0,
+            onDraw: function (el, circle) {
+                circle.text(Math.round(circle.value) + "%");
+            }
+        });
+
+        setInterval(function () {
+            $("#0").circleChart({
+                value: Math.random() * 100
+            });
+        }, 4000);
+
+
+
+        certifySwiper = new Swiper('#certify .swiper-container', {
+            watchSlidesProgress: true,
+            slidesPerView: 'auto',
+            centeredSlides: true,
+            loop: true,
+            loopedSlides: 3,
+            autoplay: 3000,
+            prevButton: '.swiper-button-prev',
+            nextButton: '.swiper-button-next',
+            pagination: '.swiper-pagination',
+            //paginationClickable :true,
+            onProgress: function (swiper, progress) {
+                for (i = 0; i < swiper.slides.length; i++) {
+                    var slide = swiper.slides.eq(i);
+                    var slideProgress = swiper.slides[i].progress;
+                    modify = 1;
+                    if (Math.abs(slideProgress) > 1) {
+                        modify = (Math.abs(slideProgress) - 1) * 0.3 + 1;
+                    }
+                    translate = slideProgress * modify * 260 + 'px';
+                    scale = 1 - Math.abs(slideProgress) / 5;
+                    zIndex = 999 - Math.abs(Math.round(10 * slideProgress));
+                    slide.transform('translateX(' + translate + ') scale(' + scale + ')');
+                    slide.css('zIndex', zIndex);
+                    slide.css('opacity', 1);
+                    if (Math.abs(slideProgress) > 3) {
+                        slide.css('opacity', 0);
+                    }
+                }
+            },
+            onSetTransition: function (swiper, transition) {
+                for (var i = 0; i < swiper.slides.length; i++) {
+                    var slide = swiper.slides.eq(i)
+                    slide.transition(transition);
+                }
+
+            },
+            //处理分页器bug
+            onSlideChangeStart: function (swiper) {
+                if (swiper.activeIndex == 4) {
+                    swiper.bullets.eq(9).addClass('swiper-pagination-bullet-active');
+                    console.log(swiper.bullets.length);
+                }
+            }
+        });
+
+
+        $("#dataNums").rollNumDaq({
+            deVal: 16888
+        });
+
+        $("#dataNums2").rollNumDaq({
+            deVal: 2988
+        });
+
+        $("#dataNums3").rollNumDaq({
+            deVal: 0888
+        });
+
+        $('#selectID .chosen-single-with-deselect span').text();
+    </script>
+
+</body>
+
+</html>
