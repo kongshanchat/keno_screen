@@ -7,10 +7,12 @@ let c_bg_bar = 'rgba(76,180,231,0.15)';
 let com_charts = {
     color: colors,
     grid: {
-        top: '25%',
-        bottom: '10%'
-    },
+        top: '10%',
+        bottom: '10%',
+        left: '4%',
+        right: 10
 
+    },
     textStyle: {
         fontFamily: 'PingFang SC, sans-serif',
         fontSize: 10 * scale
@@ -22,12 +24,12 @@ let com_charts = {
         lineHeight: 10 * scale,
         textStyle: {
             color: colors[0],
-            fontSize: 16 * scale,
+            fontSize: 12 * scale,
         }
     },
     tooltip: {
         textStyle: {
-            fontSize: 16 * scale,
+            fontSize: 12 * scale,
             color: colors[0]
         },
     },
@@ -36,17 +38,17 @@ let com_charts = {
 //直角坐标系坐标轴
 let com_axis = {
     axisLabel: { //标签名称
-        color: colors[0],
-        margin: 8 * scale,
-        fontSize: 16 * scale,
+        color: '#FBFFFF',
+        //margin: 8 * scale,
+        fontSize: 12 * scale,
     },
     nameTextStyle: { //坐标轴名称
         color: colors[0],
-        fontSize: 18 * scale
+        fontSize: 12 * scale
     },
-    nameGap: 16 * scale, //坐标轴名称距离
+    //nameGap: 16 * scale, //坐标轴名称距离
     axisTick: { //小刻度线
-        show: false
+        show: true
     },
     axisLine: { //坐标轴
         show: true,
@@ -75,7 +77,7 @@ let opt_line = $.extend(true, {}, com_charts, {
 });
 let seri_line = {
     type: 'line',
-    smooth: true,
+    smooth: false,
     lineStyle: {
         width: 1.5 * scale,
         shadowColor: 'rgba(255,255,255,0.4)', //线条外发光
@@ -83,21 +85,21 @@ let seri_line = {
     },
 };
 let seri_area = $.extend(true, {}, seri_line, {
-    areaStyle: {
-        color: {
-            x: 0,
-            y: 0,
-            x2: 0,
-            y2: 1,
-            colorStops: [{
-                offset: 0,
-                color: colors[0] // 0% 处的颜色
-            }, {
-                offset: 1,
-                color: 'transparent' // 100% 处的颜色
-            }]
-        }
-    }
+    // areaStyle: {
+    //     color: {
+    //         x: 0,
+    //         y: 0,
+    //         x2: 0,
+    //         y2: 1,
+    //         colorStops: [{
+    //             offset: 0,
+    //             color: colors[0] // 0% 处的颜色
+    //         }, {
+    //             offset: 1,
+    //             color: 'transparent' // 100% 处的颜色
+    //         }]
+    //     }
+    // }
 });
 
 // let opt_area = $.extend(true, {}, com_charts,opt_line)
@@ -167,15 +169,6 @@ let com_lineBar_vertical = $.extend(true, {}, com_charts, {
     }),
     yAxis: [
         {
-            min: 0,
-            max: 250,
-            interval: 50,
-
-        },
-        {
-            min: 0,
-            max: 25,
-            interval: 5,
             axisLine: { //y轴
                 show: false
             },
@@ -186,7 +179,7 @@ let com_lineBar_vertical = $.extend(true, {}, com_charts, {
                 show: false
             }
         }
-    ].map(function (item, index) {
+    ].map(function(item, index) {
         return $.extend(true, {
             type: 'value'
         }, com_axis, item);
@@ -206,7 +199,7 @@ let com_lineBar_vertical = $.extend(true, {}, com_charts, {
             }
         },
         textStyle: {
-            fontSize: 16 * scale,
+            fontSize: 12 * scale,
             color: '#fff'
         },
     },
@@ -219,9 +212,7 @@ let com_lineBarSeries = {
     itemStyle: {
         normal: {
             color: new echarts.graphic.LinearGradient(
-                0, 0, 0, 1,
-                [
-                    {
+                0, 0, 0, 1, [{
                         offset: 1,
                         color: '#227cff'
                     },
@@ -237,10 +228,10 @@ let com_lineBarSeries = {
 };
 
 let com_circleSeries = {
-    type: 'pie',
-    radius: ['45%', '65%'],
-}
-//散点图公共属性
+        type: 'pie',
+        radius: ['45%', '65%'],
+    }
+    //散点图公共属性
 let opt_scatter = $.extend(true, {}, com_charts, {
     xAxis: $.extend(true, {}, com_axis, {
         type: 'category'
@@ -284,9 +275,9 @@ let opt_radar = $.extend(true, {}, {
             textStyle: {
                 color: '#0cf',
                 fontSize: 12 * scale
-                // backgroundColor: '#999',
-                // borderRadius: 3,
-                // padding: [3, 5]
+                    // backgroundColor: '#999',
+                    // borderRadius: 3,
+                    // padding: [3, 5]
             }
         },
 
@@ -363,7 +354,7 @@ let geoCoordMap = {
     '郑州': [113.4668, 34.6234],
     '鄂尔多斯': [108.9734, 39.2487],
     '重庆': [107.7539, 30.1904],
-    
+
     '好望角': [18.473927, -34.356817],
     '大西洋返回辅助点1': [9.384907, -27.079606],
     '大西洋返回辅助点2': [2.778027, -19.928112],

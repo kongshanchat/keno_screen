@@ -1,0 +1,88 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>单行和多行上下无缝滚动代码 - Liehuo.Net</title>
+    <meta http-equiv="content-type" content="text/html;charset=gb2312">
+    <style type="text/css">
+        body {
+            font-size: 0.8em;
+            letter-spacing: 1px;
+            line-height: 1.8em;
+        }
+
+        div,
+        h2,
+        p,
+        ul,
+        li {
+            margin: 0;
+            padding: 0;
+        }
+
+
+
+    
+        ul.mulitline {
+            width: 500px;
+           
+            background: #eee;
+            overflow: hidden;
+            margin-bottom: 20px;
+            border: 2px solid #a40000;
+        }
+
+        ul.mulitline {
+            height: 90px;
+        }
+
+        li {
+            height: 30px;
+            text-indent: 15px;
+            font-size: 12px;
+            line-height: 30px;
+            list-style: none;
+        }
+    </style>
+    <script language="javascript" src="./js/jquery-1.12.2.min.js"></script>
+    <script language="javascript">
+        
+        $(function () {
+            //多行应用@Mr.Think
+            var _wrap = $('ul.mulitline'); //定义滚动区域
+            var _interval = 3000; //定义滚动间隙时间
+            var _moving; //需要清除的动画
+            _wrap.hover(function () {
+                clearInterval(_moving); //当鼠标在滚动区域中时,停止滚动
+            }, function () {
+                _moving = setInterval(function () {
+                    var _field = _wrap.find('li:first'); //此变量不可放置于函数起始处，li:first取值是变化的
+                    var _h = _field.height(); //取得每次滚动高度
+                    _field.animate({
+                        marginTop: -_h + 'px'
+                    }, 600, function () { //通过取负margin值，隐藏第一行
+                        _field.css('marginTop', 0).appendTo(
+                        _wrap); //隐藏后，将该行的margin值置零，并插入到最后，实现无缝滚动
+                    })
+                }, _interval) //滚动间隔时间取决于_interval
+            }).trigger('mouseleave'); //函数载入时，模拟执行mouseleave，即自动滚动
+        });
+    </script>
+</head>
+
+<body>
+    
+    <h2>多行应用</h2>
+    <ul class="mulitline">
+        <li><a title="一个简单的鼠标划过切换效果" href="#">一个简单的鼠标划过切换效果</a> 2010年05月23日 (4)</li>
+        <li><a title="奇或偶数行高亮显示及鼠标划过高亮显示类" href="#">奇或偶数行高亮显示及鼠标划过高亮显示类</a> 2010年05月05日 (5)</li>
+        <li><a title="getElementsByTagName的简写方式" href="#">getElementsByTagName的简写方式</a> 2010年06月24日 (4)</li>
+        <li><a title="两种简单实现菜单高亮显示的JS类" href="#">两种简单实现菜单高亮显示的JS类</a> 2010年04月17日 (10)</li>
+        <li><a title="简易的点击展开/关闭效果(原生JS版和JQ版)" href="#">简易的点击展开/关闭效果(原生JS版和JQ版)</a> 2010年08月02日 (6)</li>
+        <li><a title="一个简单的纵横向动画效果类" href="#">一个简单的纵横向动画效果类</a> 2010年05月02日 (4)</li>
+        <li><a title="document.getElementById的简写方式" href="#">document.getElementById的简写方式</a> 2010年04月18日 (1)</li>
+    </ul>
+</body>
+
+</html><!-- Liehuo.Net Stat -->

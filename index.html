@@ -18,6 +18,9 @@
     <script src="./js/common.js"></script>
     <script src="./js/swiper.min.js"></script>
     <script src="./js/num.js"></script>
+    <script src="./js/num2.js"></script>
+    <script src="./js/num3.js"></script>
+    <script src="./js/lottie.js"></script>
 </head>
 
 <body>
@@ -32,7 +35,7 @@
             <main>
                 <!--主左侧模块BG-->
                 <div class="l main_item">
-                    <div class="box_item jiya">
+                    <div class="box_item jiya top_margin">
                         <div class="box-tle">
                             挤压车间
                         </div>
@@ -50,12 +53,24 @@
                                             挤压车间的总达成率
                                         </div>
                                         <div class="chartCont circlecont">
-                                            <div class="circleChart" id="0"></div>
-                                            <div class="circleChart" id="1"></div>
-                                            <div class="circleChart" id="2"></div>
-                                            <div class="circleChart" id="3"></div>
-                                            <div class="circleChart" id="4"></div>
-                                            <div class="circleChart" id="5"></div>
+                                            <div class="circleChart" id="0">
+                                                <p>#一线</p>
+                                            </div>
+                                            <div class="circleChart" id="1">
+                                                <p>#二线</p>
+                                            </div>
+                                            <div class="circleChart" id="2">
+                                                <p>#三线</p>
+                                            </div>
+                                            <div class="circleChart" id="3">
+                                                <p>#四线</p>
+                                            </div>
+                                            <div class="circleChart" id="4">
+                                                <p>#五线</p>
+                                            </div>
+                                            <div class="circleChart" id="5">
+                                                <p>#六线</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -89,31 +104,15 @@
                                                     <div class="td">设备名称</div>
                                                     <div class="td">当前状态</div>
                                                 </div>
-                                                <div class="tr">
-                                                    <div class="td">1</div>
+                                                <div id="live_status" style="height:252px;overflow:hidden">
+                                                
+                                                <!-- <div class="tr">
+                                                    <div class="td">6</div>
                                                     <div class="td">哈哈哈</div>
                                                     <div class="td">3是</div>
-                                                </div>
-                                                <div class="tr">
-                                                    <div class="td">1</div>
-                                                    <div class="td">哈哈哈</div>
-                                                    <div class="td">3是</div>
-                                                </div>
-                                                <div class="tr">
-                                                    <div class="td">1</div>
-                                                    <div class="td">哈哈哈</div>
-                                                    <div class="td">3是</div>
-                                                </div>
-                                                <div class="tr">
-                                                    <div class="td">1</div>
-                                                    <div class="td">哈哈哈</div>
-                                                    <div class="td">3是</div>
-                                                </div>
-                                                <div class="tr">
-                                                    <div class="td">1</div>
-                                                    <div class="td">哈哈哈</div>
-                                                    <div class="td">3是</div>
-                                                </div>
+                                                </div> -->
+                                                
+                                            </div>
                                             </div>
                                         </div>
                                     </div>
@@ -148,7 +147,7 @@
                                             氧化车间生产工单
                                         </div>
                                         <div class="chartCont">
-                                            <div id="workOrderChart"></div>
+                                            <div id="RateWorkOrderChart"></div>
                                         </div>
                                     </div>
 
@@ -166,7 +165,7 @@
                                             工单达成率合格率
                                         </div>
                                         <div class="chartCont">
-                                            <div id="RateWorkOrderChart"></div>
+                                            <div id="workOrderChart"></div>
                                         </div>
                                     </div>
 
@@ -195,7 +194,7 @@
                             <div class="chartBox_l produce">
                                 <div class=" chartBox_item">
                                     <div class="chartBox_t">
-                                        <div class="chart_tle">
+                                        <div class="chart_tle" style="margin-bottom: 0">
                                             生产工单达成率
                                         </div>
                                         <div class="chartCont">
@@ -204,7 +203,7 @@
                                     </div>
 
                                     <div class="chartBox_b">
-                                        <div class="chart_tle">
+                                        <div class="chart_tle" style="margin-bottom: 0">
                                             生产工单完工数
                                         </div>
                                         <div class="chartCont">
@@ -230,39 +229,113 @@
 
                 <!-- 主中间侧模块BG -->
                 <div class=" c main_item">
+                    <div class="top_icons">
+                        <img src="./images/topgroup.png" class="c_top_left">
+                        <img src="./images/topgroup.png" class="c_top_right">
+                    </div>
 
+                    <!-- 数字翻页 BG -->
                     <div class="nubberBox">
                         <div class="number_item">
                             <p>计划数量:</p>
-                            <div id="dataNums"> </div>
+                            <div id="dataNums1">
+                                <div class="numberBox">
+                                    <p>6</p>
+                                    <p>6</p>
+                                    <p>6</p>
+                                    <p>1</p>
+                                    <p>1</p>
+                                    <p>1</p>
+                                    <span>只</span>
+                                </div>
+                            </div>
                         </div>
                         <div class="number_item">
                             <p>完工数量:</p>
-                            <div id="dataNums2"> </div>
+                            <div id="dataNums2">
+                                <div class="numberBox">
+                                    <p>0</p>
+                                    <p>0</p>
+                                    <p>0</p>
+                                    <p>0</p>
+                                    <p>0</p>
+                                    <p>0</p>
+                                    <span>只</span>
+                                </div>
+                            </div>
                         </div>
                         <div class="number_item">
                             <p>合格数量:</p>
-                            <div id="dataNums3"> </div>
+                            <div id="dataNums3">
+                                <div class="numberBox">
+                                    <p>0</p>
+                                    <p>4</p>
+                                    <p>6</p>
+                                    <p>2</p>
+                                    <p>8</p>
+                                    <p>1</p>
+                                    <span>只</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    <!-- 数字翻页 END -->
+
+                    <!-- 数据轮播 BG -->
                     <div class="swiperItem">
                         <div id="certify">
                             <div class="swiper-container">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide"><img src="images/certify01.png" /></div>
-                                    <div class="swiper-slide"><img src="images/certify02.png" /></div>
-                                    <div class="swiper-slide"><img src="images/certify03.png" /></div>
+                                <div class="swiper-wrapper bgwrapper">
+                                    <div class="swiper-slide jiya">
+                                        <p>挤压车间</p>
+                                        <img src="./images/worker.png" class="bg1">
+                                        <img src="./images/workerdown.png" class="bg2">
+
+                                        <span class="ball1">#1</span>
+                                        <span class="ball2">#2</span>
+                                        <span class="ball3">#3</span>
+                                        <span class="ball4">#4</span>
+                                        <span class="ball5">#5</span>
+                                        <span class="ball6">#6</span>
+                                    </div>
+                                    <div class="swiper-slide deep">
+                                        <p>深加工车间</p>
+                                        <img src="./images/process.png" class="bg1">
+                                        <img src="./images/processBg.png" class="bg2">
+                                        <img src="./images/process_circle.png" class="bg3">
+                                        <img src="./images/down2.png" class="bg4">
+
+                                    </div>
+                                    <div class="swiper-slide youyang">
+                                        <p>氧化车间</p>
+                                        <img src="./images/process2.png" class="bg1">
+                                        <img src="./images/processBg.png" class="bg2">
+                                        <img src="./images/processcircle.png" class="bg3">
+                                        <img src="./images/down2.png" class="bg4">
+                                    </div>
 
                                 </div>
                             </div>
-                            <div class="swiper-pagination"></div>
+                            <!-- <div class="swiper-pagination"></div> -->
                             <div class="swiper-button-prev"></div>
                             <div class="swiper-button-next"></div>
                         </div>
 
                     </div>
+                    <div class="down_pic">
+                        <img src="./images/down3.png">
+                        <img src="./images/arrow.png" class="arrow">
+                        <img src="./images/arrow2.png" class="arrow2">
+                        <div class="svgBox">
+
+                            <div style="width:300px;height:400px" id="bodymovin"></div>
+                        </div>
+
+                    </div>
+                    <!-- 数据轮播 END -->
+
                     <!-- 生产统计 BG -->
-                    <div class="box_item">
+                    <div class="box_item" style="margin-top: 10px;">
                         <div class="box-tle">
                             生产统计
                         </div>
@@ -277,87 +350,141 @@
                                 <div class=" chartBox_item">
                                     <div class="chartBox_t">
                                         <div class="chartCont">
+                                            <p class="live_status_title">生产总汇占比</p>
                                             <div class="live_status">
-                                                <div class="green">
-                                                    <div class="progress">
-                                                        <div class="inner">
-                                                            <div class="percent"><span>67</span>%</div>
-                                                            <div class="water"></div>
-                                                            <div class="glare"></div>
+                                                <div class="status_items">
+                                                    <div class="green">
+                                                        <div class="progress">
+                                                            <div class="inner">
+                                                                <div class="percent number"><span>67</span>%</div>
+                                                                <div class="water"></div>
+                                                                <div class="glare"></div>
+                                                            </div>
                                                         </div>
+                                                    </div>
+                                                    <div class="status_text">
+                                                        <p>#时尚线</p>
+                                                        <p class="number">136<span></span></p>
                                                     </div>
                                                 </div>
 
-                                                <div class="red">
-                                                    <div class="progress">
-                                                        <div class="inner">
-                                                            <div class="percent"><span>17</span>%</div>
-                                                            <div class="water"></div>
-                                                            <div class="glare"></div>
+                                                <div class="status_items">
+                                                    <div class="green2">
+                                                        <div class="progress">
+                                                            <div class="inner">
+                                                                <div class="percent number"><span>67</span>%</div>
+                                                                <div class="water"></div>
+                                                                <div class="glare"></div>
+                                                            </div>
                                                         </div>
+                                                    </div>
+                                                    <div class="status_text">
+                                                        <p>#时尚线</p>
+                                                        <p class="number">136<span></span></p>
                                                     </div>
                                                 </div>
 
-                                                <div class="orange">
-                                                    <div class="progress">
-                                                        <div class="inner">
-                                                            <div class="percent"><span>90</span>%</div>
-                                                            <div class="water"></div>
-                                                            <div class="glare"></div>
+
+                                                <div class="status_items">
+                                                    <div class="green3">
+                                                        <div class="progress">
+                                                            <div class="inner">
+                                                                <div class="percent number"><span>67</span>%</div>
+                                                                <div class="water"></div>
+                                                                <div class="glare"></div>
+                                                            </div>
                                                         </div>
+                                                    </div>
+                                                    <div class="status_text">
+                                                        <p>#时尚线</p>
+                                                        <p class="number">136<span></span></p>
                                                     </div>
                                                 </div>
 
-                                                <div class="green">
-                                                    <div class="progress">
-                                                        <div class="inner">
-                                                            <div class="percent"><span>100</span>%</div>
-                                                            <div class="water"></div>
-                                                            <div class="glare"></div>
+                                                <div class="status_items">
+                                                    <div class="green4">
+                                                        <div class="progress">
+                                                            <div class="inner">
+                                                                <div class="percent number"><span>67</span>%</div>
+                                                                <div class="water"></div>
+                                                                <div class="glare"></div>
+                                                            </div>
                                                         </div>
+                                                    </div>
+                                                    <div class="status_text">
+                                                        <p>#时尚线</p>
+                                                        <p class="number">136<span></span></p>
                                                     </div>
                                                 </div>
 
-                                                <div class="red">
-                                                    <div class="progress">
-                                                        <div class="inner">
-                                                            <div class="percent"><span>90</span>%</div>
-                                                            <div class="water"></div>
-                                                            <div class="glare"></div>
+                                                <div class="status_items">
+                                                    <div class="green5">
+                                                        <div class="progress">
+                                                            <div class="inner">
+                                                                <div class="percent number"><span>67</span>%</div>
+                                                                <div class="water"></div>
+                                                                <div class="glare"></div>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="orange">
-                                                    <div class="progress">
-                                                        <div class="inner">
-                                                            <div class="percent"><span>50</span>%</div>
-                                                            <div class="water"></div>
-                                                            <div class="glare"></div>
-                                                        </div>
+                                                    <div class="status_text">
+                                                        <p>#时尚线</p>
+                                                        <p class="number">136<span></span></p>
                                                     </div>
                                                 </div>
-                                                <div class="green">
-                                                    <div class="progress">
-                                                        <div class="inner">
-                                                            <div class="percent"><span>25</span>%</div>
-                                                            <div class="water"></div>
-                                                            <div class="glare"></div>
+
+                                                <div class="status_items">
+                                                    <div class="green6">
+                                                        <div class="progress">
+                                                            <div class="inner">
+                                                                <div class="percent number"><span>67</span>%</div>
+                                                                <div class="water"></div>
+                                                                <div class="glare"></div>
+                                                            </div>
                                                         </div>
                                                     </div>
+                                                    <div class="status_text">
+                                                        <p>#时尚线</p>
+                                                        <p class="number">136<span></span></p>
+                                                    </div>
                                                 </div>
-                                                <div class="red">
-                                                    <div class="progress">
-                                                        <div class="inner">
-                                                            <div class="percent"><span>60</span>%</div>
-                                                            <div class="water"></div>
-                                                            <div class="glare"></div>
+                                                <div class="status_items">
+                                                    <div class="green7">
+                                                        <div class="progress">
+                                                            <div class="inner">
+                                                                <div class="percent number"><span>67</span>%</div>
+                                                                <div class="water"></div>
+                                                                <div class="glare"></div>
+                                                            </div>
                                                         </div>
+                                                    </div>
+                                                    <div class="status_text">
+                                                        <p>#时尚线</p>
+                                                        <p class="number">136<span></span></p>
+                                                    </div>
+                                                </div>
+                                                <div class="status_items">
+                                                    <div class="green8">
+                                                        <div class="progress">
+                                                            <div class="inner">
+                                                                <div class="percent number"><span>67</span>%</div>
+                                                                <div class="water"></div>
+                                                                <div class="glare"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="status_text">
+                                                        <p>#时尚线</p>
+                                                        <p class="number">136<span></span></p>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="chartBox_b">
+                                        <div class="chart_tle">
+                                            生产进度统计
+                                        </div>
                                         <div class="chartCont">
                                             <div id="statisticChart"></div>
                                         </div>
@@ -374,13 +501,13 @@
                     <!-- 生产统计 ED -->
 
                 </div>
-                <!-- <!-- 主中间模块ED --> -->
+                <!-- <!-- 主中间模块ED -->-->
 
                 <!-- 主右侧模块BG -->
                 <div class="r main_item">
 
                     <!-- 仓库实时库存 BG -->
-                    <div class="box_item">
+                    <div class="box_item top_margin">
                         <div class="box-tle">
                             仓库实时库存
                         </div>
@@ -410,24 +537,24 @@
                                                 <div class="material_item">
                                                     <p>璐定</p>
                                                     <div class="desc">
-                                                        <p>当前库存：<span>1200</span></p>
-                                                        <p>今日入库：<span>1200</span></p>
+                                                        <p>当前库存：<span class="counter">1200</span></p>
+                                                        <p>今日入库：<span class="counter">1200</span></p>
                                                     </div>
                                                 </div>
 
                                                 <div class="material_item">
                                                     <p>璐定</p>
                                                     <div class="desc">
-                                                        <p>当前库存：<span>1200</span></p>
-                                                        <p>今日入库：<span>1200</span></p>
+                                                        <p>当前库存：<span class="counter">1200</span></p>
+                                                        <p>今日入库：<span class="counter">1200</span></p>
                                                     </div>
                                                 </div>
 
                                                 <div class="material_item">
                                                     <p>璐定</p>
                                                     <div class="desc">
-                                                        <p>当前库存：<span>1200</span></p>
-                                                        <p>今日入库：<span>1200</span></p>
+                                                        <p>当前库存：<span class="counter">1200</span></p>
+                                                        <p>今日入库：<span class="counter">1200</span></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -450,34 +577,51 @@
                                         <div class="chartCont">
                                             <div class="material">
                                                 <div class="material_item">
-                                                    <p>璐定</p>
+                                                    <img src="./images/topline.png" class="topline">
+                                                    <img src="./images/rect2.png" class="rectLeft">
+                                                    <img src="./images/rect2.png" class="rectRight">
+                                                    <img src="./images/rect2.png" class="rectLeftBottom">
+                                                    <img src="./images/rect2.png" class="rectRightBottom">
+
                                                     <div class="desc">
-                                                        <p>当前库存：<span>1200</span></p>
-                                                        <p>今日入库：<span>1200</span></p>
+                                                        <div>当天入库量:</div>
+                                                        <div>3000<span>吨</span></div>
                                                     </div>
                                                 </div>
 
                                                 <div class="material_item">
-                                                    <p>璐定</p>
+                                                    <img src="./images/topline.png" class="topline">
+                                                    <img src="./images/rect2.png" class="rectLeft">
+                                                    <img src="./images/rect2.png" class="rectRight">
+                                                    <img src="./images/rect2.png" class="rectLeftBottom">
+                                                    <img src="./images/rect2.png" class="rectRightBottom">
                                                     <div class="desc">
-                                                        <p>当前库存：<span>1200</span></p>
-                                                        <p>今日入库：<span>1200</span></p>
+                                                        <div>当天发货量:</div>
+                                                        <div>3000<span>吨</span></div>
                                                     </div>
                                                 </div>
 
                                                 <div class="material_item">
-                                                    <p>璐定</p>
+                                                    <img src="./images/topline.png" class="topline">
+                                                    <img src="./images/rect2.png" class="rectLeft">
+                                                    <img src="./images/rect2.png" class="rectRight">
+                                                    <img src="./images/rect2.png" class="rectLeftBottom">
+                                                    <img src="./images/rect2.png" class="rectRightBottom">
                                                     <div class="desc">
-                                                        <p>当前库存：<span>1200</span></p>
-                                                        <p>今日入库：<span>1200</span></p>
+                                                        <div>当月发货量:</div>
+                                                        <div>3000<span>吨</span></div>
                                                     </div>
                                                 </div>
 
                                                 <div class="material_item">
-                                                    <p>璐定</p>
+                                                    <img src="./images/topline.png" class="topline">
+                                                    <img src="./images/rect2.png" class="rectLeft">
+                                                    <img src="./images/rect2.png" class="rectRight">
+                                                    <img src="./images/rect2.png" class="rectLeftBottom">
+                                                    <img src="./images/rect2.png" class="rectRightBottom">
                                                     <div class="desc">
-                                                        <p>当前库存：<span>1200</span></p>
-                                                        <p>今日入库：<span>1200</span></p>
+                                                        <div>当前库存量:</div>
+                                                        <div>3000<span>吨</span></div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -570,7 +714,7 @@
                                                         <p>33%</p>
                                                     </div>
                                                     <div class="status_r">
-                                                        <img src="./images/act.png">
+                                                        <img src="./images/rate.png">
                                                     </div>
                                                 </div>
                                                 <div class="status_item">
@@ -579,7 +723,7 @@
                                                         <p>33/h</p>
                                                     </div>
                                                     <div class="status_r">
-                                                        <img src="./images/act.png">
+                                                        <img src="./images/liuliang.png">
                                                     </div>
                                                 </div>
                                                 <div class="status_item">
@@ -588,7 +732,7 @@
                                                         <p>33 C</p>
                                                     </div>
                                                     <div class="status_r">
-                                                        <img src="./images/act.png">
+                                                        <img src="./images/temper.png">
                                                     </div>
                                                 </div>
                                                 <div class="status_item">
@@ -597,7 +741,7 @@
                                                         <p>正常</p>
                                                     </div>
                                                     <div class="status_r">
-                                                        <img src="./images/act.png">
+                                                        <img src="./images/water.png">
                                                     </div>
                                                 </div>
                                             </div>
@@ -667,92 +811,239 @@
             </main>
         </div>
         <!-- container -->
-        <!-- <div class="canvaszz"> </div>
-        <canvas id="canvas"></canvas> -->
+        <!-- <div class="canvaszz"> </div> -->
+        <canvas id="canvas" style="height: 1620px"></canvas>
     </div>
     <!-----HEADER END----->
     <div class="videozz"></div>
 
-
-
-
-
-
     <script src="./js/echarts.js"></script>
-    <!-- <script src="./lib/bg/js/bg.js"></script> -->
     <script src="./lib/circleChart.min.js"></script>
+    <script src="./lib/bg/js/bg.js"></script>
+
     <script src="./js/ec.js"></script>
     <script src="./js/index.js"></script>
+
+    <!-- <script src="./js/jquery.waypoints.min.js"></script>
+    <script src="./js/jquery.countup.min.js"></script> -->
     <script>
         var ch = $(window).height();
         $('main').height(ch);
 
-        $(".circleChart#1").circleChart({
-            size: 30,
-            value: 5,
-            text: 0,
-            onDraw: function (el, circle) {
-                circle.text(Math.round(circle.value) + "%");
-            }
-        });
-        $(".circleChart#0").circleChart({
-            size: 30,
-            value: 5,
-            text: 'asasasa',
-            onDraw: function (el, circle) {
-                circle.text(Math.round(circle.value) + "%");
-            }
-        });
-        $(".circleChart#2").circleChart({
-            size: 30,
-            value: 8,
-            color: "#67ee3e",
-            backgroundColor: "#e6e6e6",
-            text: 0,
-            onDraw: function (el, circle) {
-                circle.text(Math.round(circle.value) + "%");
-            }
-        });
-        $(".circleChart#3").circleChart({
-            size: 30,
-            value: 8,
-            color: "#67ee3e",
-            backgroundColor: "#e6e6e6",
-            text: 0,
-            onDraw: function (el, circle) {
-                circle.text(Math.round(circle.value) + "%");
-            }
-        });
-        $(".circleChart#4").circleChart({
-            size: 30,
-            value: 8,
-            color: "#67ee3e",
-            backgroundColor: "#e6e6e6",
-            text: 0,
-            onDraw: function (el, circle) {
-                circle.text(Math.round(circle.value) + "%");
-            }
-        });
-        $(".circleChart#5").circleChart({
-            size: 30,
-            value: 8,
-            color: "#67ee3e",
-            backgroundColor: "#e6e6e6",
-            text: 0,
-            onDraw: function (el, circle) {
-                circle.text(Math.round(circle.value) + "%");
-            }
-        });
-
-        setInterval(function () {
-            $("#0").circleChart({
-                value: Math.random() * 100
-            });
-        }, 4000);
+        //$('.counter').countUp();
 
 
+         $(function () {
+            
+        });
 
-        certifySwiper = new Swiper('#certify .swiper-container', {
+
+        //svg 动画 引入
+        var animData = {
+            wrapper: document.getElementById('bodymovin'),
+            animType: 'html',
+            loop: true,
+            prerender: true,
+            autoplay: true,
+            path: 'data3.json'
+
+        };
+        var anim = bodymovin.loadAnimation(animData);
+
+        //svg 动画 引入end//
+
+        //达成率
+
+        var doneRate=[
+            {
+                name:"#一线",
+                value:'20'
+            },
+            {
+                name:"#二线",
+                value:'40'
+            },
+            {
+                name:"#三线",
+                value:'60'
+            },
+            {
+                name:"#四线",
+                value:'80'
+            },
+            {
+                name:"#五线",
+                value:'90'
+            },
+            {
+                name:"#六线",
+                value:'100'
+            },
+
+        ]
+
+       
+
+        
+
+        function doneRateMove(){
+            var rateColor=['#389AF4','#FF872E','#FFC257','#FD6892','#A100FC','#03D7FB']
+            var rateColor2=['rgba(56, 154, 244, .3)','rgba(255, 135, 46, .3)','rgba(255, 194, 87, .3)','rgba(253, 104, 146, .3)','rgba(161, 0, 252, .3)','rgba(3, 215, 251, .3)']
+            for(let i=0; i< 6;i++){
+                $(".circleChart#"+i).circleChart({
+                size: 62,
+                value:doneRate[i].value,
+                text: 0,
+                backgroundColor: rateColor2[i],
+                color: rateColor[i],
+                onDraw: function(el, circle) {
+                    circle.text(Math.round(circle.value) + "%");
+                }
+                });
+            }
+        }
+
+        doneRateMove()
+
+        //每隔6秒刷新一次达成率
+        setInterval(function() {
+            doneRateMove()
+        }, 6000);
+
+        //达成率 end //
+
+
+        //挤压实时状态 滚动
+        $.ajax({
+             type: "get",
+             url: "/login",
+             contentType: 'application/x-www-form-urlencoded;charset=utf-8',
+             data: {
+
+             },
+             dataType: "json",
+             success: function(data){
+                console.log(data);
+             },
+             error:function(e){
+                console.log(232323232323); 
+
+             }
+         });
+
+        var deviceStatus=[
+            {
+                id:1,
+                sno:'001',
+                deviceName:'哈哈啊1',
+                curStatus:0
+            },
+            {
+                id:1,
+                sno:'002',
+                deviceName:'哈哈啊2',
+                curStatus:1
+            },
+            {
+                id:1,
+                sno:'003',
+                deviceName:'哈哈啊3',
+                curStatus:2
+            },
+            {
+                id:1,
+                sno:'004',
+                deviceName:'哈哈啊4',
+                curStatus:0
+            },
+            {
+                id:1,
+                sno:'005',
+                deviceName:'哈哈啊5',
+                curStatus:1
+            },
+            {
+                id:1,
+                sno:'006',
+                deviceName:'哈哈啊6',
+                curStatus:2
+            },
+            {
+                id:1,
+                sno:'007',
+                deviceName:'哈哈啊7',
+                curStatus:0
+            },
+            {
+                id:1,
+                sno:'008',
+                deviceName:'哈哈啊8',
+                curStatus:1
+            },
+            {
+                id:1,
+                sno:'009',
+                deviceName:'哈哈啊9',
+                curStatus:2
+            },
+
+        ]
+
+        var _statusHtml='';
+
+         $.each(deviceStatus,function(a,b){
+           
+            if(deviceStatus[a].curStatus==0){
+                _statusHtml+=`
+                <div class="tr status_stop">
+                    <div class="td">${deviceStatus[a].sno}</div>
+                    <div class="td">${deviceStatus[a].deviceName}</div>
+                    <div class="td">暂停</div>
+                </div>
+                `
+            }else if(deviceStatus[a].curStatus==1){
+                _statusHtml+=`
+                <div class="tr status_act">
+                    <div class="td">${deviceStatus[a].sno}</div>
+                    <div class="td">${deviceStatus[a].deviceName}</div>
+                    <div class="td">运行</div>
+                </div>
+                `
+            }else if(deviceStatus[a].curStatus==2){
+                _statusHtml+=`
+                <div class="tr status_repaire">
+                    <div class="td">${deviceStatus[a].sno}</div>
+                    <div class="td">${deviceStatus[a].deviceName}</div>
+                    <div class="td">维修</div>
+                </div>`
+            }
+            
+         })
+
+         $('#live_status').html(_statusHtml)
+
+
+        var _wrap = $('#live_status'); //定义滚动区域
+            var _interval = 3000; //定义滚动间隙时间
+            var _moving; //需要清除的动画
+            _wrap.hover(function () {
+                clearInterval(_moving); //当鼠标在滚动区域中时,停止滚动
+            }, function () {
+                _moving = setInterval(function () {
+                    var _field = _wrap.find('.tr:first'); //此变量不可放置于函数起始处，li:first取值是变化的
+                    var _h = _field.height(); //取得每次滚动高度
+                    _field.animate({
+                        marginTop: -_h + 'px'
+                    }, 600, function () { //通过取负margin值，隐藏第一行
+                        _field.css('marginTop', 0).appendTo(
+                        _wrap); //隐藏后，将该行的margin值置零，并插入到最后，实现无缝滚动
+                    })
+                }, _interval) //滚动间隔时间取决于_interval
+            }).trigger('mouseleave'); //函数载入时，模拟执行mouseleave，即自动滚动
+
+
+        // 大屏中间轮播 begain
+        var certifySwiper = new Swiper('#certify .swiper-container', {
             watchSlidesProgress: true,
             slidesPerView: 'auto',
             centeredSlides: true,
@@ -761,9 +1052,10 @@
             autoplay: 3000,
             prevButton: '.swiper-button-prev',
             nextButton: '.swiper-button-next',
-            pagination: '.swiper-pagination',
+            //pagination: '.swiper-pagination',
             //paginationClickable :true,
-            onProgress: function (swiper, progress) {
+            onProgress: function(swiper, progress) {
+                //console.log(certifySwiper)
                 for (i = 0; i < swiper.slides.length; i++) {
                     var slide = swiper.slides.eq(i);
                     var slideProgress = swiper.slides[i].progress;
@@ -771,7 +1063,7 @@
                     if (Math.abs(slideProgress) > 1) {
                         modify = (Math.abs(slideProgress) - 1) * 0.3 + 1;
                     }
-                    translate = slideProgress * modify * 260 + 'px';
+                    translate = slideProgress * modify * 100 + 'px';
                     scale = 1 - Math.abs(slideProgress) / 5;
                     zIndex = 999 - Math.abs(Math.round(10 * slideProgress));
                     slide.transform('translateX(' + translate + ') scale(' + scale + ')');
@@ -781,8 +1073,9 @@
                         slide.css('opacity', 0);
                     }
                 }
+                setPageNumber()
             },
-            onSetTransition: function (swiper, transition) {
+            onSetTransition: function(swiper, transition) {
                 for (var i = 0; i < swiper.slides.length; i++) {
                     var slide = swiper.slides.eq(i)
                     slide.transition(transition);
@@ -790,28 +1083,136 @@
 
             },
             //处理分页器bug
-            onSlideChangeStart: function (swiper) {
+            onSlideChangeStart: function(swiper) {
+                //console.log(swiper)
+                $('.bgwrapper .jiya span').removeClass('activeBall')
+                ac_index = swiper.activeIndex;
                 if (swiper.activeIndex == 4) {
-                    swiper.bullets.eq(9).addClass('swiper-pagination-bullet-active');
-                    console.log(swiper.bullets.length);
+                    //swiper.bullets.eq(9).addClass('swiper-pagination-bullet-active');
+                    //console.log(swiper.bullets.length);
+                }
+                if (swiper.activeIndex == 3 || swiper.activeIndex == 6) {
+                    if (certifySwiper !== undefined) {
+                        certifySwiper.stopAutoplay();
+                        startAutoPlay();
+                        setTimeout(function() {
+                            ballBounce()
+                        }, 30000)
+                    }
                 }
             }
         });
 
+        function ballBounce() {
+            //alert('begain')
 
-        $("#dataNums").rollNumDaq({
-            deVal: 16888
-        });
+            clearInterval(timer);
+            certifySwiper.startAutoplay();
 
-        $("#dataNums2").rollNumDaq({
-            deVal: 2988
-        });
+        }
 
-        $("#dataNums3").rollNumDaq({
-            deVal: 0888
-        });
 
-        $('#selectID .chosen-single-with-deselect span').text();
+        var timer = null;
+        var index = 0;
+
+
+        function startAutoPlay() {
+            timer = setInterval(function() {
+                index++;
+                if (index > 6) {
+                    index = 0;
+                }
+                changeBalls();
+            }, 5000);
+        }
+
+        function changeBalls() {
+            var balls = $('.bgwrapper .jiya span');
+            for (var i = 0; i < balls.length; i++) {
+                $(balls[i]).addClass('ballsss' + i);
+                setPageNumber()
+                    //console.log(balls)
+                    //lis[i].className = "";
+                $(balls[i]).removeClass('activeBall')
+            }
+
+
+
+            //balls[index].style.display = "block";
+            $(balls[index + 11]).addClass('activeBall')
+        }
+
+        function setPageNumber() {
+            var math = "";
+            for (var i = 0; i < 6; i++) {
+                math += Math.floor(Math.random() * 10);
+            }
+
+            $("#dataNums1").rollNumDaq({
+                deVal: math
+            });
+
+            $("#dataNums2").rollNumDaq2({
+                deVal: math
+            });
+
+            $("#dataNums3").rollNumDaq3({
+                deVal: math
+            });
+        }
+
+
+        //原料仓库
+
+        function getMaterialData(){
+            var data=[
+                {
+                    name:'璐定',
+                    inventory:'3000',
+                    wareHouse:'300'
+                },
+                {
+                    name:'璐定',
+                    inventory:'4000',
+                    wareHouse:'400'
+                },
+                {
+                    name:'璐定',
+                    inventory:'5000',
+                    wareHouse:'500'
+                },
+                {
+                    name:'璐定',
+                    inventory:'6000',
+                    wareHouse:'600'
+                }
+
+            ]
+            $.ajax({
+                type: "get",
+                url: "/login",
+                contentType: 'application/x-www-form-urlencoded;charset=utf-8',
+                data: {
+
+                },
+                dataType: "json",
+                success: function(data){
+                console.log(data);
+                },
+                error:function(e){
+                    
+
+                }
+            });
+        }
+
+        function addMaterialHtml(){
+            
+        }
+
+
+
+        //成品仓库
     </script>
 
 </body>

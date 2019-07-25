@@ -1,213 +1,388 @@
-.green .progress,
+                                                                    .status_items {
+                                                                    display: flex;
+                                                                    flex-direction: row;
+                                                                    width: 180px;
+                                                                }
+                                                                
+                                                                .status_text {
+                                                                    display: flex;
+                                                                    flex-direction: column;
+                                                                    justify-content: center;
+                                                                    margin-left: 24px;
+                                                                    height: 84px;
+                                                                }
+                                                                
+                                                                .status_text P:nth-of-type(1) {
+                                                                    margin-bottom: 14px;
+                                                                    font-size: 18px;
+                                                                    font-family: Adobe Heiti Std R;
+                                                                    font-weight: normal;
+                                                                    color: rgba(254, 254, 254, 1);
+                                                                }
+                                                                
+                                                                .status_text P:nth-of-type(2) {
+                                                                    font-size: 18px;
+                                                                    font-family: number;
+                                                                    font-weight: 400;
+                                                                }
+                                                                
+                                                                .green .progress,
+                                                                .green2 .progress,
+                                                                .green3 .progress,
+                                                                .green4 .progress,
+                                                                .green5 .progress,
+                                                                .green6 .progress,
+                                                                .green7 .progress,
+                                                                .green8 .progress {
+                                                                    position: relative;
+                                                                    border-radius: 50%;
+                                                                    width: 84px;
+                                                                    height: 84px;
+                                                                    -webkit-transition: all 1s ease;
+                                                                    transition: all 1s ease;
+                                                                }
+                                                                /* .green .progress,
 .red .progress,
 .orange .progress {
-    position: relative;
-    border-radius: 50%;
-}
-.green .progress,
-.red .progress,
-.orange .progress {
-    width: 60px;
-    height: 60px;
-}
-.green .progress {
-    border: 5px solid #53fc53;
-}
-.green .progress {
-    box-shadow: 0 0 20px #029502;
-}
-.green .progress,
+    width: 84px;
+    height: 84px;
+} */
+                                                                /* .green .progress,
 .red .progress,
 .orange .progress {
     -webkit-transition: all 1s ease;
     transition: all 1s ease;
-}
-.green .progress .inner,
+} */
+                                                                
+                                                                .green .progress .inner,
+                                                                .green2 .progress .inner,
+                                                                .green3 .progress .inner,
+                                                                .green4 .progress .inner,
+                                                                .green5 .progress .inner,
+                                                                .green6 .progress .inner,
+                                                                .green7 .progress .inner,
+                                                                .green8 .progress .inner {
+                                                                    position: absolute;
+                                                                    overflow: hidden;
+                                                                    z-index: 2;
+                                                                    border-radius: 50%;
+                                                                    width: 74px;
+                                                                    height: 74px;
+                                                                    border: 5px solid #1a1a1a;
+                                                                    -webkit-transition: all 1s ease;
+                                                                    transition: all 1s ease;
+                                                                }
+                                                                /* .green .progress .inner,
 .red .progress .inner,
 .orange .progress .inner {
-    position: absolute;
-    overflow: hidden;
-    z-index: 2;
-    border-radius: 50%;
-}
-.green .progress .inner,
-.red .progress .inner,
-.orange .progress .inner {
-    width: 50px;
-    height: 50px;
-}
-.green .progress .inner,
+    width: 74px;
+    height: 74px;
+} */
+                                                                /* .green .progress .inner,
 .red .progress .inner,
 .orange .progress .inner {
     border: 5px solid #1a1a1a;
-}
-.green .progress .inner,
+} */
+                                                                /* .green .progress .inner,
 .red .progress .inner,
 .orange .progress .inner {
     -webkit-transition: all 1s ease;
     transition: all 1s ease;
-}
-.green .progress .inner .water,
-.red .progress .inner .water,
-.orange .progress .inner .water {
-    position: absolute;
-    z-index: 1;
-    width: 200%;
-    height: 200%;
-    left: -50%;
-    border-radius: 40%;
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-    -webkit-animation-timing-function: linear;
-    animation-timing-function: linear;
-    -webkit-animation-name: spin;
-    animation-name: spin;
-}
-.green .progress .inner .water {
+} */
+                                                                
+                                                                .green .progress .inner .water,
+                                                                .green2 .progress .inner .water,
+                                                                .green3 .progress .inner .water,
+                                                                .green4 .progress .inner .water,
+                                                                .green5 .progress .inner .water,
+                                                                .green6 .progress .inner .water,
+                                                                .green7 .progress .inner .water,
+                                                                .green8 .progress .inner .water {
+                                                                    position: absolute;
+                                                                    z-index: 1;
+                                                                    width: 200%;
+                                                                    height: 200%;
+                                                                    left: -50%;
+                                                                    border-radius: 40%;
+                                                                    -webkit-animation-iteration-count: infinite;
+                                                                    animation-iteration-count: infinite;
+                                                                    -webkit-animation-timing-function: linear;
+                                                                    animation-timing-function: linear;
+                                                                    -webkit-animation-name: spin;
+                                                                    animation-name: spin;
+                                                                    -webkit-transition: all 1s ease;
+                                                                    transition: all 1s ease;
+                                                                    -webkit-animation-duration: 10s;
+                                                                    animation-duration: 10s;
+                                                                }
+                                                                /* .green .progress .inner .water {
     top: 25%;
-}
-.green .progress .inner .water {
-    background: rgba(83, 252, 83, 0.5);
-}
-.green .progress .inner .water,
+} */
+                                                                
+                                                                .green .progress {
+                                                                    border: 5px solid #8B57E2;
+                                                                    box-shadow: 0 0 20px #8B57E2;
+                                                                }
+                                                                
+                                                                .green .progress .inner .water {
+                                                                    background: linear-gradient(0deg, rgba(137, 54, 190, .6), rgba(169, 46, 204, 1));
+                                                                    box-shadow: 0 0 20px #8B57E2;
+                                                                    top: 25%;
+                                                                }
+                                                                
+                                                                .green .progress .inner .percent {
+                                                                    color: #fff;
+                                                                    /* text-shadow: 0 0 10px #029502; */
+                                                                }
+                                                                /* .green .progress .inner .water,
 .red .progress .inner .water,
 .orange .progress .inner .water {
     -webkit-transition: all 1s ease;
     transition: all 1s ease;
-}
-.green .progress .inner .water,
+} */
+                                                                /* .green .progress .inner .water,
 .red .progress .inner .water,
 .orange .progress .inner .water {
     -webkit-animation-duration: 10s;
     animation-duration: 10s;
-}
-.green .progress .inner .water {
-    box-shadow: 0 0 20px #03bc03;
-}
-.green .progress .inner .glare,
-.red .progress .inner .glare,
-.orange .progress .inner .glare {
-    position: absolute;
-    top: -120%;
-    left: -120%;
-    z-index: 5;
-    width: 200%;
-    height: 200%;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-    border-radius: 50%;
-}
-.green .progress .inner .glare,
+} */
+                                                                
+                                                                .green .progress .inner .glare,
+                                                                .green2 .progress .inner .glare,
+                                                                .green3 .progress .inner .glare,
+                                                                .green4 .progress .inner .glare,
+                                                                .green5 .progress .inner .glare,
+                                                                .green6 .progress .inner .glare,
+                                                                .green7 .progress .inner .glare,
+                                                                .green8 .progress .inner .glare {
+                                                                    position: absolute;
+                                                                    top: -120%;
+                                                                    left: -120%;
+                                                                    z-index: 5;
+                                                                    width: 200%;
+                                                                    height: 200%;
+                                                                    -webkit-transform: rotate(45deg);
+                                                                    -ms-transform: rotate(45deg);
+                                                                    transform: rotate(45deg);
+                                                                    border-radius: 50%;
+                                                                    background-color: rgba(255, 255, 255, 0.15);
+                                                                    -webkit-transition: all 1s ease;
+                                                                    transition: all 1s ease;
+                                                                }
+                                                                /* .green .progress .inner .glare,
 .red .progress .inner .glare,
 .orange .progress .inner .glare {
     background-color: rgba(255, 255, 255, 0.15);
-}
-.green .progress .inner .glare,
+} */
+                                                                /* .green .progress .inner .glare,
 .red .progress .inner .glare,
 .orange .progress .inner .glare {
     -webkit-transition: all 1s ease;
     transition: all 1s ease;
-}
-.green .progress .inner .percent,
+} */
+                                                                
+                                                                .green .progress .inner .percent,
+                                                                .green2 .progress .inner .percent,
+                                                                .green3 .progress .inner .percent,
+                                                                .green4 .progress .inner .percent,
+                                                                .green5 .progress .inner .percent,
+                                                                .green6 .progress .inner .percent,
+                                                                .green7 .progress .inner .percent,
+                                                                .green8 .progress .inner .percent {
+                                                                    position: absolute;
+                                                                    top: 0;
+                                                                    left: 0;
+                                                                    width: 100%;
+                                                                    height: 100%;
+                                                                    font-weight: bold;
+                                                                    text-align: center;
+                                                                    line-height: 64px;
+                                                                    font-size: 16px;
+                                                                    -webkit-transition: all 1s ease;
+                                                                    transition: all 1s ease;
+                                                                    color: #fff;
+                                                                }
+                                                                /* .green .progress .inner .percent,
 .red .progress .inner .percent,
 .orange .progress .inner .percent {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    font-weight: bold;
-    text-align: center;
-}
-.green .progress .inner .percent,
-.red .progress .inner .percent,
-.orange .progress .inner .percent {
-    line-height: 50px;
+    line-height: 64px;
     font-size: 16px;
-}
-.green .progress .inner .percent {
-    color: #03c603;
-}
-.green .progress .inner .percent {
+    color: #fff;
+} */
+                                                                /* .green .progress .inner .percent {
     text-shadow: 0 0 10px #029502;
-}
-.green .progress .inner .percent,
+} */
+                                                                /* .green .progress .inner .percent,
 .red .progress .inner .percent,
 .orange .progress .inner .percent {
     -webkit-transition: all 1s ease;
     transition: all 1s ease;
-}
-.red {
-    margin-top: 15px;
-}
-.red .progress {
-    border: 5px solid #ed3b3b;
-}
-.red .progress {
-    box-shadow: 0 0 20px #7a0b0b;
-}
-.red .progress .inner .water {
-    top: 75%;
-}
-.red .progress .inner .water {
-    background: rgba(237, 59, 59, 0.5);
-}
-.red .progress .inner .water {
-    box-shadow: 0 0 20px #9b0e0e;
-}
-.red .progress .inner .percent {
-    color: #a30f0f;
-}
-.red .progress .inner .percent {
-    text-shadow: 0 0 10px #7a0b0b;
-}
-.orange {
-    margin-top: 15px;
-}
-.orange .progress {
-    border: 5px solid #f07c3e;
-}
-.orange .progress {
-    box-shadow: 0 0 20px #7e320a;
-}
-.orange .progress .inner .water {
-    top: 50%;
-}
-.orange .progress .inner .water {
-    background: rgba(240, 124, 62, 0.5);
-}
-.orange .progress .inner .water {
-    box-shadow: 0 0 20px #a0400c;
-}
-.orange .progress .inner .percent {
-    color: #a8430d;
-}
-.orange .progress .inner .percent {
-    text-shadow: 0 0 10px #7e320a;
-}
-
-@-webkit-keyframes spin {
-    from {
-        -webkit-transform: rotate(0deg);
-        -ms-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-    to {
-        -webkit-transform: rotate(360deg);
-        -ms-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
-}
-@keyframes spin {
-    from {
-        -webkit-transform: rotate(0deg);
-        -ms-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-    to {
-        -webkit-transform: rotate(360deg);
-        -ms-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
-}
+} */
+                                                                
+                                                                .green2 .progress {
+                                                                    border: 5px solid #08B154;
+                                                                    box-shadow: 0 0 20px #08B154;
+                                                                }
+                                                                
+                                                                .green2 .progress .inner .water {
+                                                                    background: linear-gradient(0deg, rgba(2, 168, 133, .5), rgba(13, 220, 106, 1));
+                                                                    box-shadow: 0 0 20px #08B154;
+                                                                    top: 75%;
+                                                                }
+                                                                /* .green2 .progress .inner .percent {
+                                                    color: #a30f0f;
+                                                    text-shadow: 0 0 10px #7a0b0b;
+                                                } */
+                                                                
+                                                                .green3 .progress {
+                                                                    border: 5px solid #EED500;
+                                                                    box-shadow: 0 0 20px #EED500
+                                                                }
+                                                                
+                                                                .green3 .progress .inner .water {
+                                                                    background: rgba(237, 59, 59, 0.5);
+                                                                    box-shadow: 0 0 20px #EED500;
+                                                                    top: 75%;
+                                                                }
+                                                                
+                                                                .green3 .progress .inner .percent {
+                                                                    color: #a30f0f;
+                                                                    text-shadow: 0 0 10px #7a0b0b;
+                                                                }
+                                                                
+                                                                .green4 .progress {
+                                                                    border: 5px solid #ed3b3b;
+                                                                    box-shadow: 0 0 20px #7a0b0b;
+                                                                }
+                                                                
+                                                                .green4 .progress .inner .water {
+                                                                    background: rgba(237, 59, 59, 0.5);
+                                                                    box-shadow: 0 0 20px #9b0e0e;
+                                                                    top: 75%;
+                                                                }
+                                                                
+                                                                .green4 .progress .inner .percent {
+                                                                    color: #a30f0f;
+                                                                    text-shadow: 0 0 10px #7a0b0b;
+                                                                }
+                                                                
+                                                                .green5 .progress {
+                                                                    border: 5px solid #ed3b3b;
+                                                                    box-shadow: 0 0 20px #7a0b0b;
+                                                                }
+                                                                
+                                                                .green5 .progress .inner .water {
+                                                                    background: rgba(237, 59, 59, 0.5);
+                                                                    box-shadow: 0 0 20px #9b0e0e;
+                                                                    top: 75%;
+                                                                }
+                                                                
+                                                                .green5 .progress .inner .percent {
+                                                                    color: #a30f0f;
+                                                                    text-shadow: 0 0 10px #7a0b0b;
+                                                                }
+                                                                
+                                                                .green6 .progress {
+                                                                    border: 5px solid #ed3b3b;
+                                                                    box-shadow: 0 0 20px #7a0b0b;
+                                                                }
+                                                                
+                                                                .green6 .progress .inner .water {
+                                                                    background: rgba(237, 59, 59, 0.5);
+                                                                    box-shadow: 0 0 20px #9b0e0e;
+                                                                    top: 75%;
+                                                                }
+                                                                
+                                                                .green6 .progress .inner .percent {
+                                                                    color: #a30f0f;
+                                                                    text-shadow: 0 0 10px #7a0b0b;
+                                                                }
+                                                                
+                                                                .green7 .progress {
+                                                                    border: 5px solid #ed3b3b;
+                                                                    box-shadow: 0 0 20px #7a0b0b;
+                                                                }
+                                                                
+                                                                .green7 .progress .inner .water {
+                                                                    background: rgba(237, 59, 59, 0.5);
+                                                                    box-shadow: 0 0 20px #9b0e0e;
+                                                                    top: 75%;
+                                                                }
+                                                                
+                                                                .green7 .progress .inner .percent {
+                                                                    color: #a30f0f;
+                                                                    text-shadow: 0 0 10px #7a0b0b;
+                                                                }
+                                                                
+                                                                .green8 .progress {
+                                                                    border: 5px solid #ed3b3b;
+                                                                    box-shadow: 0 0 20px #7a0b0b;
+                                                                }
+                                                                
+                                                                .green8 .progress .inner .water {
+                                                                    background: rgba(237, 59, 59, 0.5);
+                                                                    box-shadow: 0 0 20px #9b0e0e;
+                                                                    top: 75%;
+                                                                }
+                                                                
+                                                                .green8 .progress .inner .percent {
+                                                                    color: #a30f0f;
+                                                                    text-shadow: 0 0 10px #7a0b0b;
+                                                                }
+                                                                
+                                                                .orange {
+                                                                    margin-top: 15px;
+                                                                }
+                                                                
+                                                                .orange .progress {
+                                                                    border: 5px solid #f07c3e;
+                                                                }
+                                                                
+                                                                .orange .progress {
+                                                                    box-shadow: 0 0 20px #7e320a;
+                                                                }
+                                                                
+                                                                .orange .progress .inner .water {
+                                                                    top: 50%;
+                                                                }
+                                                                
+                                                                .orange .progress .inner .water {
+                                                                    background: rgba(240, 124, 62, 0.5);
+                                                                }
+                                                                
+                                                                .orange .progress .inner .water {
+                                                                    box-shadow: 0 0 20px #a0400c;
+                                                                }
+                                                                
+                                                                .orange .progress .inner .percent {
+                                                                    color: #a8430d;
+                                                                }
+                                                                
+                                                                .orange .progress .inner .percent {
+                                                                    text-shadow: 0 0 10px #7e320a;
+                                                                }
+                                                                
+                                                                @-webkit-keyframes spin {
+                                                                    from {
+                                                                        -webkit-transform: rotate(0deg);
+                                                                        -ms-transform: rotate(0deg);
+                                                                        transform: rotate(0deg);
+                                                                    }
+                                                                    to {
+                                                                        -webkit-transform: rotate(360deg);
+                                                                        -ms-transform: rotate(360deg);
+                                                                        transform: rotate(360deg);
+                                                                    }
+                                                                }
+                                                                
+                                                                @keyframes spin {
+                                                                    from {
+                                                                        -webkit-transform: rotate(0deg);
+                                                                        -ms-transform: rotate(0deg);
+                                                                        transform: rotate(0deg);
+                                                                    }
+                                                                    to {
+                                                                        -webkit-transform: rotate(360deg);
+                                                                        -ms-transform: rotate(360deg);
+                                                                        transform: rotate(360deg);
+                                                                    }

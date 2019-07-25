@@ -7,20 +7,25 @@ const Cfg = {
     designH: settings.designH || 1620, //设计图高度
     zoomMode: settings.zoomMode || (innerWidth < 768 ? 'cover' : 'contain'),
     notebookOptim: [undefined, true].includes(settings.notebookOptim),
-    getWeatherPeriod: settings.getWeatherPeriod || 5, //天气预报更新周期（分）
-    chartRefreshPeriod: settings.chartRefreshPeriod || 6, // 图表刷新周期（秒）
+    //getWeatherPeriod: settings.getWeatherPeriod || 5, //天气预报更新周期（分）
+    chartRefreshPeriod: settings.chartRefreshPeriod || 5, // 图表刷新周期（秒）
     colors: settings.colors || 'default',
     colorData: { //配色方案，部分色彩参考 http://rmco.jp/coloringroom/haisyoku_rei/haisyoku_haru.html
-        default: ['lightskyblue', 'orange', 'greenyellow', 'limegreen',
-            'mediumturquoise', 'mediumpurple'],
+        default: ['#FFFFFF', 'orange', 'greenyellow', 'limegreen',
+            'mediumturquoise', 'mediumpurple'
+        ],
         spring: ['#BEDC6E', '#FA8C8C', '#FAAAC8', '#FAC8C8',
-            '#FFFFE6', '#6E6464'],
+            '#FFFFE6', '#6E6464'
+        ],
         summer: ['#FFAE00', '#FF5200', '#007AFF', '#00BF05',
-            '#DCFFFF', '#505064'],
+            '#DCFFFF', '#505064'
+        ],
         autumn: ['#c1ad2f', /*'#A5912D',*/ '#782323', '#783723', '#A05027',
-            '#FAE6DC', '#283C14'],
+            '#FAE6DC', '#283C14'
+        ],
         winter: ['#F5F5FA', '#96822D', '#6E5A19', '#BECDEB',
-            '#E1E1F0', '#281E1E'],
+            '#E1E1F0', '#281E1E'
+        ],
     }
 };
 let scale = 1;
@@ -37,11 +42,11 @@ const Public = {
     },
     // 页面顶部时间
     setHeaderTime() {
-        setTimeout(function () {
+        setTimeout(function() {
             let t = new Date();
-            const weekday=["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
-            let myddy=t.getDay();//获取存储当前日期
-            let [year, mon, date, hour, min, sec, milliSec,week] = [
+            const weekday = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
+            let myddy = t.getDay(); //获取存储当前日期
+            let [year, mon, date, hour, min, sec, milliSec, week] = [
                 t.getFullYear(),
                 t.getMonth() + 1,
                 t.getDate(),
@@ -51,7 +56,7 @@ const Public = {
                 t.getMilliseconds(),
                 weekday[myddy]
             ];
-            
+
 
 
             let timeHtml =
@@ -66,20 +71,8 @@ const Public = {
                 </span>`;
             colonShow = !colonShow;
             $("#headerTime").html(timeHtml);
-            // if (!hasGetWeather) {
-            //     Public.getWeather(t);
-            //     hasGetWeather = true;
-            // } else {
-            //     if (min % Cfg.getWeatherPeriod === 0 && sec === 0 && milliSec < 500) {
-            //         Public.getWeather(t);
-            //     }
-            // }
             Public.setHeaderTime();
         }, 500)
-    },
-    // 获取天气情况
-    getWeather(currTime) {
-       
     },
     //页面缩放
     pageResize() {
@@ -126,6 +119,8 @@ const Public = {
                 });
                 break;
         }
+
+        scale = 1;
         $("html").css("font-size", scale * 16 + "px").css("opacity", 1);
         notebookOptim = !(Cfg.notebookOptim === false || scale > .75);
         // console.log("~~~~~~~~~窗口高度：" + pageH + ",\n宽度:" + pageW + " \nbody字号：" + scale)
@@ -154,10 +149,11 @@ const Public = {
                 if (noRefresh && noRefresh.includes(item) && !(someRefresh && someRefresh.includes(
                         item))) return;
                 let chart = charts[item];
+                //console.log(chart)
                 let opt = chart.getOption();
                 chart.clear();
                 chart.setOption(opt);
-                console.log('charts')
+
             })
         }, (t || Cfg.chartRefreshPeriod) * 1000)
 
@@ -171,8 +167,8 @@ const Public = {
              * @param power 数据缩放到10的多少次方
              * @param str 后面可以跟上个字符串，比如‘%’
              */
-            str2NumFixed: function (n, power, str = '') {
-                $.each($(this), function () {
+            str2NumFixed: function(n, power, str = '') {
+                $.each($(this), function() {
                     $(this).text(Public.hasVal(parseFloat($(this).text() + 'e' + power).toFixed(
                         n) + str));
                 })
@@ -180,7 +176,7 @@ const Public = {
         })
     },
     //滚动水波特效
-    
+
 };
 
 //jsonP
@@ -195,32 +191,10 @@ $(window).resize(() => {
     //Public.pageResize();
 });
 
-$(function () {
+$(function() {
     Public.setHeaderTime();
-    // 加载源不能写成body>header>*,原因不明
-    // $('#container>header').load('common.html header>*', function () {
-    //     // $('#container>header').load('common.html', function () {
-    //     Public.setHeaderTime(); // 页面顶部时间
-    // });
-    // 加载设置面板
-    // $('body>aside').load('common.html aside >*', function () {
-    //     $("#getWeatherPeriod").val(settings.getWeatherPeriod || 5);
-    //     $("#chartRefreshPeriod").val(settings.chartRefreshPeriod || 10);
-    //     $("#notebookOptim").attr('checked', [undefined, true].includes(settings.notebookOptim));
-    //     $("#designW").val(settings.designW || 1920);
-    //     $("#designH").val(settings.designH || 1080);
-    //     $("#" + Cfg.zoomMode).prop('checked', true);
-    //     let $colors = $("body>aside .colors");
-    //     Object.keys(Cfg.colorData).forEach(item => {
-    //         $colors.append(
-    //             `
-    //         <label for="colors_${item}">
-    //             <input type="radio" id="colors_${item}" name="colors" ${Cfg.colors === item ? 'checked' : ''}><span>${item}</span>
-    //         </label>
-    //     `
-    //         )
-    //     });
-    // });
+
+
 
     // 保存设置
     // $("body ").on('click', '#saveSetting', function () {
@@ -245,5 +219,7 @@ $(function () {
     //         settingTip: true
     //     }))
     // }
+
+
 
 });
