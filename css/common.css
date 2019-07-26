@@ -367,14 +367,14 @@
     height: 14px;
     font-family: Adobe Heiti Std R;
     font-weight: normal;
-    color: rgba(2, 255, 175, 1);
+    /* color: rgba(2, 255, 175, 1); */
 }
 
 .status_l p {
     font-size: 24px;
     font-family: number;
     font-weight: 400;
-    color: rgba(223, 120, 46, 1);
+    /* color: rgba(223, 120, 46, 1); */
 }
 
 .status_r img {
@@ -419,7 +419,7 @@
     line-height: 32px;
 }
 
-.table_tr:nth-of-type(odd) {
+.table_tr:nth-of-type(even) {
     background: rgba(0, 84, 166, .12);
 }
 
@@ -527,6 +527,20 @@
 .desc p {
     color: rgba(255, 255, 255, 1);
     font-size: 12px;
+    width:130px;
+}
+
+.desc p:nth-of-type(2) span, .curDay{
+    color: #00C2FF!important;
+    font-family: number;
+    background:linear-gradient(0deg,rgba(0,194,255,1) 0%, rgba(0,255,255,1) 100%);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.desc p:nth-of-type(2) span:nth-of-type(1){
+    font-size: 18px;
+    margin-right: 4px;
 }
 
 .chartBox_r .desc>div {
@@ -542,12 +556,17 @@
     font-family: number;
     font-weight: 400;
     color: rgba(255, 210, 0, 1);
+    background: linear-gradient(0deg, rgba(249, 157, 56, 1) 0%, rgba(249, 196, 83, 1) 50%, rgba(255, 220, 54, 1) 100%);
+    -webkit-background-clip: text;
+    font-family: number;
+    -webkit-text-fill-color: transparent;
 }
 
 .chartBox_r .desc div:nth-of-type(2) span {
     font-size: 14px;
     font-family: SimHei;
     font-weight: 400;
+    margin-left: 4px;
 }
 
 .chartBox_r .desc {
@@ -555,14 +574,28 @@
     margin-top: 0;
 }
 
-.desc p span {
+.desc p:nth-of-type(1) span:nth-of-type(1) {
     color: #FFD200;
     font-size: 18px;
+    margin-right: 4px;
     background: linear-gradient(0deg, rgba(249, 157, 56, 1) 0%, rgba(249, 196, 83, 1) 50%, rgba(255, 220, 54, 1) 100%);
     -webkit-background-clip: text;
     font-family: number;
     -webkit-text-fill-color: transparent
 }
+
+.desc p:nth-of-type(1) span:nth-of-type(2){
+    font-size: 12px;
+    font-family:SimHei;
+font-weight:400;
+color:rgba(255,210,0,1);
+}
+
+.desc p:nth-of-type(2){
+
+}
+
+
 
 #statisticChart {
     height: 190px;
@@ -745,3 +778,36 @@
     -ms-transform: rotateY(180deg);
     -o-transform: rotateY(180deg);
 }
+
+.live_0 .status_l span{
+  color: rgba(2, 255, 175, 1);
+}
+.live_0 .status_l p{
+    color: rgba(223, 120, 46, 1);
+}
+
+.live_1 .status_l span{
+    color:#00FBF2;
+  }
+  .live_1 .status_l p{
+      color:#FFC257;
+  }
+
+  .live_2 .status_l span{
+    color: #0094FB;
+  }
+  .live_2 .status_l p{
+      color: #FD6892;
+  }
+
+  .live_3 .status_l span{
+    color: #42ECB3;
+  }
+  .live_3 .status_l p{
+      color: #A100FC;
+  }
+
+  .model_table{
+      overflow: hidden;
+      height: 128px;
+  }
