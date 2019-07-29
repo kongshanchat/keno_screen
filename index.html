@@ -1471,7 +1471,20 @@
             $('.produceRate').html(rateHtml)
         }
 
-        getproduceRateData()
+        getproduceRateData();
+
+
+        //所有非echarts图表的数据定时刷新  
+        //直接调用函数
+
+        setInterval(function(){
+            getJiyaData();
+            getMaterialData();
+            getFinshGoodsData();
+            getLiveData();
+            getModelData();
+            getproduceRateData();
+        },10000)
 
 
 
