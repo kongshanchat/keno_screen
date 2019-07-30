@@ -724,12 +724,6 @@
 
         //$('.counter').countUp();
 
-
-         $(function () {
-            
-        });
-
-
         //svg 动画 引入
         var animData = {
             wrapper: document.getElementById('bodymovin'),
@@ -915,7 +909,10 @@
             $('#live_status').html(_statusHtml)
         }
 
-        getJiyaData()
+        getJiyaData();
+
+
+        
 
         var _wrap = $('#live_status'); //定义滚动区域
             var _interval = 3000; //定义滚动间隙时间
@@ -939,7 +936,77 @@
 
 
 
+        
+        
+       
+            var data2={
+                    jiya:[
+                        {   
+                            name:'一线',
+                            plan:'000332',
+                            done:'000204',
+                            qualify:'000200' 
+                        },
+                        {   
+                            name:'2线',
+                            plan:'000141',
+                            done:'000120',
+                            qualify:'000040' 
+                        },
+                        {   
+                            name:'3线',
+                            plan:'000345',
+                            done:'000234',
+                            qualify:'000222' 
+                        },
+                        {   
+                            name:'4线',
+                            plan:'000235',
+                            done:'000231',
+                            qualify:'000125' 
+                        },
+                        {   
+                            name:'5线',
+                            plan:'000896',
+                            done:'000732',
+                            qualify:'000659' 
+                        },
+                        {   
+                            name:'6线',
+                            plan:'000325',
+                            done:'000315',
+                            qualify:'000340' 
+                        }
+                    ],
+                    yanghua:{
+                        plan:'000235',
+                        done:'000200',
+                        qualify:'000190'
+                    },
+                    jiagong:{
+                        plan:'000356',
+                        done:'000345',
+                        qualify:'000300'
+                    }
+                }
 
+                $.ajax({
+                    type: "get",
+                    url: "/login",
+                    contentType: 'application/x-www-form-urlencoded;charset=utf-8',
+                    data: {
+
+                    },
+                    dataType: "json",
+                    success: function(data){
+                        console.log(data);
+                    },
+                    error:function(e){
+                        console.log(232323232323); 
+                        //swiperData=data
+                    }
+                });
+      
 
         // 大屏中间轮播 begain
         var certifySwiper = new Swiper('#certify .swiper-container', {
@@ -948,7 +1015,7 @@
             centeredSlides: true,
             loop: true,
             loopedSlides: 3,
-            autoplay: 3000,
+            autoplay: 6000,
             prevButton: '.swiper-button-prev',
             nextButton: '.swiper-button-next',
             //pagination: '.swiper-pagination',
@@ -972,7 +1039,21 @@
                         slide.css('opacity', 0);
                     }
                 }
-                setPageNumber()
+
+                if(swiper.activeIndex==3){
+                    setPageNumber(data2.jiagong)
+                }else if(swiper.activeIndex==4){
+                    setPageNumber(data2.yanghua)
+                }else if(swiper.activeIndex==5){
+                    setPageNumber(data2.jiya[0])
+                }else if(swiper.activeIndex==3){
+                    setPageNumber(data2.jiagong)
+                }
+
+                
+
+                //console.log(swiper.activeIndex)
+                
             },
             onSetTransition: function(swiper, transition) {
                 for (var i = 0; i < swiper.slides.length; i++) {
@@ -993,15 +1074,15 @@
                 if (swiper.activeIndex == 3 || swiper.activeIndex == 6) {
                     if (certifySwiper !== undefined) {
                         certifySwiper.stopAutoplay();
-                        startAutoPlay();
+                        startsAutoPlay();
                         setTimeout(function() {
                             ballBounce()
-                        }, 30000)
+                        }, 36000)
                     }
                 }
             }
         });
-
+        //小球抖动停止
         function ballBounce() {
             //alert('begain')
 
@@ -1012,51 +1093,54 @@
 
 
         var timer = null;
-        var index = 0;
+        
 
-
-        function startAutoPlay() {
+        //轮播到挤压车间 停止当前轮播 小球跳动
+        function startsAutoPlay() {
+            var index = 0;
+            $('.ball1').addClass('activeBall')
             timer = setInterval(function() {
                 index++;
                 if (index > 6) {
                     index = 0;
                 }
-                changeBalls();
-            }, 5000);
+                changeBalls(index);//小球跳动
+            }, 6000);
         }
 
-        function changeBalls() {
+        function changeBalls(index) {
             var balls = $('.bgwrapper .jiya span');
             for (var i = 0; i < balls.length; i++) {
                 $(balls[i]).addClass('ballsss' + i);
-                setPageNumber()
+                //setPageNumber(data2.jiya[i]);
                     //console.log(balls)
                     //lis[i].className = "";
                 $(balls[i]).removeClass('activeBall')
             }
-
-
-
-            //balls[index].style.display = "block";
-            $(balls[index + 11]).addClass('activeBall')
+            setPageNumber(data2.jiya[index]);
+            console.log(index)
+            
+            $(balls[index + 12]).addClass('activeBall')
         }
 
-        function setPageNumber() {
-            var math = "";
-            for (var i = 0; i < 6; i++) {
-                math += Math.floor(Math.random() * 10);
-            }
+        function setPageNumber(data) {
+            // var math = "";
+            // for (var i = 0; i < 6; i++) {
+            //     math += Math.floor(Math.random() * 10);
+            // }
+
+           // console.log(data);
 
             $("#dataNums1").rollNumDaq({
-                deVal: math
+                deVal: data.plan
             });
 
             $("#dataNums2").rollNumDaq2({
-                deVal: math
+                deVal: data.done
             });
 
             $("#dataNums3").rollNumDaq3({
-                deVal: math
+                deVal: data.qualify
             });
         }
 
@@ -1477,14 +1561,14 @@
         //所有非echarts图表的数据定时刷新  
         //直接调用函数
 
-        setInterval(function(){
-            getJiyaData();
-            getMaterialData();
-            getFinshGoodsData();
-            getLiveData();
-            getModelData();
-            getproduceRateData();
-        },10000)
+        // setInterval(function(){
+        //     getJiyaData();
+        //     getMaterialData();
+        //     getFinshGoodsData();
+        //     getLiveData();
+        //     getModelData();
+        //     getproduceRateData();
+        // },10000)
 
 
 

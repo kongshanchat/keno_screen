@@ -9,7 +9,7 @@ body {
     margin: 0 auto;
     width: 3840px;
     height: 1620px;
-    background-color: #000;
+    background-color:rgba(0, 0, 0, .7);
     position: relative;
 }
 

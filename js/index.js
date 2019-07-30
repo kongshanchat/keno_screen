@@ -20,7 +20,191 @@ let Index = {
         this.statisticChart();
     },
     jiya_charts() {
+        let chart = echarts.init($("#jiya_charts")[0]); //初始化图表，注意命名的规范合理
+        this.charts.jiya_charts = chart; //放入charts对象方便后面的刷新缩放以及其他操作
 
+        var test=function(datar){
+            alert('sss');
+           
+            chart.setOption({
+                grid: {
+                    top: '20%',
+                    bottom: "15%",
+                    left: 30
+                },
+                tooltip: {
+                    trigger: "axis",
+                    axisPointer: {
+                        type: "shadow",
+                        label: {
+                            show: true
+                        }
+                    }
+                },
+                legend: {
+                    data: datar.legendTitle,
+                    top: 0,
+                    right: '10%',
+                    textStyle: {
+                        color: "#ffffff"
+                    }
+                },
+                xAxis: {
+                    data:datar.xname,
+                    axisLine: {
+                        show: true //隐藏X轴轴线
+                    },
+                    axisTick: {
+                        show: true //隐藏X轴刻度
+                    },
+                    axisLabel: {
+                        show: true,
+                        textStyle: {
+                            color: "#EEFDFF" //X轴文字颜色
+                        }
+                    }
+                },
+                yAxis: [{
+                        type: "value",
+                        name: "单位/件",
+                        nameTextStyle: {
+                            color: "#fff"
+                        },
+                        splitLine: {
+                            show: false
+                        },
+                        splitLine: {
+                            show: false
+                        },
+                        axisTick: {
+                            show: false
+                        },
+                        axisLine: {
+                            show: false
+                        },
+                        axisLabel: {
+                            show: true,
+                            textStyle: {
+                                color: "#fff"
+                            }
+                        }
+                    },
+                    {
+                        type: "value",
+                        //name: "单位/kg",
+                        nameTextStyle: {
+                            color: "#00D0F2"
+                        },
+                        position: "right",
+                        splitLine: {
+                            show: false
+                        },
+                        splitLine: {
+                            show: false
+                        },
+                        axisTick: {
+                            show: false
+                        },
+                        axisLine: {
+                            show: false
+                        },
+                        axisLabel: {
+                            show: false,
+                            //formatter: "{value} %", //右侧Y轴文字显示
+                            textStyle: {
+                                color: "#00D0F2"
+                            }
+                        }
+                    },
+                    {
+                        type: "value",
+                        gridIndex: 0,
+                        min: 50,
+                        max: 100,
+                        splitNumber: 5,
+                        splitLine: {
+                            show: false
+                        },
+                        axisLine: {
+                            show: false
+                        },
+                        axisTick: {
+                            show: false
+                        },
+                        axisLabel: {
+                            show: false
+                        },
+                        splitArea: {
+                            show: true,
+                            areaStyle: {
+                                color: ["rgba(3,118,197,0.0)", "rgba(3,118,197,0.2)"]
+                            }
+                        }
+                    }
+                ],
+                series: [{
+                        name: datar.series[0].name,
+                        type: "line",
+                        yAxisIndex: 1, //使用的 y 轴的 index，在单个图表实例中存在多个 y轴的时候有用
+                        //smooth: true, //平滑曲线显示
+                        showAllSymbol: true, //显示所有图形。
+                        symbol: "circle", //标记的图形为实心圆
+                        symbolSize: 6, //标记的大小
+                        itemStyle: {
+                            //折线拐点标志的样式
+                            color: "#FFB508"
+                        },
+                        lineStyle: {
+                            color: "#FFB508"
+                        },
+                        areaStyle: {
+                            color: ["rgba(255, 181, 8, 0.15)", "rgba(255, 181, 8, 0)"]
+                        },
+                        data: datar.series[0].value
+                    },
+                    {
+                        name:datar.series[1].name,
+                        type: "bar",
+                        barWidth: 15,
+                        itemStyle: {
+                            normal: {
+                                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                                        offset: 0,
+                                        color: "#03D8FC"
+                                    },
+                                    {
+                                        offset: 1,
+                                        color: "#02A6C1"
+                                    }
+                                ])
+                            }
+                        },
+                        data: datar.series[1].value
+                    },
+                    {
+                        name:  datar.series[2].name,
+                        type: "bar",
+                        barWidth: 15,
+                        itemStyle: {
+                            normal: {
+                                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                                        offset: 0,
+                                        color: "#0326FC"
+                                    },
+                                    {
+                                        offset: 1,
+                                        color: "#0221C1"
+                                    }
+                                ])
+                            }
+                        },
+                        data:  datar.series[1].value
+                    }
+                ]
+
+            })
+        }
+        
         $.ajax({
             type: "get",
             url: "/login",
@@ -33,208 +217,29 @@ let Index = {
                console.log(data);
             },
             error:function(e){
+                var datar= {
+                    legendTitle:["合格数量", "计划数量", "完工数量"],
+                    xname:["#1线","#2线","#3线","#4线","#5线","#6线"],
+                    series:[
+                        {
+                            name:'合格数量',
+                            value:[33, 23, 13, 44, 55, 26]
+                        },
+                        {
+                            name:'计划数量',
+                            value: [1, 2, 3, 4, 5, 6]
+                        },
+                        {
+                            name:'完工数量',
+                            value: [1, 2, 3, 4, 5, 6]
+                        }
+                    ]
+                }
 
+                //this.jiya_charts.test(datar);
+                test(datar);
             }
         });
-
-        var data= {
-            legendTitle:["合格数量", "计划数量", "完工数量"],
-            xname:["#1线","#2线","#3线","#4线","#5线","#6线"],
-            series:[
-                {
-                    name:'合格数量',
-                    value:[33, 23, 13, 44, 55, 26]
-                },
-                {
-                    name:'计划数量',
-                    value: [1, 2, 3, 4, 5, 6]
-                },
-                {
-                    name:'完工数量',
-                    value: [1, 2, 3, 4, 5, 6]
-                }
-            ]
-        }
-
-        let chart = echarts.init($("#jiya_charts")[0]); //初始化图表，注意命名的规范合理
-        this.charts.jiya_charts = chart; //放入charts对象方便后面的刷新缩放以及其他操作
-        chart.setOption({
-            grid: {
-                top: '20%',
-                bottom: "15%",
-                left: 30
-            },
-            tooltip: {
-                trigger: "axis",
-                axisPointer: {
-                    type: "shadow",
-                    label: {
-                        show: true
-                    }
-                }
-            },
-            legend: {
-                data: data.legendTitle,
-                top: 0,
-                right: '10%',
-                textStyle: {
-                    color: "#ffffff"
-                }
-            },
-            xAxis: {
-                data:data.xname,
-                axisLine: {
-                    show: false //隐藏X轴轴线
-                },
-                axisTick: {
-                    show: false //隐藏X轴刻度
-                },
-                axisLabel: {
-                    show: true,
-                    textStyle: {
-                        color: "#EEFDFF" //X轴文字颜色
-                    }
-                }
-            },
-            yAxis: [{
-                    type: "value",
-                    name: "单位/件",
-                    nameTextStyle: {
-                        color: "#00D0F2"
-                    },
-                    splitLine: {
-                        show: false
-                    },
-                    splitLine: {
-                        show: false
-                    },
-                    axisTick: {
-                        show: false
-                    },
-                    axisLine: {
-                        show: false
-                    },
-                    axisLabel: {
-                        show: true,
-                        textStyle: {
-                            color: "#00D0F2"
-                        }
-                    }
-                },
-                {
-                    type: "value",
-                    //name: "单位/kg",
-                    nameTextStyle: {
-                        color: "#00D0F2"
-                    },
-                    position: "right",
-                    splitLine: {
-                        show: false
-                    },
-                    splitLine: {
-                        show: false
-                    },
-                    axisTick: {
-                        show: false
-                    },
-                    axisLine: {
-                        show: false
-                    },
-                    axisLabel: {
-                        show: false,
-                        //formatter: "{value} %", //右侧Y轴文字显示
-                        textStyle: {
-                            color: "#00D0F2"
-                        }
-                    }
-                },
-                {
-                    type: "value",
-                    gridIndex: 0,
-                    min: 50,
-                    max: 100,
-                    splitNumber: 5,
-                    splitLine: {
-                        show: false
-                    },
-                    axisLine: {
-                        show: false
-                    },
-                    axisTick: {
-                        show: false
-                    },
-                    axisLabel: {
-                        show: false
-                    },
-                    splitArea: {
-                        show: true,
-                        areaStyle: {
-                            color: ["rgba(250,250,250,0.0)", "rgba(250,250,250,0.05)"]
-                        }
-                    }
-                }
-            ],
-            series: [{
-                    name: data.series[0].name,
-                    type: "line",
-                    yAxisIndex: 1, //使用的 y 轴的 index，在单个图表实例中存在多个 y轴的时候有用
-                    //smooth: true, //平滑曲线显示
-                    showAllSymbol: true, //显示所有图形。
-                    symbol: "circle", //标记的图形为实心圆
-                    symbolSize: 6, //标记的大小
-                    itemStyle: {
-                        //折线拐点标志的样式
-                        color: "#FFB508"
-                    },
-                    lineStyle: {
-                        color: "#FFB508"
-                    },
-                    areaStyle: {
-                        color: "rgba(5,140,255, 0.2)"
-                    },
-                    data: data.series[0].value
-                },
-                {
-                    name:data.series[1].name,
-                    type: "bar",
-                    barWidth: 15,
-                    itemStyle: {
-                        normal: {
-                            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-                                    offset: 0,
-                                    color: "#02A6C1"
-                                },
-                                {
-                                    offset: 1,
-                                    color: "#03D8FC"
-                                }
-                            ])
-                        }
-                    },
-                    data: data.series[1].value
-                },
-                {
-                    name:  data.series[2].name,
-                    type: "bar",
-                    barWidth: 15,
-                    itemStyle: {
-                        normal: {
-                            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-                                    offset: 0,
-                                    color: "#0221C1"
-                                },
-                                {
-                                    offset: 1,
-                                    color: "#0326FC"
-                                }
-                            ])
-                        }
-                    },
-                    data:  data.series[1].value
-                }
-            ]
-
-        })
     },
     //氧化车间  工单达成合格率
     workOrderChart() {
@@ -479,7 +484,7 @@ let Index = {
                 gridIndex: 0,
                 min: 50,
                 max: 100,
-                splitNumber: 5,
+                splitNumber: 4,
                 splitLine: {
                     show: false
                 },
@@ -495,7 +500,7 @@ let Index = {
                 splitArea: {
                     show: true,
                     areaStyle: {
-                        color: ["rgba(250,250,250,0.0)", "rgba(250,250,250,0.05)"]
+                        color: ["rgba(3,118,197,0.0)", "rgba(3,118,197,0.2)"]
                     }
                 }
             }
@@ -512,7 +517,7 @@ let Index = {
                     color: "#FFB508"
                 },
                 areaStyle: {
-                    color: "rgba(5,140,255, 0.2)"
+                    color: ["rgba(255, 181, 8, 0.15)", "rgba(255, 181, 8, 0)"]
                 }
             }]
         })
@@ -636,7 +641,7 @@ let Index = {
                 splitArea: {
                     show: true,
                     areaStyle: {
-                        color: ["rgba(250,250,250,0.0)", "rgba(250,250,250,0.05)"]
+                        color: ["rgba(3,118,197,0.0)", "rgba(3,118,197,0.2)"]
                     }
                 }
             }
@@ -664,10 +669,10 @@ let Index = {
                             //barBorderRadius: [5, 5, 0, 0],
                             color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
                                 offset: 0,
-                                color: '#00D4C1'
+                                color: '#6275D1'
                             }, {
                                 offset: 1,
-                                color: '#6275D1'
+                                color: '#00D4C1'
                             }], false),
                         },
                     },
@@ -695,10 +700,10 @@ let Index = {
                             //barBorderRadius: [5, 5, 0, 0],
                             color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
                                 offset: 0,
-                                color: '#D0AE59'
+                                color: '#00D4C1'
                             }, {
                                 offset: 1,
-                                color: '#00D4C1'
+                                color: '#D0AE59'
                             }], false),
                         },
                     },
@@ -739,7 +744,7 @@ let Index = {
                 itemWidth: 10,
                 itemHeight: 10,
                 textStyle: {
-                    color: '#1bb4f6'
+                    color: '#fff'
                 },
                 data: data.title
             },
@@ -747,7 +752,7 @@ let Index = {
                 type: 'category',
                 boundaryGap: false,
                 axisLabel: {
-                    color: '#30eee9'
+                    color: '#fff'
                 },
                 axisLine: {
                     show: true,
@@ -774,7 +779,7 @@ let Index = {
                     axisLabel: {
                         formatter: '{value}',
                         textStyle: {
-                            color: '#2ad1d2'
+                            color: '#fff'
                         }
                     },
                     axisLine: {
@@ -801,7 +806,7 @@ let Index = {
                         formatter: '{value} 人',
                         show: false,
                         textStyle: {
-                            color: '#186afe'
+                            color: '#fff'
                         }
                     },
                     axisLine: {
