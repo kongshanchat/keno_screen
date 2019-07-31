@@ -254,8 +254,6 @@ let Index = {
                 name:'合格率',
                 data:[15, 40, 40, 50, 80, 90,30,56]
             }
-
-
         }
         let chart = echarts.init($("#workOrderChart")[0]);
         this.charts.workOrderChart = chart;
