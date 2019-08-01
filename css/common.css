@@ -71,6 +71,10 @@
     margin-left: 20px;
 }
 
+.iconfont{
+    margin-right: 14px;
+}
+
 .box_item {
     width: 940px;
     /* height: 226px; */
@@ -104,6 +108,93 @@
     display: flex;
     flex-direction: row;
 }
+
+.chart_tle{
+    position: relative;
+}
+
+.chart_tle > span{
+    display: inline-block;
+    padding: 0 26px;
+    border-left: 2px solid #4450F0;
+    border-right: 2px solid #4450F0;
+}
+
+.chart_tle .line_l{
+    position: absolute;
+    border: 1px solid #4450F0;
+    top: 8px;
+    left: 22px;
+    
+}
+
+.jiya_chejian::before ,.sumRate::before ,.yanghua_chejian::before,.qualifyRate::before,.produce_rate::before ,.process_static::before,.materialHouse::before,.jihuaWangong::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background:#4450F0;
+    left:14px;
+    top:5px;
+}
+
+.jiya_chejian::after ,.sumRate::after ,.yanghua_chejian::after,.qualifyRate::after,.produce_rate::after,.process_static::after,.materialHouse::after,.jihuaWangong::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background:#4450F0;
+    right:14px;
+    top:5px;
+}
+
+.chart_tle .line_r{
+    position: absolute;
+    border: 1px solid #4450F0;
+    top: 8px;
+    right: 22px;
+    
+}
+
+.sumRate .line_l{
+    width: 170px;
+}
+
+.sumRate .line_r{
+    width:170px;
+}
+
+.jiya_chejian .line_l,.jiya_chejian .line_r{
+    width:196px;
+}
+.yanghua_chejian .line_l,.yanghua_chejian .line_r{
+    width:130px;
+}
+.qualifyRate .line_l,.qualifyRate .line_r{
+    width:338px;
+}
+
+.produce_rate .line_l,.produce_rate .line_r{
+    width:338px;
+}
+
+.process_static .line_l,.process_static .line_r{
+    width:778px;
+}
+
+.materialHouse .line_l,.materialHouse .line_r{
+    width:140px;
+}
+.jihuaWangong .line_l,.jihuaWangong .line_r{
+    width:104px;
+}
+
+
+
+
+
+
+
 
 .rectLeft,
 .rectRight,
@@ -289,7 +380,7 @@
     
 
 .yanghua_l {
-    width: 540px;
+    width: 500px;
 }
 
 .r .yanghua_l {
@@ -301,7 +392,7 @@
 }
 
 .yanghua_r {
-    width: 360px
+    width: 400px
 }
 
 #workOrderChart,

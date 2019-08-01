@@ -140,6 +140,11 @@ let opt_bar_v = $.extend(true, {}, com_charts, {
     }
     //这里写此类图表其他属性
 });
+
+//横条图公共属性
+
+
+
 let seri_bar_v = {
     type: 'bar',
     barWidth: '60%'

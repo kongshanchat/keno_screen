@@ -24,7 +24,6 @@ let Index = {
         this.charts.jiya_charts = chart; //放入charts对象方便后面的刷新缩放以及其他操作
 
         var test=function(datar){
-            alert('sss');
            
             chart.setOption({
                 grid: {
@@ -276,7 +275,7 @@ let Index = {
             },
             grid: {
                 left: '3%',
-                right: '5%',
+                right: '7%',
                 bottom: '4%',
                 containLabel: true
             },
@@ -381,34 +380,38 @@ let Index = {
         }
         let chart = echarts.init($("#RateWorkOrderChart")[0]);
         this.charts.RateWorkOrderChart = chart;
-        chart.setOption(opt_bar_v);
+        chart.setOption(opt_bar_h);
         chart.setOption({
+            grid: {
+                left: '10%',
+            },
             xAxis: {
-                data:data.name
+                
             },
             yAxis: {
-                name: '数量/件',
+                data:data.name,
                 textStyle: {
                     color: colors[0],
                     fontSize: 12,
                 }
             },
-            series: [{
-                    "name": data.planNum.name,
+            series: [
+                {
+                    "name": data.passNum.name,
                     itemStyle: {
                         normal: {
                             color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [{
                                     offset: 0,
-                                    color: "#0268D4"
+                                    color: "#02A6C1"
                                 },
                                 {
                                     offset: 1,
-                                    color: "#0268D4"
+                                    color: "#03D8FC"
                                 }
                             ])
                         }
                     },
-                    data: data.planNum.value
+                    data: data.passNum.value
                 },
                 {
                     "name": data.doneNum.name,
@@ -428,22 +431,24 @@ let Index = {
                     data: data.doneNum.value
                 },
                 {
-                    "name": data.passNum.name,
+                    "name": data.planNum.name,
                     itemStyle: {
                         normal: {
                             color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [{
                                     offset: 0,
-                                    color: "#02A6C1"
+                                    color: "#0268D4"
                                 },
                                 {
                                     offset: 1,
-                                    color: "#03D8FC"
+                                    color: "#0268D4"
                                 }
                             ])
                         }
                     },
-                    data: data.passNum.value
+                    data: data.planNum.value
                 }
+                
+                
             ].map(item => {
                 return $.extend(true, {}, seri_bar_v, item, {
                     stack: '总时间'
@@ -906,17 +911,15 @@ let Index = {
         chart.setOption({
             color: ['#5AC0FB', '#3CF7A1', '#0931B3', '#0F347B', '#585247', '#7F6AAD', '#009D85', "rgba(250,250,250,0.3)"],
             // title: {
-            //     textStyle: {
-            //         color: '#f2f2f2',
-            //         fontSize: 20,
-            //         // align: 'center'
-            //     },
-            //     subtextStyle: {
-            //         fontSize: 20,
-            //         color: ['#ff9d19']
-            //     },
+            //     text: '总达成率',
             //     x: 'center',
             //     y: 'center',
+            //     textStyle: {
+            //       backgroundColor:'#fff',
+            //       fontWeight: 'normal',
+            //       color: '#0580f2',
+            //       fontSize: '14'
+            //     }
             // },
             grid: {
                 bottom: 150,
@@ -975,38 +978,39 @@ let Index = {
 
                 },
                 // 边框的设置
-                {
-                    radius: ['25%', '24%'],
-                    center: ['50%', '50%'],
-                    type: 'pie',
-                    label: {
-                        normal: {
-                            show: false
-                        },
-                        emphasis: {
-                            show: false
-                        }
-                    },
-                    labelLine: {
-                        normal: {
-                            show: false
-                        },
-                        emphasis: {
-                            show: false
-                        }
-                    },
-                    animation: false,
-                    tooltip: {
-                        show: false
-                    },
-                    data: [{
-                        value: 1,
-                        itemStyle: {
-                            color: "rgba(250,250,250,0.3)",
-                        },
+                // {
+                //     radius: ['25%', '24%'],
+                //     center: ['50%', '50%'],
+                //     type: 'pie',
+                //     label: {
+                //         normal: {
+                //             show: false
+                //         },
+                //         emphasis: {
+                //             show: false
+                //         }
+                //     },
+                //     labelLine: {
+                //         normal: {
+                //             show: false
+                //         },
+                //         emphasis: {
+                //             show: false
+                //         }
+                //     },
+                //     animation: false,
+                //     tooltip: {
+                //         show: false
+                //     },
+                //     data: [{
+                //         value: 1,
+                //         itemStyle: {
+                //             color: "rgba(250,250,250,0.3)",
+                //         },
 
-                    }],
-                }, {
+                //     }],
+                // }, 
+                {
                     name: '外边框',
                     type: 'pie',
                     clockWise: false, //顺时加载

@@ -38,8 +38,12 @@
 #certify .bgwrapper .swiper-slide>p {
     font-size: 36px;
     font-family: FZZDHJW--GB1-0;
-    font-weight: 400;
+    font-weight: bold;
     color: #088EFF;
+}
+
+#certify .swiper-slide-active p{
+    color: #fff!important;
 }
 
 #certify .bgwrapper .swiper-slide span {

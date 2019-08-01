@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>科诺大屏</title>
+    <link rel="stylesheet" href="font/iconfont.css">
     <link rel="stylesheet" type="text/css" href="./css/base.css">
     <link rel="stylesheet" type="text/css" href="./css/swiper.min.css">
     <link rel="stylesheet" type="text/css" href="./css/certify.css">
@@ -49,8 +50,11 @@
                             <div class="chartBox_l jiya_l">
                                 <div class=" chartBox_item">
                                     <div class="chartBox_t">
-                                        <div class="chart_tle">
-                                            挤压车间的总达成率
+                                        <div class="chart_tle sumRate">
+                                            <span>挤压车间的总达成率</span>
+                                            <p class="line_l"></p>
+                                            <p class="line_r"></p>
+                                            
                                         </div>
                                         <div class="chartCont circlecont">
                                             <div class="circleChart" id="0">
@@ -77,8 +81,10 @@
                                 <!-- chartBox_item -->
                                 <div class=" chartBox_item">
                                     <div class="chartBox_t">
-                                        <div class="chart_tle">
-                                            挤压车间工单
+                                        <div class="chart_tle jiya_chejian">
+                                            <span>挤压车间工单</span>
+                                            <p class="line_l"></p>
+                                            <p class="line_r"></p>
                                         </div>
                                     </div>
                                     <div class="chartBox_b">
@@ -95,7 +101,8 @@
                                 <div class=" chartBox_item">
                                     <div class="chartBox_t">
                                         <div class="chart_tle">
-                                            挤压车间设备实时状态
+                                           挤压车间设备实时状态
+                                            
                                         </div>
                                         <div class="chartCont">
                                             <div class="statusBox">
@@ -143,8 +150,10 @@
                             <div class="chartBox_l yanghua_l">
                                 <div class=" chartBox_item">
                                     <div class="chartBox_t">
-                                        <div class="chart_tle">
-                                            氧化车间生产工单
+                                        <div class="chart_tle yanghua_chejian">
+                                            <span>氧化车间生产工单</span>
+                                            <p class="line_l"></p>
+                                            <p class="line_r"></p>
                                         </div>
                                         <div class="chartCont">
                                             <div id="RateWorkOrderChart"></div>
@@ -194,8 +203,10 @@
                             <div class="chartBox_l produce">
                                 <div class=" chartBox_item">
                                     <div class="chartBox_t">
-                                        <div class="chart_tle" style="margin-bottom: 0">
-                                            生产工单达成率
+                                        <div class="chart_tle qualifyRate" style="margin-bottom: 0">
+                                            <span>生产工单达成率</span>
+                                            <p class="line_l"></p>
+                                            <p class="line_r"></p>
                                         </div>
                                         <div class="chartCont">
                                             <div id="produceOrderChartRate"></div>
@@ -203,8 +214,10 @@
                                     </div>
 
                                     <div class="chartBox_b">
-                                        <div class="chart_tle" style="margin-bottom: 0">
-                                            生产工单完工数
+                                        <div class="chart_tle produce_rate" style="margin-bottom: 0">
+                                            <span>生产工单完工数</span>
+                                            <p class="line_l"></p>
+                                            <p class="line_r"></p>
                                         </div>
                                         <div class="chartCont">
                                             <div id="produceOrderChartDoneRate"></div>
@@ -335,7 +348,7 @@
                     <!-- 数据轮播 END -->
 
                     <!-- 生产统计 BG -->
-                    <div class="box_item" style="margin-top: 10px;">
+                    <div class="box_item" style="margin-top: 6px;">
                         <div class="box-tle">
                             生产统计
                         </div>
@@ -352,118 +365,7 @@
                                         <div class="chartCont">
                                             <p class="live_status_title">生产总汇占比</p>
                                             <div class="live_status produceRate">
-                                                <div class="status_items">
-                                                    <div class="green">
-                                                        <div class="progress">
-                                                            <div class="inner">
-                                                                <div class="percent number"><span>67</span>%</div>
-                                                                <div class="water"></div>
-                                                                <div class="glare"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="status_text">
-                                                        <p>#时尚线</p>
-                                                        <p class="number">136<span></span></p>
-                                                    </div>
-                                                </div>
-
-                                                <div class="status_items">
-                                                    <div class="green2">
-                                                        <div class="progress">
-                                                            <div class="inner">
-                                                                <div class="percent number"><span>67</span>%</div>
-                                                                <div class="water"></div>
-                                                                <div class="glare"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="status_text">
-                                                        <p>#时尚线</p>
-                                                        <p class="number">136<span></span></p>
-                                                    </div>
-                                                </div>
-
-
-                                                <div class="status_items">
-                                                    <div class="green3">
-                                                        <div class="progress">
-                                                            <div class="inner">
-                                                                <div class="percent number"><span>67</span>%</div>
-                                                                <div class="water"></div>
-                                                                <div class="glare"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="status_text">
-                                                        <p>#时尚线</p>
-                                                        <p class="number">136<span></span></p>
-                                                    </div>
-                                                </div>
-
-                                                <div class="status_items">
-                                                    <div class="green4">
-                                                        <div class="progress">
-                                                            <div class="inner">
-                                                                <div class="percent number"><span>67</span>%</div>
-                                                                <div class="water"></div>
-                                                                <div class="glare"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="status_text">
-                                                        <p>#时尚线</p>
-                                                        <p class="number">136<span></span></p>
-                                                    </div>
-                                                </div>
-
-                                                <div class="status_items">
-                                                    <div class="green5">
-                                                        <div class="progress">
-                                                            <div class="inner">
-                                                                <div class="percent number"><span>67</span>%</div>
-                                                                <div class="water"></div>
-                                                                <div class="glare"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="status_text">
-                                                        <p>#时尚线</p>
-                                                        <p class="number">136<span></span></p>
-                                                    </div>
-                                                </div>
-
-                                                <div class="status_items">
-                                                    <div class="green6">
-                                                        <div class="progress">
-                                                            <div class="inner">
-                                                                <div class="percent number"><span>67</span>%</div>
-                                                                <div class="water"></div>
-                                                                <div class="glare"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="status_text">
-                                                        <p>#时尚线</p>
-                                                        <p class="number">136<span></span></p>
-                                                    </div>
-                                                </div>
-                                                <div class="status_items">
-                                                    <div class="green7">
-                                                        <div class="progress">
-                                                            <div class="inner">
-                                                                <div class="percent number"><span>67</span>%</div>
-                                                                <div class="water"></div>
-                                                                <div class="glare"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="status_text">
-                                                        <p>#时尚线</p>
-                                                        <p class="number">136<span></span></p>
-                                                    </div>
-                                                </div>
-                                                <div class="status_items">
+                                                <!-- <div class="status_items">
                                                     <div class="green8">
                                                         <div class="progress">
                                                             <div class="inner">
@@ -477,13 +379,15 @@
                                                         <p>#时尚线</p>
                                                         <p class="number">136<span></span></p>
                                                     </div>
-                                                </div>
+                                                </div> -->
                                             </div>
                                         </div>
                                     </div>
                                     <div class="chartBox_b">
-                                        <div class="chart_tle">
-                                            生产进度统计
+                                        <div class="chart_tle process_static">
+                                            <span>生产进度统计</span>
+                                            <p class="line_l"></p>
+                                            <p class="line_r"></p>
                                         </div>
                                         <div class="chartCont">
                                             <div id="statisticChart"></div>
@@ -521,8 +425,10 @@
                             <div class="chartBox_l yanghua_l">
                                 <div class=" chartBox_item">
                                     <div class="chartBox_t">
-                                        <div class="chart_tle">
-                                            原料仓库
+                                        <div class="chart_tle materialHouse">
+                                            <span>原料仓库</span>
+                                            <p class="line_l"></p>
+                                            <p class="line_r"></p>
                                         </div>
                                         <div class="chartCont">
                                             <div class="material" id="marterialHouse">
@@ -547,8 +453,11 @@
                             <div class="chartBox_r yanghua_r">
                                 <div class=" chartBox_item">
                                     <div class="chartBox_t">
-                                        <div class="chart_tle">
-                                            成品仓库
+                                        <div class="chart_tle materialHouse">
+                                            
+                                            <span>成品仓库</span>
+                                            <p class="line_l"></p>
+                                            <p class="line_r"></p>
                                         </div>
                                         <div class="chartCont">
                                             <div class="material" id="finishGoods">
@@ -593,8 +502,10 @@
                             <div class="chartBox_l yanghua_l">
                                 <div class=" chartBox_item">
                                     <div class="chartBox_t">
-                                        <div class="chart_tle">
-                                            周发货计划完工数
+                                        <div class="chart_tle jihuaWangong">
+                                            <span>周发货计划完工数</span>
+                                            <p class="line_l"></p>
+                                            <p class="line_r"></p>
                                         </div>
                                         <div class="chartCont">
                                             <div id="weekPlanDoneChart"></div>
@@ -884,7 +795,7 @@
                     <div class="tr status_stop">
                         <div class="td">${deviceStatus[a].sno}</div>
                         <div class="td">${deviceStatus[a].deviceName}</div>
-                        <div class="td">暂停</div>
+                        <div class="td"><span class="iconfont">&#xe678;</span>暂停</div>
                     </div>
                     `
                 }else if(deviceStatus[a].curStatus==1){
@@ -892,7 +803,7 @@
                     <div class="tr status_act">
                         <div class="td">${deviceStatus[a].sno}</div>
                         <div class="td">${deviceStatus[a].deviceName}</div>
-                        <div class="td">运行</div>
+                        <div class="td"><span class="iconfont">&#xe678;</span>运行</div>
                     </div>
                     `
                 }else if(deviceStatus[a].curStatus==2){
@@ -900,7 +811,7 @@
                     <div class="tr status_repaire">
                         <div class="td">${deviceStatus[a].sno}</div>
                         <div class="td">${deviceStatus[a].deviceName}</div>
-                        <div class="td">维修</div>
+                        <div class="td"><span class="iconfont">&#xe678;</span>维修</div>
                     </div>`
                     }
            
@@ -939,7 +850,21 @@
         
         
        
-            var data2={
+            
+
+                $.ajax({
+                    type: "get",
+                    url: "/login",
+                    contentType: 'application/x-www-form-urlencoded;charset=utf-8',
+                    data: {
+
+                    },
+                    dataType: "json",
+                    success: function(data){
+                        console.log(data);
+                    },
+                    error:function(e){
+                        var data2={
                     jiya:[
                         {   
                             name:'一线',
@@ -989,106 +914,89 @@
                         qualify:'000300'
                     }
                 }
-
-                $.ajax({
-                    type: "get",
-                    url: "/login",
-                    contentType: 'application/x-www-form-urlencoded;charset=utf-8',
-                    data: {
-
-                    },
-                    dataType: "json",
-                    success: function(data){
-                        console.log(data);
-                    },
-                    error:function(e){
-                        console.log(232323232323); 
-                        //swiperData=data
+                        lunbo(data2)
                     }
                 });
+
+        function lunbo(data2){
+                    // 大屏中间轮播 begain
+            var certifySwiper = new Swiper('#certify .swiper-container', {
+                watchSlidesProgress: true,
+                slidesPerView: 'auto',
+                centeredSlides: true,
+                loop: true,
+                loopedSlides: 3,
+                autoplay: 6000,
+                prevButton: '.swiper-button-prev',
+                nextButton: '.swiper-button-next',
+                //pagination: '.swiper-pagination',
+                //paginationClickable :true,
+                onProgress: function(swiper, progress) {
+                    //console.log(certifySwiper)
+                    for (i = 0; i < swiper.slides.length; i++) {
+                        var slide = swiper.slides.eq(i);
+                        var slideProgress = swiper.slides[i].progress;
+                        modify = 1;
+                        if (Math.abs(slideProgress) > 1) {
+                            modify = (Math.abs(slideProgress) - 1) * 0.3 + 1;
+                        }
+                        translate = slideProgress * modify * 100 + 'px';
+                        scale = 1 - Math.abs(slideProgress) / 5;
+                        zIndex = 999 - Math.abs(Math.round(10 * slideProgress));
+                        slide.transform('translateX(' + translate + ') scale(' + scale + ')');
+                        slide.css('zIndex', zIndex);
+                        slide.css('opacity', 1);
+                        if (Math.abs(slideProgress) > 3) {
+                            slide.css('opacity', 0);
+                        }
+                    }
+
+                    if(swiper.activeIndex==3){
+                        setPageNumber(data2.jiagong)
+                    }else if(swiper.activeIndex==4){
+                        setPageNumber(data2.yanghua)
+                    }else if(swiper.activeIndex==5){
+                        setPageNumber(data2.jiya[0])
+                    }else if(swiper.activeIndex==3){
+                        setPageNumber(data2.jiagong)
+                    }
+                },
+                onSetTransition: function(swiper, transition) {
+                    for (var i = 0; i < swiper.slides.length; i++) {
+                        var slide = swiper.slides.eq(i)
+                        slide.transition(transition);
+                    }
+
+                },
+                //处理分页器bug
+                onSlideChangeStart: function(swiper) {
+                    //console.log(swiper)
+                    $('.bgwrapper .jiya span').removeClass('activeBall')
+                    ac_index = swiper.activeIndex;
+                    if (swiper.activeIndex == 4) {
+                        //swiper.bullets.eq(9).addClass('swiper-pagination-bullet-active');
+                        //console.log(swiper.bullets.length);
+                    }
+                    if (swiper.activeIndex == 3 || swiper.activeIndex == 6) {
+                        if (certifySwiper !== undefined) {
+                            certifySwiper.stopAutoplay();
+                            startsAutoPlay(data2);
+                            setTimeout(function() {
+                                clearInterval(timer);
+                                certifySwiper.startAutoplay();
+                            }, 36000)
+                        }
+                    }
+                }
+            });
+        
+        }
       
 
-        // 大屏中间轮播 begain
-        var certifySwiper = new Swiper('#certify .swiper-container', {
-            watchSlidesProgress: true,
-            slidesPerView: 'auto',
-            centeredSlides: true,
-            loop: true,
-            loopedSlides: 3,
-            autoplay: 6000,
-            prevButton: '.swiper-button-prev',
-            nextButton: '.swiper-button-next',
-            //pagination: '.swiper-pagination',
-            //paginationClickable :true,
-            onProgress: function(swiper, progress) {
-                //console.log(certifySwiper)
-                for (i = 0; i < swiper.slides.length; i++) {
-                    var slide = swiper.slides.eq(i);
-                    var slideProgress = swiper.slides[i].progress;
-                    modify = 1;
-                    if (Math.abs(slideProgress) > 1) {
-                        modify = (Math.abs(slideProgress) - 1) * 0.3 + 1;
-                    }
-                    translate = slideProgress * modify * 100 + 'px';
-                    scale = 1 - Math.abs(slideProgress) / 5;
-                    zIndex = 999 - Math.abs(Math.round(10 * slideProgress));
-                    slide.transform('translateX(' + translate + ') scale(' + scale + ')');
-                    slide.css('zIndex', zIndex);
-                    slide.css('opacity', 1);
-                    if (Math.abs(slideProgress) > 3) {
-                        slide.css('opacity', 0);
-                    }
-                }
-
-                if(swiper.activeIndex==3){
-                    setPageNumber(data2.jiagong)
-                }else if(swiper.activeIndex==4){
-                    setPageNumber(data2.yanghua)
-                }else if(swiper.activeIndex==5){
-                    setPageNumber(data2.jiya[0])
-                }else if(swiper.activeIndex==3){
-                    setPageNumber(data2.jiagong)
-                }
-
-                
-
-                //console.log(swiper.activeIndex)
-                
-            },
-            onSetTransition: function(swiper, transition) {
-                for (var i = 0; i < swiper.slides.length; i++) {
-                    var slide = swiper.slides.eq(i)
-                    slide.transition(transition);
-                }
-
-            },
-            //处理分页器bug
-            onSlideChangeStart: function(swiper) {
-                //console.log(swiper)
-                $('.bgwrapper .jiya span').removeClass('activeBall')
-                ac_index = swiper.activeIndex;
-                if (swiper.activeIndex == 4) {
-                    //swiper.bullets.eq(9).addClass('swiper-pagination-bullet-active');
-                    //console.log(swiper.bullets.length);
-                }
-                if (swiper.activeIndex == 3 || swiper.activeIndex == 6) {
-                    if (certifySwiper !== undefined) {
-                        certifySwiper.stopAutoplay();
-                        startsAutoPlay();
-                        setTimeout(function() {
-                            ballBounce()
-                        }, 36000)
-                    }
-                }
-            }
-        });
         //小球抖动停止
         function ballBounce() {
-            //alert('begain')
-
             clearInterval(timer);
-            certifySwiper.startAutoplay();
-
+            lunbo.certifySwiper.startAutoplay();
         }
 
 
@@ -1096,7 +1004,7 @@
         
 
         //轮播到挤压车间 停止当前轮播 小球跳动
-        function startsAutoPlay() {
+        function startsAutoPlay(data2) {
             var index = 0;
             $('.ball1').addClass('activeBall')
             timer = setInterval(function() {
@@ -1104,17 +1012,14 @@
                 if (index > 6) {
                     index = 0;
                 }
-                changeBalls(index);//小球跳动
+                changeBalls(index,data2);//小球跳动
             }, 6000);
         }
 
-        function changeBalls(index) {
+        function changeBalls(index,data2) {
             var balls = $('.bgwrapper .jiya span');
             for (var i = 0; i < balls.length; i++) {
                 $(balls[i]).addClass('ballsss' + i);
-                //setPageNumber(data2.jiya[i]);
-                    //console.log(balls)
-                    //lis[i].className = "";
                 $(balls[i]).removeClass('activeBall')
             }
             setPageNumber(data2.jiya[index]);
@@ -1124,13 +1029,7 @@
         }
 
         function setPageNumber(data) {
-            // var math = "";
-            // for (var i = 0; i < 6; i++) {
-            //     math += Math.floor(Math.random() * 10);
-            // }
-
-           // console.log(data);
-
+            console.log(data)
             $("#dataNums1").rollNumDaq({
                 deVal: data.plan
             });
