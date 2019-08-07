@@ -4,7 +4,7 @@
 const settings = JSON.parse(localStorage.getItem('settings')) || {};
 const Cfg = {
     designW: settings.designW || 3840, //设计图宽度
-    designH: settings.designH || 1620, //设计图高度
+    designH: settings.designH || 2160, //设计图高度
     zoomMode: settings.zoomMode || (innerWidth < 768 ? 'cover' : 'contain'),
     notebookOptim: [undefined, true].includes(settings.notebookOptim),
     //getWeatherPeriod: settings.getWeatherPeriod || 5, //天气预报更新周期（分）

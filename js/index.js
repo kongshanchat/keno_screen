@@ -364,7 +364,7 @@ let Index = {
     ////氧化车间  氧化车间生产工单
     RateWorkOrderChart() {
         var data={
-            name:['w001', 'w002', 'woo3', 'w004', 'w005', 'w006', 'w007','w008'],
+            name:['2018020802', '2018020802', '2018020802', '2018020802', '2018020802', '2018020802', '2018020802','2018020802'],
             planNum:{
                 name:'计划数量',
                 value:[3, 2, 2, 2, 2, 2, 3,10]
@@ -383,7 +383,7 @@ let Index = {
         chart.setOption(opt_bar_h);
         chart.setOption({
             grid: {
-                left: '10%',
+                left: '16%',
             },
             xAxis: {
                 
@@ -719,9 +719,11 @@ let Index = {
     weekPlanDoneChart() {
         var data= {
             title:['计划数量','发货数量'],
-            name:['v53', 'v23', 'v24', 'v26', 'v50', 'v43', 'v16', 'v51', 'v16', 'v21', 'v27', 'v46'],
-            planNum:[120, 132, 101, 134, 90, 230, 210, 182, 191, 234, 290, 330],
-            sendNum:[220, 182, 191, 234, 290, 330, 310, 201, 154, 190, 330, 410]
+            name:[ 'y53-y01-1301', 'y53-y01-1302', 'y53-y01-1303'],
+            // planNum:[ 134, 90, 230],
+            // sendNum:[ 234, 290, 330],
+            planNum:[ 100, 250, 310],
+            sendNum:[ 90, 80, 100]
         }
         let chart = echarts.init($("#weekPlanDoneChart")[0]);
         this.charts.weekPlanDoneChart = chart;
@@ -729,7 +731,7 @@ let Index = {
         chart.setOption({
             grid: {
                 left: '5%',
-                right: '5%',
+                right: '9%',
                 top: 30,
                 bottom: '12%',
                 containLabel: true
@@ -831,7 +833,7 @@ let Index = {
             series: [{
                     name: data.title[0],
                     type: 'line',
-                    stack: '总量',
+                    //stack: '总量',
                     symbol: 'circle',
                     symbolSize: 8,
                     itemStyle: {
@@ -865,7 +867,7 @@ let Index = {
                 {
                     name: data.title[1],
                     type: 'line',
-                    stack: '总量',
+                    //stack: '总量',
                     symbol: 'circle',
                     symbolSize: 8,
 

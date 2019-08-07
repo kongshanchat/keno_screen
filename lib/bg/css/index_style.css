@@ -8,9 +8,10 @@ body {
 .header {
     margin: 0 auto;
     width: 3840px;
-    height: 1620px;
+    height: 2160px;
     background-color:rgba(0, 0, 0, .7);
     position: relative;
+    overflow: hidden;
 }
 
 .header canvas {
@@ -26,7 +27,7 @@ body {
     /*用来解决视频右键菜单，用于视频上面的遮罩层*/
     width: 3840px;
     background-image: url(img/in_top_bj.jpg);
-    height: 1620px;
+    height: 2160px;
     position: absolute;
     z-index: 10;
     filter: alpha(opacity=40);
