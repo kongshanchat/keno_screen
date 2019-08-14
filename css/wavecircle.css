@@ -18,12 +18,14 @@
     font-family: Adobe Heiti Std R;
     font-weight: normal;
     color: rgba(254, 254, 254, 1);
+    
 }
 
 .status_text P:nth-of-type(2) {
     font-size: 20px;
     font-family: number;
     font-weight: bolder;
+    
 }
 
 .green1 .progress,

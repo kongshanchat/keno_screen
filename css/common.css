@@ -1,6 +1,9 @@
+#container>header{
+    transform: scale(0.5)
+}
 #container>header #headerTime {
     position: absolute;
-    right: 40px;
+    right: -926px;
     top: 28px;
     font-size: 28px;
     font-family: Adobe Heiti Std R;
@@ -34,6 +37,12 @@
     width: 20px;
 }
 
+/* .swiper-container2 {
+    width: 100%;
+    height: 100%;
+  } */
+
+
 .dateIcon {
     /* vertical-align: middle; */
     width: 30px;
@@ -45,30 +54,41 @@
 #container>main {
     flex: 1;
     display: flex;
-    padding: 40px;
+    padding: 0px 40px;
     position: absolute;
     left: 0;
     width: 100%;
+    height: 1080px;
 }
 
 .main_item {
     min-height: 600px;
+    height: 1080px;
 }
 
 .l {
     /* background: pink; */
     width: 980px;
+    margin-top: -276px;
+    margin-left: -254px;
+    transform: scale(.5);
 }
 
 .c {
     /* background: red; */
     width: 1800px;
+    margin-left: -664px;
+    transform: scale(.5);
+    margin-top: -276px;
 }
 
 .r {
     /* background: purple; */
     width: 940px;
     margin-left: 20px;
+    transform: scale(.5);
+    margin-top: -276px;
+    margin-left: -674px;
 }
 
 .iconfont{
@@ -78,11 +98,13 @@
 .box_item {
     width: 940px;
     /* height: 226px; */
-    margin-bottom: 40px;
+    /* margin-bottom: 80px; */
+    /* margin-bottom: 120px; */
+    padding: 81px 0;
 }
 
 .top_margin {
-    margin-top: 216px;
+    /* margin-top: 216px; */
 }
 
 .box-tle {
@@ -93,13 +115,13 @@
     text-indent: 24px;
     background: url(../images/maintitle.png) no-repeat;
     background-size: 180px 42px;
-    margin-bottom: 16px;
+    margin-bottom: 46px;
     color: #fff;
 }
 
 .chartBox {
     width: 940px;
-    height: 540px;
+    height: 470px;
     background: rgba(17, 24, 60, 0.7);
     opacity: 0.8;
     box-sizing: border-box;
@@ -123,7 +145,7 @@
 .chart_tle .line_l{
     position: absolute;
     border: 1px solid #4450F0;
-    top: 8px;
+    top: 11px;
     left: 22px;
     
 }
@@ -135,7 +157,7 @@
     height: 8px;
     background:#4450F0;
     left:14px;
-    top:5px;
+    top:8px;
 }
 
 .jiya_chejian::after ,.sumRate::after ,.yanghua_chejian::after,.qualifyRate::after,.produce_rate::after,.process_static::after,.materialHouse::after,.jihuaWangong::after {
@@ -145,48 +167,48 @@
     height: 8px;
     background:#4450F0;
     right:14px;
-    top:5px;
+    top:8px;
 }
 
 .chart_tle .line_r{
     position: absolute;
     border: 1px solid #4450F0;
-    top: 8px;
+    top: 11px;
     right: 22px;
     
 }
 
 .sumRate .line_l{
-    width: 170px;
+    width: 144px;
 }
 
 .sumRate .line_r{
-    width:170px;
+    width:144px;
 }
 
 .jiya_chejian .line_l,.jiya_chejian .line_r{
-    width:196px;
+    width:180px;
 }
 .yanghua_chejian .line_l,.yanghua_chejian .line_r{
-    width:130px;
+    width:106px;
 }
 .qualifyRate .line_l,.qualifyRate .line_r{
-    width:338px;
+    width:318px;
 }
 
 .produce_rate .line_l,.produce_rate .line_r{
-    width:338px;
+    width:318px;
 }
 
 .process_static .line_l,.process_static .line_r{
-    width:778px;
+    width:760px;
 }
 
 .materialHouse .line_l,.materialHouse .line_r{
-    width:140px;
+    width:128px;
 }
 .jihuaWangong .line_l,.jihuaWangong .line_r{
-    width:104px;
+    width:80px;
 }
 
 
@@ -243,25 +265,31 @@
 .chart_tle {
     text-align: center;
     width: 100%;
-    height: 18px;
-    font-size: 18px;
-    line-height: 18px;
+    height: 24px;
+    font-size: 24px;
+    line-height: 24px;
     font-family: Adobe Heiti Std R;
     font-weight: normal;
     color: rgba(227, 251, 255, 1);
 }
-
+.statusBox > .tr{
+    height:60px;
+}
+.statusBox > .tr .td{
+    height:60px;
+    line-height: 60px;
+}
 .jiya_l {
     width: 600px;
 }
 
 #jiya_charts {
-    height: 150px
+    height: 240px
 }
 
 .circlecont {
-    margin: 20px 0;
-    margin-bottom: 40px;
+    margin: 30px 0;
+    margin-bottom: 50px;
 }
 
 .jiya .chartCont {
@@ -277,6 +305,7 @@
 
 .chart_tle {
     margin-bottom: 20px;
+    margin-top: 10px;
     text-align: center
 }
 
@@ -284,7 +313,7 @@
     background: rgba(4, 10, 19, 1);
 } */
 
-.circleChart p {
+.circleChart_p {
     position: absolute;
     bottom: -26px;
     height: 12px;
@@ -294,6 +323,12 @@
     font-weight: normal;
     width: 62px;
     text-align: center;
+    /* left:-50%; */
+    
+}
+
+.circleChart + p{
+    
 }
 
 .circlecont .circleChart:nth-of-type(1) p {
@@ -337,8 +372,8 @@
 
 
 .tr {
-    height: 28px;
-    line-height: 28px;
+    height: 32.5px;
+    line-height: 32.5px;
     overflow: hidden;
 }
 
@@ -348,9 +383,10 @@
 
 .tr .td {
     float: left;
-    height: 28px;
-    line-height: 28px;
-    color: #00CCFF
+    height: 32.5px;
+    line-height: 32.5px;
+    color: #00CCFF;
+    
 }
 
 .tr .td:nth-of-type(1) {
@@ -397,15 +433,15 @@
 
 #workOrderChart,
 #RateWorkOrderChart {
-    height: 300px
+    height: 380px
 }
 
 #produceOrderChartRate {
-    height: 115px;
+    height: 160px;
 }
 
 #produceOrderChartDoneRate {
-    height: 155px;
+    height: 180px;
 }
 
 .produce {
@@ -413,12 +449,12 @@
 }
 
 .produce .chartBox_t {
-    margin-bottom: 20px;
+    margin: 20px 0;
 }
 
 #weeksendDoneChart,
 #weekPlanDoneChart {
-    height: 300px
+    height: 380px
 }
 
 .live_status {
@@ -459,6 +495,7 @@
     height: 14px;
     font-family: Adobe Heiti Std R;
     font-weight: normal;
+    
     /* color: rgba(2, 255, 175, 1); */
 }
 
@@ -494,7 +531,7 @@
     height: 66px;
     line-height: 66px;
     color: #00CCFF;
-    font-size: 16px;
+    
     background: rgba(0, 84, 166, .12);
 }
 
@@ -504,7 +541,8 @@
     text-align: center;
     border-right: 1px solid #070815;
     box-sizing: border-box;
-    color: #00FEFE
+    color: #00FEFE;
+    font-size: 16px;
 }
 
 .table_thead .table_th{
@@ -551,14 +589,23 @@
     border-right: none;
 }
 
-.material {
+.material .swiper-slide, #finishGoods {
     display: flex;
     flex-direction: row;
     width: 100%;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    margin-top: 40px;
+    
+}
+
+#marterialHouse, #finishGoods{
+    padding-top: 60px;
+}
+
+.swiper-container2{
+    height: 340px;
+    overflow: hidden;
 }
 
 .desc {
@@ -573,7 +620,7 @@
     width: 170px;
     position: relative;
     height: 100px;
-    margin-bottom: 60px;
+    margin-bottom: 70px;
     background: rgba(15, 25, 68, 1);
     border: 1px solid rgba(92, 183, 254, 1);
     border-radius: 6px;
@@ -625,6 +672,7 @@
     color: rgba(255, 255, 255, 1);
     font-size: 12px;
     width:130px;
+    
 }
 
 .desc p:nth-of-type(2) span, .curDay{
@@ -646,6 +694,7 @@
     font-weight: 400;
     color: rgba(255, 255, 255, 1);
     padding-bottom: 10px;
+    
 }
 
 .chartBox_r .desc div:nth-of-type(2) {
@@ -695,7 +744,7 @@ color:rgba(255,210,0,1);
 
 
 #statisticChart {
-    height: 190px;
+    height: 230px;
 }
 
 .c .box_item {
@@ -709,7 +758,8 @@ color:rgba(255,210,0,1);
 .swiperItem {
     width: 1720px;
     margin: 0 auto;
-    margin-top: 110px
+    margin-top: 340px;
+    margin-bottom: 85px;
 }
 
 .nubberBox {
@@ -735,6 +785,18 @@ color:rgba(255,210,0,1);
     font-size: 28px;
     letter-spacing: normal;
     word-spacing: normal;
+}
+
+.unit{
+    font-size: 30px;
+    color: #fff;
+    position: absolute;
+    right: -30px;
+    bottom: 0;
+}
+
+#dataNums1,#dataNums2,#dataNums3{
+    position: relative;
 }
 
 .dataNums,
@@ -771,6 +833,7 @@ color:rgba(255,210,0,1);
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    margin-top: 62px;
 }
 
 .numberBox {
@@ -857,6 +920,7 @@ color:rgba(255,210,0,1);
     font-weight: bold;
     color: rgba(252, 252, 252, 1);
     float: left;
+    
 }
 
 .top_icons {
@@ -865,7 +929,7 @@ color:rgba(255,210,0,1);
     align-items: center;
     justify-content: space-between;
     height: auto;
-    margin-bottom: 46px
+    margin-bottom: 90px
 }
 
 .top_icons .c_top_right {
@@ -906,5 +970,5 @@ color:rgba(255,210,0,1);
 
   .model_table{
       overflow: hidden;
-      height: 128px;
+      height: 224px;
   }

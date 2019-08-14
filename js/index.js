@@ -28,7 +28,7 @@ let Index = {
             chart.setOption({
                 grid: {
                     top: '20%',
-                    bottom: "15%",
+                    bottom: "18%",
                     left: 30
                 },
                 tooltip: {

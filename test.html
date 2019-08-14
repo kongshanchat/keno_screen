@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>科诺大屏</title>
-    <link rel="stylesheet" href="font/iconfont.css">
     <link rel="stylesheet" type="text/css" href="./css/base.css">
     <link rel="stylesheet" type="text/css" href="./css/swiper.min.css">
     <link rel="stylesheet" type="text/css" href="./css/certify.css">
@@ -22,6 +21,8 @@
     <script src="./js/num2.js"></script>
     <script src="./js/num3.js"></script>
     <script src="./js/lottie.js"></script>
+
+    <script src="../../common/js/WebCore.js"></script>
 </head>
 
 <body>
@@ -58,22 +59,22 @@
                                         </div>
                                         <div class="chartCont circlecont">
                                             <div class="circleChart" id="0">
-                                                <p class="circleChart_p">#一线</p>
+                                                <p>#一线</p>
                                             </div>
                                             <div class="circleChart" id="1">
-                                                <p class="circleChart_p">#二线</p>
+                                                <p>#二线</p>
                                             </div>
                                             <div class="circleChart" id="2">
-                                                <p class="circleChart_p">#三线</p>
+                                                <p>#三线</p>
                                             </div>
                                             <div class="circleChart" id="3">
-                                                <p class="circleChart_p">#四线</p>
+                                                <p>#四线</p>
                                             </div>
                                             <div class="circleChart" id="4">
-                                                <p class="circleChart_p">#五线</p>
+                                                <p>#五线</p>
                                             </div>
                                             <div class="circleChart" id="5">
-                                                <p class="circleChart_p">#六线</p>
+                                                <p>#六线</p>
                                             </div>
                                         </div>
                                     </div>
@@ -111,7 +112,7 @@
                                                     <div class="td">设备名称</div>
                                                     <div class="td">当前状态</div>
                                                 </div>
-                                                <div id="live_status" style="height:325px;overflow:hidden">
+                                                <div id="live_status" style="height:252px;overflow:hidden">
 
                                                     <!-- <div class="tr">
                                                     <div class="td">6</div>
@@ -203,7 +204,7 @@
                             <div class="chartBox_l produce">
                                 <div class=" chartBox_item">
                                     <div class="chartBox_t">
-                                        <div class="chart_tle qualifyRate">
+                                        <div class="chart_tle qualifyRate" style="margin-bottom: 0">
                                             <span>生产工单达成率</span>
                                             <p class="line_l"></p>
                                             <p class="line_r"></p>
@@ -242,7 +243,7 @@
 
                 <!-- 主中间侧模块BG -->
                 <div class=" c main_item">
-                    <div class="top_icons" style="display:none">
+                    <div class="top_icons">
                         <img src="./images/topgroup.png" class="c_top_left">
                         <img src="./images/topgroup.png" class="c_top_right">
                     </div>
@@ -259,7 +260,7 @@
                                     <p>1</p>
                                     <p>1</p>
                                     <p>1</p>
-                                    <span>吨</span>
+                                    <span>只</span>
                                 </div>
                             </div>
                         </div>
@@ -273,7 +274,7 @@
                                     <p>0</p>
                                     <p>0</p>
                                     <p>0</p>
-                                    <span>吨</span>
+                                    <span>只</span>
                                 </div>
                             </div>
                         </div>
@@ -287,7 +288,7 @@
                                     <p>2</p>
                                     <p>8</p>
                                     <p>1</p>
-                                    <span>吨</span>
+                                    <span>只</span>
                                 </div>
                             </div>
                         </div>
@@ -297,18 +298,19 @@
                     <!-- 数据轮播 BG -->
                     <div class="swiperItem">
                         <div id="certify">
-                            <div class="swiper-container" style="transform: scale(1.08);">
+                            <div class="swiper-container">
                                 <div class="swiper-wrapper bgwrapper">
                                     <div class="swiper-slide jiya">
                                         <p>挤压车间</p>
                                         <img src="./images/worker.png" class="bg1">
                                         <img src="./images/workerdown.png" class="bg2">
-                                        <span class="ball1">1#</span>
-                                        <span class="ball2">2#</span>
-                                        <span class="ball3">3#</span>
-                                        <span class="ball4">4#</span>
-                                        <span class="ball5">5#</span>
-                                        <span class="ball6">6#</span>
+
+                                        <span class="ball1">#1</span>
+                                        <span class="ball2">#2</span>
+                                        <span class="ball3">#3</span>
+                                        <span class="ball4">#4</span>
+                                        <span class="ball5">#5</span>
+                                        <span class="ball6">#6</span>
                                     </div>
                                     <div class="swiper-slide deep">
                                         <p>深加工车间</p>
@@ -335,7 +337,7 @@
 
                     </div>
                     <div class="down_pic">
-                        <img src="./images/down4.png">
+                        <img src="./images/down3.png">
                         <img src="./images/arrow.png" class="arrow">
                         <img src="./images/arrow2.png" class="arrow2">
                         <div class="svgBox">
@@ -347,7 +349,7 @@
                     <!-- 数据轮播 END -->
 
                     <!-- 生产统计 BG -->
-                    <div class="box_item" style="margin-top: -10px;">
+                    <div class="box_item" style="margin-top: 6px;">
                         <div class="box-tle">
                             生产统计
                         </div>
@@ -383,7 +385,7 @@
                                         </div>
                                     </div>
                                     <div class="chartBox_b">
-                                        <div class="chart_tle process_static" style="margin: 40px 0;">
+                                        <div class="chart_tle process_static">
                                             <span>生产进度统计</span>
                                             <p class="line_l"></p>
                                             <p class="line_r"></p>
@@ -430,28 +432,14 @@
                                             <p class="line_r"></p>
                                         </div>
                                         <div class="chartCont">
-                                            <div class="material swiper-container2">
-                                                <div class="swiper-wrapper" id="marterialHouse">
-                                                    <!-- <div class="material_item">
+                                            <div class="material" id="marterialHouse">
+                                                <!-- <div class="material_item">
                                                     <p>璐定</p>
                                                     <div class="desc">
                                                         <p>当前库存：<span>1200</span><span>吨</span></p>
                                                         <p>今日入库：<span class="curDay">1200</span><span>吨</span></p>
                                                     </div>
                                                 </div> -->
-                                                    <div class="swiper-slide">
-                                                        <p>Slide 1</p>
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <p>Slide 2</p>
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <p>Slide 3</p>
-                                                    </div>
-
-                                                </div>
-
-
                                             </div>
                                         </div>
                                     </div>
@@ -628,7 +616,7 @@
         </div>
         <!-- container -->
         <!-- <div class="canvaszz"> </div> -->
-        <canvas id="canvas" style="height:1080px"></canvas>
+        <canvas id="canvas" style="height: 2160px"></canvas>
     </div>
     <!-----HEADER END----->
     <div class="videozz"></div>
@@ -643,11 +631,16 @@
     <!-- <script src="./js/jquery.waypoints.min.js"></script>
     <script src="./js/jquery.countup.min.js"></script> -->
     <script>
-        // var ch = $(window).height();
-        // $('main').height(ch);
-        // alert(ch)
+        //var ch = $(window).height();
+        //$('main').height(ch);
 
         //$('.counter').countUp();
+
+
+        $(function () {
+
+        });
+
 
         //svg 动画 引入
         var animData = {
@@ -664,55 +657,39 @@
         //svg 动画 引入end//
 
         //达成率
-
-        var doneRate = [{
-                name: "#一线",
-                value: '20'
-            },
-            {
-                name: "#二线",
-                value: '40'
-            },
-            {
-                name: "#三线",
-                value: '60'
-            },
-            {
-                name: "#四线",
-                value: '80'
-            },
-            {
-                name: "#五线",
-                value: '90'
-            },
-            {
-                name: "#六线",
-                value: '100'
-            },
-
-        ]
-
-
-
-
-
         function doneRateMove() {
             var rateColor = ['#389AF4', '#FF872E', '#FFC257', '#FD6892', '#A100FC', '#03D7FB']
             var rateColor2 = ['rgba(56, 154, 244, .3)', 'rgba(255, 135, 46, .3)', 'rgba(255, 194, 87, .3)',
                 'rgba(253, 104, 146, .3)', 'rgba(161, 0, 252, .3)', 'rgba(3, 215, 251, .3)'
             ]
-            for (let i = 0; i < 6; i++) {
-                $(".circleChart#" + i).circleChart({
-                    size: 62,
-                    value: doneRate[i].value,
-                    text: 0,
-                    backgroundColor: rateColor2[i],
-                    color: rateColor[i],
-                    onDraw: function (el, circle) {
-                        circle.text(Math.round(circle.value) + "%");
+            //ajax获取个产线达成率
+            $.ajax({
+                type: "get",
+                url: WebCore.root("/material/bigScreen/queryDoneRateByDay"),
+                contentType: 'application/x-www-form-urlencoded;charset=utf-8',
+                data: {
+
+                },
+                dataType: "json",
+                success: function (data) {
+                    var doneRate = data;
+                    for (let i = 0; i < 6; i++) {
+                        $(".circleChart#" + i).circleChart({
+                            size: 62,
+                            value: doneRate[i].value,
+                            text: 0,
+                            backgroundColor: rateColor2[i],
+                            color: rateColor[i],
+                            onDraw: function (el, circle) {
+                                circle.text((circle.value).toFixed(2) + "%");
+                            }
+                        });
                     }
-                });
-            }
+                },
+                error: function (e) {
+                    //console.log(e);
+                }
+            });
         }
 
         doneRateMove()
@@ -720,124 +697,67 @@
         //每隔6秒刷新一次达成率
         setInterval(function () {
             doneRateMove()
-        }, 6000);
-
+        }, 300000);
         //达成率 end //
 
 
         //挤压实时状态 滚动
         function getJiyaData() {
-            var deviceStatus = [{
-                    id: 1,
-                    sno: '001',
-                    deviceName: '哈哈啊1',
-                    curStatus: 0
-                },
-                {
-                    id: 1,
-                    sno: '002',
-                    deviceName: '哈哈啊2',
-                    curStatus: 1
-                },
-                {
-                    id: 1,
-                    sno: '003',
-                    deviceName: '哈哈啊3',
-                    curStatus: 2
-                },
-                {
-                    id: 1,
-                    sno: '004',
-                    deviceName: '哈哈啊4',
-                    curStatus: 0
-                },
-                {
-                    id: 1,
-                    sno: '005',
-                    deviceName: '哈哈啊5',
-                    curStatus: 1
-                },
-                {
-                    id: 1,
-                    sno: '006',
-                    deviceName: '哈哈啊6',
-                    curStatus: 2
-                },
-                {
-                    id: 1,
-                    sno: '007',
-                    deviceName: '哈哈啊7',
-                    curStatus: 0
-                },
-                {
-                    id: 1,
-                    sno: '008',
-                    deviceName: '哈哈啊8',
-                    curStatus: 1
-                },
-                {
-                    id: 1,
-                    sno: '009',
-                    deviceName: '哈哈啊9',
-                    curStatus: 2
-                },
-
-            ]
             $.ajax({
                 type: "get",
-                url: "/login",
+                url: WebCore.root("/material/bigScreen/queryDevState"),
                 contentType: 'application/x-www-form-urlencoded;charset=utf-8',
                 data: {
 
                 },
                 dataType: "json",
                 success: function (data) {
-
+                    var deviceStatus = data;
+                    addJiyaHtml(deviceStatus)
                 },
                 error: function (e) {
-
-                    addJiyaHtml(deviceStatus)
+                    //console.log(e); 
                 }
             });
         }
 
         function addJiyaHtml(deviceStatus) {
             var _statusHtml = '';
-            $.each(deviceStatus, function (a, b) {
-                if (deviceStatus[a].curStatus == 0) {
-                    _statusHtml += `
-                    <div class="tr status_stop">
-                        <div class="td">${deviceStatus[a].sno}</div>
-                        <div class="td">${deviceStatus[a].deviceName}</div>
-                        <div class="td"><span class="iconfont">&#xe678;</span>暂停</div>
-                    </div>
-                    `
-                } else if (deviceStatus[a].curStatus == 1) {
-                    _statusHtml += `
-                    <div class="tr status_act">
-                        <div class="td">${deviceStatus[a].sno}</div>
-                        <div class="td">${deviceStatus[a].deviceName}</div>
-                        <div class="td"><span class="iconfont">&#xe678;</span>运行</div>
-                    </div>
-                    `
-                } else if (deviceStatus[a].curStatus == 2) {
-                    _statusHtml += `
-                    <div class="tr status_repaire">
-                        <div class="td">${deviceStatus[a].sno}</div>
-                        <div class="td">${deviceStatus[a].deviceName}</div>
-                        <div class="td"><span class="iconfont">&#xe678;</span>维修</div>
-                    </div>`
-                }
+            //返回数据不为空时
+            if (deviceStatus != null && deviceStatus.length > 0) {
+                $.each(deviceStatus, function (a, b) {
+                    if (deviceStatus[a].curStatus == 0) {
+                        _statusHtml += `
+                        <div class="tr status_stop">
+                            <div class="td">${a+1}</div>
+                            <div class="td">${deviceStatus[a].deviceName}</div>
+                            <div class="td">暂停</div>
+                        </div>
+                        `
+                    } else if (deviceStatus[a].curStatus == 1) {
+                        _statusHtml += `
+                        <div class="tr status_act">
+                            <div class="td">${deviceStatus[a].sno}</div>
+                            <div class="td">${deviceStatus[a].deviceName}</div>
+                            <div class="td">运行</div>
+                        </div>
+                        `
+                    } else if (deviceStatus[a].curStatus == 2) {
+                        _statusHtml += `
+                        <div class="tr status_repaire">
+                            <div class="td">${deviceStatus[a].sno}</div>
+                            <div class="td">${deviceStatus[a].deviceName}</div>
+                            <div class="td">维修</div>
+                        </div>`
+                    }
 
-            })
+                })
+            }
 
             $('#live_status').html(_statusHtml)
         }
 
-        getJiyaData();
-
-
-
+        getJiyaData()
 
         var _wrap = $('#live_status'); //定义滚动区域
         var _interval = 3000; //定义滚动间隙时间
@@ -857,84 +777,25 @@
             }, _interval) //滚动间隔时间取决于_interval
         }).trigger('mouseleave'); //函数载入时，模拟执行mouseleave，即自动滚动
 
-
-
-
-
-
-
+        //大屏中间轮播数据
         function getMidData() {
-
-
             $.ajax({
                 type: "get",
-                url: "/login",
+                url: WebCore.root("/material/bigScreen/queryMidInfo"),
                 contentType: 'application/x-www-form-urlencoded;charset=utf-8',
                 data: {
 
                 },
                 dataType: "json",
                 success: function (data) {
-
+                    lunbo(data)
                 },
                 error: function (e) {
-                    var data2 = {
-                        jiya: [{
-                                name: '一线',
-                                plan: '000332',
-                                done: '000204',
-                                qualify: '000200'
-                            },
-                            {
-                                name: '2线',
-                                plan: '000141',
-                                done: '000120',
-                                qualify: '000040'
-                            },
-                            {
-                                name: '3线',
-                                plan: '000345',
-                                done: '000234',
-                                qualify: '000222'
-                            },
-                            {
-                                name: '4线',
-                                plan: '000235',
-                                done: '000231',
-                                qualify: '000125'
-                            },
-                            {
-                                name: '5线',
-                                plan: '000896',
-                                done: '000732',
-                                qualify: '000659'
-                            },
-                            {
-                                name: '6线',
-                                plan: '000325',
-                                done: '000315',
-                                qualify: '000340'
-                            }
-                        ],
-                        yanghua: {
-                            plan: '000235',
-                            done: '000200',
-                            qualify: '000190'
-                        },
-                        jiagong: {
-                            plan: '000356',
-                            done: '000345',
-                            qualify: '000300'
-                        }
-                    }
-                    lunbo(data2)
-                    //lunbo.certifySwiper.slideTo(1,1000,false);
-
+                    //console.log(e);
                 }
             });
         }
 
-        getMidData()
 
         function lunbo(data2) {
             // 大屏中间轮播 begain
@@ -949,9 +810,8 @@
                 nextButton: '.swiper-button-next',
                 //pagination: '.swiper-pagination',
                 //paginationClickable :true,
-                observer: true,
-                observeParents: true,
                 onProgress: function (swiper, progress) {
+                    //console.log(certifySwiper)
                     for (i = 0; i < swiper.slides.length; i++) {
                         var slide = swiper.slides.eq(i);
                         var slideProgress = swiper.slides[i].progress;
@@ -989,14 +849,12 @@
                 },
                 //处理分页器bug
                 onSlideChangeStart: function (swiper) {
-
-
+                    //console.log(swiper)
                     $('.bgwrapper .jiya span').removeClass('activeBall')
                     ac_index = swiper.activeIndex;
                     if (swiper.activeIndex == 4) {
                         //swiper.bullets.eq(9).addClass('swiper-pagination-bullet-active');
-
-
+                        //console.log(swiper.bullets.length);
                     }
                     if (swiper.activeIndex == 3 || swiper.activeIndex == 6) {
                         if (certifySwiper !== undefined) {
@@ -1010,6 +868,7 @@
                     }
                 }
             });
+
         }
 
 
@@ -1045,12 +904,10 @@
             setPageNumber(data2.jiya[index]);
 
 
-
             $(balls[index + 12]).addClass('activeBall')
         }
 
         function setPageNumber(data) {
-
 
             $("#dataNums1").rollNumDaq({
                 deVal: data.plan
@@ -1061,134 +918,45 @@
             });
 
             $("#dataNums3").rollNumDaq3({
-                deVal: data.qualify
+                deVal: data.quality
             });
         }
-
-        // setInterval(function () {
-        //     //window.location.reload()
-        //     getMidData()
-        // }, 10200)
-
+        //初识页面调用
+        getMidData()
 
         //原料仓库
-        var swiper2 = new Swiper('.swiper-container2', {
-            direction: 'vertical',
-            followFinger: false,
-            speed: 800,
-            autoplay: 4000,
-            //loop:true,
-            pagination: {
-                el: '.swiper-pagination',
-            }
-        });
-
         function getMaterialData() {
-            var data = [{
-                    name: '璐定1',
-                    inventory: '3000',
-                    wareHouse: '300'
-                },
-                {
-                    name: '璐定2',
-                    inventory: '4000',
-                    wareHouse: '400'
-                },
-                {
-                    name: '璐定3',
-                    inventory: '5000',
-                    wareHouse: '500'
-                },
-                {
-                    name: '璐定4',
-                    inventory: '6000',
-                    wareHouse: '600'
-                },
-                {
-                    name: '璐定5',
-                    inventory: '5000',
-                    wareHouse: '500'
-                },
-                {
-                    name: '璐定6',
-                    inventory: '6000',
-                    wareHouse: '600'
-                },
-                {
-                    name: '璐定7',
-                    inventory: '5000',
-                    wareHouse: '500'
-                },
-                {
-                    name: '璐定8',
-                    inventory: '6000',
-                    wareHouse: '600'
-                },
-                {
-                    name: '璐定9',
-                    inventory: '6000',
-                    wareHouse: '600'
-                },
-                {
-                    name: '璐定10',
-                    inventory: '6000',
-                    wareHouse: '600'
-                }
-
-            ]
             $.ajax({
                 type: "get",
-                url: "/login",
+                url: WebCore.root("/material/bigScreen/queryLarScrMaterial"),
                 contentType: 'application/x-www-form-urlencoded;charset=utf-8',
                 data: {
 
                 },
                 dataType: "json",
                 success: function (data) {
-
-
+                    addMaterialHtml(data);
                 },
                 error: function (e) {
-
-                    addMaterialHtml(data)
+                    //console.log(e);
                 }
             });
         }
 
-
         function addMaterialHtml(data) {
-            //var m=maMath.ceil(data.length);
-            var total = data.length; //8
-            var num = Math.ceil(total / 4);
-            // var total = 12
-            // var num = 2;
-            var cell_num = 4;
-            materialHtml = '';
-            for (var i = 1; i <= num; i++) {
-                var max = i * cell_num; //8
-                var breaks = total % (i * 4);
-                var breakspoints = breaks == 2 ? '4' * i : '10'
-                materialHtml += '<div class="swiper-slide">';
-                for (j = 1; j <= total; j++) {
-                    //alert(j)
-                    if (j > (i - 1) * 4 && j <= breakspoints) {
-                        materialHtml += `
-                            <div class="material_item">
-                                <p>${data[j-1].name}</p>
-                                <div class="desc">
-                                    <p>当前库存：<span>${data[j-1].inventory}</span><span>吨</span></p>
-                                    <p>今日入库：<span class="curDay">${data[j-1].wareHouse}</span><span>吨</span></p>
-                                </div>
-                            </div>`
-                    }
-                }
-
-                materialHtml += "</div>";
-            }
-
+            var materialHtml = '';
+            $.each(data, function (a, b) {
+                materialHtml += `
+                <div class="material_item">
+                    <p>${data[a].name}</p>
+                    <div class="desc">
+                        <p>当前库存：<span>${data[a].inventory}</span><span>吨</span></p>
+                        <p>今日入库：<span class="curDay">${data[a].wareHouse}</span><span>吨</span></p>
+                    </div>
+                </div>`
+            })
 
             $('#marterialHouse').html(materialHtml)
-            $('.swiper-container2').append('<div class="swiper-pagination"></div> ')
         }
 
 
@@ -1199,38 +967,20 @@
         //成品仓库
 
         function getFinshGoodsData() {
-            var data = [{
-                    title: '当天入库量',
-                    value: 3000
-                },
-                {
-                    title: '当天发货量',
-                    value: 4000
-                },
-                {
-                    title: '当月发货量',
-                    value: 5000
-                },
-                {
-                    title: '当前库存量',
-                    value: 6000
-                }
-            ]
 
             $.ajax({
                 type: "get",
-                url: "/login",
+                url: WebCore.root("/material/bigScreen/queryLarScrProduct"),
                 contentType: 'application/x-www-form-urlencoded;charset=utf-8',
                 data: {
 
                 },
                 dataType: "json",
                 success: function (data) {
-
-
+                    addFinishGoodsHtml(data);
                 },
                 error: function (e) {
-                    addFinishGoodsHtml(data)
+                    //console.log(e);
                 }
             });
         }
@@ -1262,37 +1012,19 @@
         //氮化炉实时监控
 
         function getLiveData() {
-            var data = [{
-                    title: '氨气分解率',
-                    value: 30
-                },
-                {
-                    title: '氨气流量',
-                    value: 40
-                },
-                {
-                    title: '温 度',
-                    value: 50
-                },
-                {
-                    title: '水循环状态',
-                    value: '正常'
-                }
-            ]
-
             $.ajax({
                 type: "get",
-                url: "/login",
+                url: WebCore.root("/material/bigScreen/queryLarScrNitridingFurnace"),
                 contentType: 'application/x-www-form-urlencoded;charset=utf-8',
                 data: {
 
                 },
                 dataType: "json",
                 success: function (data) {
-
+                    addLiveHtml(data)
                 },
                 error: function (e) {
-                    addLiveHtml(data)
+                    //console.log(e);
                 }
             });
         }
@@ -1317,7 +1049,7 @@
                     <div class="status_item live_1">
                         <div class="status_l">
                             <span>${data[a].title}</span>
-                            <p>${data[a].value}/h</p>
+                            <p>${data[a].value}m³/h</p>
                         </div>
                         <div class="status_r">
                             <img src="./images/liuliang.png">
@@ -1356,77 +1088,20 @@
 
         //煲模表格
         function getModelData() {
-            var data = [{
-                    sno: 1,
-                    model_num: 10,
-                    begain_time: '2019-07-01 12:00',
-                    end_time: '2019-07-01 16:00',
-                    hour: '10',
-                    minutes: '30'
-                },
-                {
-                    sno: 2,
-                    model_num: 11,
-                    begain_time: '2019-07-01 12:00',
-                    end_time: '2019-07-01 16:00',
-                    hour: '10',
-                    minutes: '30'
-                },
-                {
-                    sno: 3,
-                    model_num: 12,
-                    begain_time: '2019-07-01 12:00',
-                    end_time: '2019-07-01 16:00',
-                    hour: '08',
-                    minutes: '10'
-                },
-                {
-                    sno: 4,
-                    model_num: 13,
-                    begain_time: '2019-07-01 12:00',
-                    end_time: '2019-07-01 16:00',
-                    hour: '04',
-                    minutes: '34'
-                },
-                {
-                    sno: 5,
-                    model_num: 14,
-                    begain_time: '2019-07-01 12:00',
-                    end_time: '2019-07-01 16:00',
-                    hour: '10',
-                    minutes: '40'
-                },
-                {
-                    sno: 6,
-                    model_num: 14,
-                    begain_time: '2019-07-01 12:00',
-                    end_time: '2019-07-01 16:00',
-                    hour: '10',
-                    minutes: '40'
-                },
-                {
-                    sno: 7,
-                    model_num: 14,
-                    begain_time: '2019-07-01 12:00',
-                    end_time: '2019-07-01 16:00',
-                    hour: '10',
-                    minutes: '40'
-                }
-            ]
 
             $.ajax({
                 type: "get",
-                url: "/login",
+                url: WebCore.root("/material/bigScreen/queryLarScrPotMold"),
                 contentType: 'application/x-www-form-urlencoded;charset=utf-8',
                 data: {
 
                 },
                 dataType: "json",
                 success: function (data) {
-
+                    addModelHtml(data)
                 },
                 error: function (e) {
-                    addModelHtml(data)
+                    //console.log(e);
                 }
             });
         }
@@ -1441,7 +1116,7 @@
                     <div class="table_td">${data[a].model_num}</div>
                     <div class="table_td">${data[a].begain_time}</div>
                     <div class="table_td">${data[a].end_time}</div>
-                    <div class="table_td">${data[a].hour}小时${data[a].minutes}分钟</div>
+                    <div class="table_td">${data[a].duration}</div>
                 </div>`
             })
 
@@ -1470,62 +1145,22 @@
         getModelData()
 
 
-        //生产汇总占比占比
+        //生产汇总占比
         function getproduceRateData() {
-            var data = [{
-                    name: '挤压1#',
-                    num: '450',
-                    rate: '100.33'
-                },
-                {
-                    name: '挤压2#',
-                    num: '450',
-                    rate: '30.33'
-                },
-                {
-                    name: '挤压3#',
-                    num: '450',
-                    rate: '40'
-                }, {
-                    name: '挤压4#',
-                    num: '450',
-                    rate: '50'
-                }, {
-                    name: '挤压5#',
-                    num: '450',
-                    rate: '60'
-                },
-                {
-                    name: '挤压6#',
-                    num: '450',
-                    rate: '70'
-                },
-                {
-                    name: '挤压7#',
-                    num: '450',
-                    rate: '80'
-                },
-                {
-                    name: '挤压8#',
-                    num: '450',
-                    rate: '100'
-                }
-
-            ]
 
             $.ajax({
                 type: "get",
-                url: "/login",
+                url: WebCore.root("/material/bigScreen/queryLarScrProductionSummary"),
                 contentType: 'application/x-www-form-urlencoded;charset=utf-8',
                 data: {
 
                 },
                 dataType: "json",
                 success: function (data) {
-
+                    addRateHtml(data);
                 },
                 error: function (e) {
-                    addRateHtml(data)
+                    //console.log(e);
                 }
             });
         }
@@ -1561,15 +1196,16 @@
         //所有非echarts图表的数据定时刷新  
         //直接调用函数
 
-        // setInterval(function () {
-        //     getJiyaData();
-        //     getMaterialData();
-        //     getFinshGoodsData();
-        //     getLiveData();
-        //     getModelData();
-        //     getproduceRateData();
-        //     //getMidData()
-        // }, 6000)
+        setInterval(function () {
+            doneRateMove();
+            getJiyaData();
+            getMaterialData();
+            getFinshGoodsData();
+            getLiveData();
+            getModelData();
+            getproduceRateData();
+            getMidData();
+        }, 60000);
     </script>
 
 </body>
