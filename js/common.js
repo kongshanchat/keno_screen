@@ -8,7 +8,7 @@ const Cfg = {
     zoomMode: settings.zoomMode || (innerWidth < 768 ? 'cover' : 'contain'),
     notebookOptim: [undefined, true].includes(settings.notebookOptim),
     //getWeatherPeriod: settings.getWeatherPeriod || 5, //天气预报更新周期（分）
-    chartRefreshPeriod: settings.chartRefreshPeriod || 5, // 图表刷新周期（秒）
+    chartRefreshPeriod: settings.chartRefreshPeriod || 8, // 图表刷新周期（秒）
     colors: settings.colors || 'default',
     colorData: { //配色方案，部分色彩参考 http://rmco.jp/coloringroom/haisyoku_rei/haisyoku_haru.html
         default: ['#FFFFFF', 'orange', 'greenyellow', 'limegreen',

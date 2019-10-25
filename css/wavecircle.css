@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: row;
     width: 180px;
+    transform: scale(1.1);
 }
 
 .status_text {
@@ -14,18 +15,18 @@
 
 .status_text P:nth-of-type(1) {
     margin-bottom: 14px;
-    font-size: 18px;
+    font-size: 20px;
     font-family: Adobe Heiti Std R;
     font-weight: normal;
     color: rgba(254, 254, 254, 1);
-    
+
 }
 
 .status_text P:nth-of-type(2) {
-    font-size: 20px;
+    font-size: 24px;
     font-family: number;
     font-weight: bolder;
-    
+
 }
 
 .green1 .progress,
@@ -198,38 +199,44 @@
     top: 25%;
 }
 
-.status_text .number span{
+.status_text .number span {
     color: #fff;
     font-size: 12px;
     margin-left: 4px;
-}  
+}
 
 
-.status_text1 .number{
-    color:rgba(194,100,250,1);
-}  
+.status_text1 .number {
+    color: rgba(194, 100, 250, 1);
+}
 
-.status_text2 .number{
-    color:rgba(8,197,118,1);
-}  
-.status_text3 .number{
-    color:rgba(255,219,0,1);
-}  
-.status_text4 .number{
-    color:rgba(36,103,240,1);
-}  
-.status_text5 .number{
-    color:rgba(253,104,146,1);
-}  
-.status_text6 .number{
-    color:rgba(3,223,223,1);
-}  
-.status_text7 .number{
-    color:rgba(255,135,46,1);
-}  
-.status_text8 .number{
-    color:rgba(36,103,240,1);
-}  
+.status_text2 .number {
+    color: rgba(8, 197, 118, 1);
+}
+
+.status_text3 .number {
+    color: rgba(255, 219, 0, 1);
+}
+
+.status_text4 .number {
+    color: rgba(36, 103, 240, 1);
+}
+
+.status_text5 .number {
+    color: rgba(253, 104, 146, 1);
+}
+
+.status_text6 .number {
+    color: rgba(3, 223, 223, 1);
+}
+
+.status_text7 .number {
+    color: rgba(255, 135, 46, 1);
+}
+
+.status_text8 .number {
+    color: rgba(36, 103, 240, 1);
+}
 
 
 
@@ -253,7 +260,7 @@
 }
 
 .green3 .progress .inner .water {
-    background:linear-gradient(0deg,rgba(255,95,0,1),rgba(255,225,0,1));
+    background: linear-gradient(0deg, rgba(255, 95, 0, 1), rgba(255, 225, 0, 1));
     box-shadow: 0 0 20px #EED500;
     top: 75%;
 }
@@ -266,7 +273,7 @@
 }
 
 .green4 .progress .inner .water {
-    background:linear-gradient(0deg,rgba(48,58,175,1),rgba(42,122,239,1));
+    background: linear-gradient(0deg, rgba(48, 58, 175, 1), rgba(42, 122, 239, 1));
     box-shadow: 0 0 20px #3075DA;
     top: 75%;
 }
@@ -278,7 +285,7 @@
 }
 
 .green5 .progress .inner .water {
-    background:linear-gradient(0deg,rgb(216, 20, 0.55),rgba(239,82,127,1));
+    background: linear-gradient(0deg, rgb(216, 20, 0.55), rgba(239, 82, 127, 1));
     box-shadow: 0 0 20px #FD6892;
     top: 75%;
 }
@@ -291,7 +298,7 @@
 }
 
 .green6 .progress .inner .water {
-    background:linear-gradient(0deg,rgba(11,143,143,1),rgba(3,223,223,1));
+    background: linear-gradient(0deg, rgba(11, 143, 143, 1), rgba(3, 223, 223, 1));
     box-shadow: 0 0 20px #03DFDF;
     top: 75%;
 }
@@ -304,7 +311,7 @@
 }
 
 .green7 .progress .inner .water {
-    background:linear-gradient(0deg,rgba(156,83,29,1),rgba(255,135,46,1));
+    background: linear-gradient(0deg, rgba(156, 83, 29, 1), rgba(255, 135, 46, 1));
     box-shadow: 0 0 20px #FF872E;
     top: 75%;
 }
@@ -317,7 +324,7 @@
 }
 
 .green8 .progress .inner .water {
-    background:linear-gradient(0deg,rgba(48,58,175,1),rgba(42,122,239,1));
+    background: linear-gradient(0deg, rgba(48, 58, 175, 1), rgba(42, 122, 239, 1));
     box-shadow: 0 0 20px #3075DA;
     top: 75%;
 }

@@ -24,12 +24,12 @@ let com_charts = {
         lineHeight: 10 * scale,
         textStyle: {
             color: colors[0],
-            fontSize: 12 * scale,
+            fontSize: 18 * scale,
         }
     },
     tooltip: {
         textStyle: {
-            fontSize: 12 * scale,
+            fontSize: 18 * scale,
             color: colors[0]
         },
     },
@@ -40,11 +40,11 @@ let com_axis = {
     axisLabel: { //标签名称
         color: '#FBFFFF',
         //margin: 8 * scale,
-        fontSize: 12 * scale,
+        fontSize: 18 * scale,
     },
     nameTextStyle: { //坐标轴名称
         color: colors[0],
-        fontSize: 12 * scale
+        fontSize: 18 * scale
     },
     //nameGap: 16 * scale, //坐标轴名称距离
     axisTick: { //小刻度线
@@ -154,12 +154,12 @@ let seri_bar_v = {
 let circle_series_label = {
     normal: {
         show: true,
-        fontSize: 12 * scale
+        fontSize: 18 * scale
     },
     emphasis: {
         show: true,
         textStyle: {
-            fontSize: 15 * scale,
+            fontSize: 18 * scale,
             fontWeight: 'normal'
         }
     }
@@ -204,7 +204,7 @@ let com_lineBar_vertical = $.extend(true, {}, com_charts, {
             }
         },
         textStyle: {
-            fontSize: 12 * scale,
+            fontSize: 18 * scale,
             color: '#fff'
         },
     },
@@ -255,7 +255,7 @@ let opt_radar = $.extend(true, {}, {
         itemWidth: 7 * scale,
         itemHeight: 7 * scale,
         textStyle: {
-            fontSize: 12 * scale,
+            fontSize: 18 * scale,
         },
         top: '2%',
         left: 'right',
@@ -279,7 +279,7 @@ let opt_radar = $.extend(true, {}, {
         name: {
             textStyle: {
                 color: '#0cf',
-                fontSize: 12 * scale
+                fontSize: 18 * scale
                     // backgroundColor: '#999',
                     // borderRadius: 3,
                     // padding: [3, 5]
@@ -311,7 +311,7 @@ let seri_pie = $.extend(true, {}, com_charts, {
     radius: '60%',
     center: ['50%', '55%'],
     label: {
-        fontSize: 16 * scale
+        fontSize: 18 * scale
     },
 
 });

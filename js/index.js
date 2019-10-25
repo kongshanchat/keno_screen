@@ -45,10 +45,14 @@ let Index = {
                     top: 0,
                     right: '10%',
                     textStyle: {
-                        color: "#ffffff"
+                        color: "#ffffff",
+                        fontSize:18
                     }
                 },
                 xAxis: {
+                    textStyle: {
+                        fontSize: 18,
+                    },
                     data:datar.xname,
                     axisLine: {
                         show: true //隐藏X轴轴线
@@ -59,7 +63,8 @@ let Index = {
                     axisLabel: {
                         show: true,
                         textStyle: {
-                            color: "#EEFDFF" //X轴文字颜色
+                            fontSize: 18,
+                            color: "#EEFDFF" //X轴文字颜色,
                         }
                     }
                 },
@@ -67,8 +72,10 @@ let Index = {
                         type: "value",
                         name: "单位/件",
                         nameTextStyle: {
-                            color: "#fff"
+                            color: "#fff",
+                            fontSize:18
                         },
+                        
                         splitLine: {
                             show: false
                         },
@@ -79,12 +86,13 @@ let Index = {
                             show: false
                         },
                         axisLine: {
-                            show: false
+                            show: true
                         },
                         axisLabel: {
                             show: true,
                             textStyle: {
-                                color: "#fff"
+                                color: "#fff",
+                                fontSize: 18
                             }
                         }
                     },
@@ -92,7 +100,7 @@ let Index = {
                         type: "value",
                         //name: "单位/kg",
                         nameTextStyle: {
-                            color: "#00D0F2"
+                            color: "#00D0F2",
                         },
                         position: "right",
                         splitLine: {
@@ -270,13 +278,13 @@ let Index = {
                 inactiveColor: '#666',
                 textStyle: {
                     color: '#ffffff',
-                    fontSize: 12,
+                    fontSize: 18,
                 }
             },
             grid: {
                 left: '3%',
-                right: '7%',
-                bottom: '4%',
+                right: '9%',
+                bottom: 5,
                 containLabel: true
             },
             xAxis: {
@@ -292,7 +300,7 @@ let Index = {
             series: [{
                         name: data.doneRate.name,
                         type: 'bar',
-                        barWidth: '8px',
+                        barWidth: '12px',
                         label: {
                             normal: {
                                 show: true,
@@ -300,7 +308,7 @@ let Index = {
                                 formatter: '{c}%',
                                 textStyle: {
                                     color: '#03D9FE',
-                                    fontSize: '8',
+                                    fontSize: '12',
                                 }
                             }
                         },
@@ -328,7 +336,7 @@ let Index = {
                     {
                         name: data.passRate.name,
                         type: 'bar',
-                        barWidth: '8px',
+                        barWidth: '12px',
                         xAxisIndex: 0,
                         yAxisIndex: 0,
                         label: {
@@ -338,7 +346,7 @@ let Index = {
                                 formatter: '{c}%',
                                 textStyle: {
                                     color: '#03D9FE',
-                                    fontSize: '8',
+                                    fontSize: '12',
                                 }
                             }
                         },
@@ -383,16 +391,19 @@ let Index = {
         chart.setOption(opt_bar_h);
         chart.setOption({
             grid: {
-                left: '16%',
+                left: '24%',
+                bottom:29
             },
             xAxis: {
-                
+                textStyle: {
+                    fontSize: 18,
+                }
             },
             yAxis: {
                 data:data.name,
                 textStyle: {
                     color: colors[0],
-                    fontSize: 12,
+                    fontSize: 18,
                 }
             },
             series: [
@@ -467,9 +478,10 @@ let Index = {
         chart.setOption(opt_line);
         chart.setOption({
             grid: {
-                top: 5,
+                top: 8,
                 bottom: 24,
-                right: 30
+                left:60,
+                right: 40
             },
             xAxis: {
                 type: 'category',
@@ -529,9 +541,9 @@ let Index = {
     produceOrderChartDoneRate() {
         var data={
             name:['计划数量','完工数量'],
-            workOrderName:['w0001','w0002', 'w0003', 'w0004', 'w0005', 'w0006', 'w0007', 'w0008'],
-            planNum:[10, 23, 33, 32, 23, 56, 65, 32],
-            doneNum:[20, 13, 23, 12, 23, 46, 65, 62]
+            workOrderName:['w005501','w005502', 'w005503', '55w0004', 'w005505', 'w055006', 'w005507', 'w000338'],
+            planNum:[100, 230, 393, 632, 423, 556, 865, 1032],
+            doneNum:[200, 139, 239, 612, 323, 546, 765, 962]
         }
         let chart = echarts.init($("#produceOrderChartDoneRate")[0]);
         this.charts.produceOrderChartDoneRate = chart;
@@ -550,11 +562,11 @@ let Index = {
                     color: '#fff',
                     fontStyle: 'normal',
                     fontFamily: '微软雅黑',
-                    fontSize: 12,
+                    fontSize: 18,
                 }
             },
             grid: {
-                left: '1%',
+                left: '3%',
                 right: '1%',
                 bottom: '6%',
                 top: 30,
@@ -572,7 +584,7 @@ let Index = {
                     color: '#CFE7FE',
                     fontStyle: 'normal',
                     fontFamily: '微软雅黑',
-                    fontSize: 12,
+                    fontSize: 18,
                 }
             },
             xAxis: [{
@@ -586,7 +598,7 @@ let Index = {
                         color: '#EEFDFF',
                         fontStyle: 'normal',
                         fontFamily: '微软雅黑',
-                        fontSize: 12,
+                        fontSize: 18,
                     }
                 },
                 axisTick: { //坐标轴刻度相关设置。
@@ -605,7 +617,7 @@ let Index = {
                         color: '#fff',
                         fontStyle: 'normal',
                         fontFamily: '微软雅黑',
-                        fontSize: 12,
+                        fontSize: 18,
                     }
                 },
                 axisLine: {
@@ -731,9 +743,9 @@ let Index = {
         chart.setOption({
             grid: {
                 left: '5%',
-                right: '9%',
-                top: 30,
-                bottom: '12%',
+                right: '13%',
+                top: 34,
+                bottom: 60,
                 containLabel: true
             },
             tooltip: {
@@ -744,12 +756,13 @@ let Index = {
                 show: true,
                 x: 'center',
                 //y: '15',
-                bottom: 15,
+                bottom: 10,
                 icon: 'circle',
                 itemWidth: 10,
                 itemHeight: 10,
                 textStyle: {
-                    color: '#fff'
+                    color: '#fff',
+                    fontSize:18,
                 },
                 data: data.title
             },
@@ -757,7 +770,8 @@ let Index = {
                 type: 'category',
                 boundaryGap: false,
                 axisLabel: {
-                    color: '#fff'
+                    color: '#fff',
+                    fontSize:18
                 },
                 axisLine: {
                     show: true,
@@ -779,12 +793,17 @@ let Index = {
             yAxis: [{
                     type: 'value',
                     name: '单位:支',
+                    nameTextStyle: {
+                        color: "#fff",
+                        fontSize:18
+                    },
                     min: 0,
                     //max: 1000,
                     axisLabel: {
                         formatter: '{value}',
                         textStyle: {
-                            color: '#fff'
+                            color: '#fff',
+                            fontSize:18
                         }
                     },
                     axisLine: {
@@ -929,9 +948,10 @@ let Index = {
                 right: '10%'
             },
             legend: {
-                bottom: '5%',
+                bottom: 10,
                 textStyle: {
                     color: '#fff',
+                    fontSize:18
                 },
                 itemGap: 12,
                 data: data
@@ -1113,7 +1133,7 @@ let Index = {
                     color: '#CFE7FE',
                     fontStyle: 'normal',
                     fontFamily: '微软雅黑',
-                    fontSize: 12,
+                    fontSize: 18,
                 }
             },
             xAxis: {
