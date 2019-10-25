@@ -347,7 +347,7 @@
                     <!-- 数据轮播 END -->
 
                     <!-- 生产统计 BG -->
-                    <div class="box_item" style="margin-top: -10px;">
+                    <div class="box_item" style="margin-top: -10px;margin-left:-40px">
                         <div class="box-tle">
                             生产统计
                         </div>
@@ -360,7 +360,7 @@
                             <img src="./images/rect.png" class="rectRightBottom">
                             <div class="chartBox_l produce">
                                 <div class=" chartBox_item">
-                                    <div class="chartBox_t">
+                                    <div class="chartBox_t" style="margin:30px 0;">
                                         <div class="chartCont">
                                             <p class="live_status_title">生产总汇占比</p>
                                             <div class="live_status produceRate">
@@ -703,13 +703,15 @@
             ]
             for (let i = 0; i < 6; i++) {
                 $(".circleChart#" + i).circleChart({
-                    size: 62,
-                    value: doneRate[i].value,
-                    text: 0,
+                    size: 76,
+                    //value: doneRate[i].value,
+                    value:Math.random() * 100,
+                    text: true,
+                    textSize:16,
                     backgroundColor: rateColor2[i],
                     color: rateColor[i],
                     onDraw: function (el, circle) {
-                        circle.text(Math.round(circle.value) + "%");
+                        circle.text(Math.round(circle.value) + "44%");
                     }
                 });
             }
@@ -720,7 +722,7 @@
         //每隔6秒刷新一次达成率
         setInterval(function () {
             doneRateMove()
-        }, 6000);
+        }, 5000);
 
         //达成率 end //
 
@@ -730,56 +732,62 @@
             var deviceStatus = [{
                     id: 1,
                     sno: '001',
-                    deviceName: '哈哈啊1',
+                    deviceName: '设备1',
                     curStatus: 0
                 },
                 {
                     id: 1,
                     sno: '002',
-                    deviceName: '哈哈啊2',
+                    deviceName: '设备2',
                     curStatus: 1
                 },
                 {
                     id: 1,
                     sno: '003',
-                    deviceName: '哈哈啊3',
+                    deviceName: '设备3',
                     curStatus: 2
                 },
                 {
                     id: 1,
                     sno: '004',
-                    deviceName: '哈哈啊4',
+                    deviceName: '设备4',
                     curStatus: 0
                 },
                 {
                     id: 1,
                     sno: '005',
-                    deviceName: '哈哈啊5',
+                    deviceName: '设备5',
                     curStatus: 1
                 },
                 {
                     id: 1,
                     sno: '006',
-                    deviceName: '哈哈啊6',
+                    deviceName: '设备6',
                     curStatus: 2
                 },
                 {
                     id: 1,
                     sno: '007',
-                    deviceName: '哈哈啊7',
+                    deviceName: '设备7',
                     curStatus: 0
                 },
                 {
                     id: 1,
                     sno: '008',
-                    deviceName: '哈哈啊8',
+                    deviceName: '设备8',
                     curStatus: 1
                 },
                 {
                     id: 1,
                     sno: '009',
-                    deviceName: '哈哈啊9',
+                    deviceName: '设备9',
                     curStatus: 2
+                },
+                {
+                    id: 1,
+                    sno: '010',
+                    deviceName: '设备10',
+                    curStatus: 0
                 },
 
             ]
@@ -840,7 +848,7 @@
 
 
         var _wrap = $('#live_status'); //定义滚动区域
-        var _interval = 3000; //定义滚动间隙时间
+        var _interval = 30000; //定义滚动间隙时间
         var _moving; //需要清除的动画
         _wrap.hover(function () {
             clearInterval(_moving); //当鼠标在滚动区域中时,停止滚动
@@ -942,9 +950,10 @@
                 watchSlidesProgress: true,
                 slidesPerView: 'auto',
                 centeredSlides: true,
+                initialSlide:1,
                 loop: true,
                 loopedSlides: 3,
-                autoplay: 6000,
+                autoplay: 10000,
                 prevButton: '.swiper-button-prev',
                 nextButton: '.swiper-button-next',
                 //pagination: '.swiper-pagination',
@@ -1005,7 +1014,7 @@
                             setTimeout(function () {
                                 clearInterval(timer);
                                 certifySwiper.startAutoplay();
-                            }, 36000)
+                            }, 50000)
                         }
                     }
                 }
@@ -1033,7 +1042,7 @@
                     index = 0;
                 }
                 changeBalls(index, data2); //小球跳动
-            }, 6000);
+            }, 10000);
         }
 
         function changeBalls(index, data2) {
@@ -1157,11 +1166,8 @@
 
 
         function addMaterialHtml(data) {
-            //var m=maMath.ceil(data.length);
-            var total = data.length; //8
+            var total = data.length;
             var num = Math.ceil(total / 4);
-            // var total = 12
-            // var num = 2;
             var cell_num = 4;
             materialHtml = '';
             for (var i = 1; i <= num; i++) {
@@ -1188,7 +1194,6 @@
 
 
             $('#marterialHouse').html(materialHtml)
-            $('.swiper-container2').append('<div class="swiper-pagination"></div> ')
         }
 
 
@@ -1570,6 +1575,12 @@
         //     getproduceRateData();
         //     //getMidData()
         // }, 6000)
+
+        setInterval(function () {
+            
+            //getMaterialData();
+           
+        }, 20000)
     </script>
 
 </body>
